@@ -33,8 +33,7 @@ function createHTML() {
 
     //lägg till funktion som visar varukorgen
     productBtn.addEventListener("click", () => {
-      localStorage.setItem("productToCart", JSON.stringify(products[i]));
-
+      localStorage.setItem("cart", JSON.stringify(products[i]) || "");
       addToCart(products[i]);
     });
 

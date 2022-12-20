@@ -1,10 +1,11 @@
 import { Product } from "../models/Product";
+import { products } from "../models/productList";
 
-export function addToCart(newProduct: Product) {
-  let productsInCart: Product[] = [];
-  if (localStorage.getItem("productToCart")) {
-  }
-  productsInCart.push(newProduct);
+export function addToCart(cartProduct: Product) {
+  let cart: Product[] = [];
 
-  console.log(productsInCart);
+  cart.push(cartProduct);
+  cart = JSON.parse(localStorage.getItem("cart") || "[]");
+
+  console.log(cartProduct.name);
 }
