@@ -1,0 +1,17 @@
+.footer {
+  height: 20%;
+  width: 100%;
+  background-color: burlywood;
+  position: fixed;
+  bottom: 0;
+
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    li {
+      list-style: none;
+    }
+  }
+}
