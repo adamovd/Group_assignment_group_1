@@ -212,12 +212,6 @@ export let products: Product[] = [
     "M"
   ),
 
-  new Product("Ring", 899, "", "Ring", "Golden ring", "M"),
-  new Product("Ring", 899, "", "Ring", "Golden ring", "M"),
-  new Product("Ring", 899, "", "Ring", "Golden ring", "M"),
-
-  new Product("Ring", 899, "", "Ring", "Golden ring", "M"),
-
   new Product(
     "Bracelet",
     899,
@@ -253,3 +247,9 @@ export let products: Product[] = [
     "M"
   ),
 ];
+
+/*  new Product("Ring", 899, "", "Ring", "Golden ring", "M"),
+  new Product("Ring", 899, "", "Ring", "Golden ring", "M"),
+  new Product("Ring", 899, "", "Ring", "Golden ring", "M"),
+
+  new Product("Ring", 899, "", "Ring", "Golden ring", "M"), */
