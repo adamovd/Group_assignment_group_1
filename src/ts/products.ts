@@ -1,5 +1,9 @@
 import { products } from "./models/productList";
 
+window.onload = () => {
+  createHTML();
+};
+
 function createHTML() {
   for (let i = 0; i < products.length; i++) {
     let productContainer: HTMLDivElement = document.createElement("div");
@@ -19,13 +23,14 @@ function createHTML() {
     productBtn.classList.add("product__btn");
 
     productName.innerHTML = products[i].name;
-    productPrice.innerHTML = products[i].price.toString();
+    productPrice.innerHTML = products[i].price.toString() + "kr";
     productType.innerHTML = products[i].type;
     productImg.src = products[i].image;
     productImg.alt = products[i].name;
     productDescription.innerHTML = products[i].description;
     productBtn.innerHTML = "Add to cart";
 
+    //lägg till funktion som visar varukorgen
     productBtn.addEventListener("click", () => {});
 
     productContainer.appendChild(productName);
@@ -37,5 +42,3 @@ function createHTML() {
     document.body.appendChild(productContainer);
   }
 }
-
-createHTML();
