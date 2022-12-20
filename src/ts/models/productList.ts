@@ -1,3 +1,5 @@
+import { Product } from "./Product";
+
 export let products: Product[] = [
   new Product(
     "Ring",
