@@ -5,6 +5,8 @@ export class Product {
     public image: string,
     public type: string,
     public description: string,
-    public size: string
+    public size: string,
+    public secondImage?: string,
+    public thirdImage?: string
   ) {}
 }

@@ -1,4 +1,3 @@
-import { cartModal } from "./functions/cartModal";
 import { addToCart } from "./functions/cartProducts";
 import { products } from "./models/productList";
 
@@ -35,7 +34,7 @@ function createHTML() {
     //lägg till funktion som visar varukorgen
     productBtn.addEventListener("click", () => {
       localStorage.setItem("productToCart", JSON.stringify(products[i]));
-      cartModal();
+
       addToCart(products[i]);
     });
 
