@@ -1,9 +1,10 @@
-// import { Product } from "../models/Product";
+import { Product } from "../models/Product";
 
-// function addToCart() {
-//   let productsInCart: Product[] = [];
-//   if (localStorage.getItem("productToCart")) {
-//     //  let newProduct = JSON.parse(localStorage.getItem("productToCart"));
-//   }
-//   productsInCart.push();
-// }
+export function addToCart(newProduct: Product) {
+  let productsInCart: Product[] = [];
+  if (localStorage.getItem("productToCart")) {
+  }
+  productsInCart.push(newProduct);
+
+  console.log(productsInCart);
+}

@@ -1,3 +1,4 @@
+import { addToCart } from "./functions/cartProducts";
 import { products } from "./models/productList";
 
 window.onload = () => {
@@ -31,7 +32,10 @@ function createHTML() {
     productBtn.innerHTML = "Add to cart";
 
     //lägg till funktion som visar varukorgen
-    productBtn.addEventListener("click", () => {});
+    productBtn.addEventListener("click", () => {
+      localStorage.setItem("productToCart", JSON.stringify(products[i]));
+      addToCart(products[i]);
+    });
 
     productContainer.appendChild(productName);
     productContainer.appendChild(productPrice);
