@@ -20,6 +20,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
     />
+    
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  />
 
     <script src="../ts/checkout.ts" defer type="module"></script>
     <link rel="stylesheet" href="../scss/checkout.scss" />
@@ -62,9 +67,12 @@
                   <a
                     class="nav-link active"
                     aria-current="page"
-                    href="./products.html"
-                    >products</a
+                    href="../index.html"
+                    >home</a
                   >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./products.html">products</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./about.html">about</a>
@@ -236,13 +244,20 @@
         </div>
 
 
-    <footer class="footer">
-      <ul class="footer__ul">
-        <li>HAJ jewelry</li>
-        <li>Address: Gästrikegatan 11, 113 62 Stockholm</li>
-        <li>Email: HAJ@webbshop.se</li>
-        <li>Phone: 073-564 76 54</li>
-      </ul>
-    </footer>
+        <footer
+        class="footer navbar fixed-bottom column d-flex justify-content-center align-items-center"
+      >
+        <div class="icons">
+          <i class="bi bi-mailbox"></i>
+          <i class="bi bi-envelope"></i>
+          <i class="bi bi-telephone"></i>
+        </div>
+        <ul class="footer__ul">
+          <li>HAJ jewelry</li>
+          <li>Address: Gästrikegatan 11, 113 62 Stockholm</li>
+          <li>Email: HAJ@webbshop.se</li>
+          <li>Phone: 073-564 76 54</li>
+        </ul>
+      </footer>
   </body>
 </html>

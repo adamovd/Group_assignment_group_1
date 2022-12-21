@@ -1,2 +1,15 @@
 @use "header";
 @use "footer";
+
+* {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+main {
+  background-image: url("https://images.unsplash.com/photo-1591892150204-2f872745bc4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  width: 100%;
+}
