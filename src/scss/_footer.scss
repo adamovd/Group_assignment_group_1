@@ -1,7 +1,8 @@
+@use "variables" as var;
 .footer {
   height: 20%;
   width: 100%;
-  background-color: #f9f5f0;
+  background-color: var.$popup-color;
   bottom: 0;
 
   &__ul {
