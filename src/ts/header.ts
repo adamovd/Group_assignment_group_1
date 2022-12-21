@@ -1,7 +1,9 @@
 import { cartModal } from "./functions/cartModal";
 
-let icon: HTMLButtonElement = document.getElementById(
+let icon: HTMLParagraphElement = document.getElementById(
   "icon"
-) as HTMLButtonElement;
+) as HTMLParagraphElement;
 
-icon.addEventListener("click", cartModal);
+icon.addEventListener("click", () => {
+  cartModal();
+});
