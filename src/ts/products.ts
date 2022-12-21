@@ -29,7 +29,7 @@ function createHTML() {
     productType.innerHTML = products[i].type;
     productImg.src = products[i].image;
     productImg.alt = products[i].name;
-    productBtn.innerHTML = "Add to cart";
+    productBtn.innerHTML = "add to cart";
 
     //lägg till funktion som visar varukorgen
     productBtn.addEventListener("click", () => {
@@ -38,10 +38,10 @@ function createHTML() {
       addToCart(cartProducts);
     });
 
+    productContainer.appendChild(productImg);
+    productContainer.appendChild(productType);
     productContainer.appendChild(productName);
     productContainer.appendChild(productPrice);
-    productContainer.appendChild(productType);
-    productContainer.appendChild(productImg);
     productContainer.appendChild(productBtn);
     document.body.appendChild(productContainer);
   }
