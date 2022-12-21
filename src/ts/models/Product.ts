@@ -1,4 +1,5 @@
 export class Product {
+  amount: number;
   constructor(
     public name: string,
     public price: number,
@@ -8,5 +9,13 @@ export class Product {
     public size: string,
     public secondImage?: string,
     public thirdImage?: string
-  ) {}
+  ) {
+    this.amount = 1;
+  }
+  addItem(add: number) {
+    this.amount += add;
+  }
+  removeItem(remove: number) {
+    this.amount -= remove;
+  }
 }
