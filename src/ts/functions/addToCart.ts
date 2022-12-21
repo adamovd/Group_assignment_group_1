@@ -11,12 +11,19 @@ export function cartButton() {
   const modalBtn: HTMLButtonElement = document.getElementById(
     "openCart"
   ) as HTMLButtonElement;
+  modalBtn.type = "button";
+  modalBtn.classList.add("btn");
+  modalBtn.setAttribute("data-bs-toggle", "modal");
+  modalBtn.setAttribute("data-bs-target", "#cartModal");
   modalBtn.addEventListener("click", () => {
+    console.log("Klick");
+
     presentCart(cartProducts);
   });
 }
 
 export function presentCart(cartProducts: Product[]) {
+  cartProducts = JSON.parse(localStorage.getItem("cart") || "[]");
   const modal: HTMLDivElement = document.getElementById(
     "cartModal"
   ) as HTMLDivElement;
@@ -24,8 +31,6 @@ export function presentCart(cartProducts: Product[]) {
   let cartModalBody: HTMLDivElement = document.getElementById(
     "modal-body"
   ) as HTMLDivElement;
-
-  modal.appendChild(cartModalBody);
 
   for (let i = 0; i < cartProducts.length; i++) {
     const cartProductName: HTMLParagraphElement = document.createElement("p");
