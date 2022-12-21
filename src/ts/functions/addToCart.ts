@@ -5,8 +5,23 @@ export function addToCart(cartProducts: Product[]) {
   console.log(cartProducts);
   presentCart(cartProducts);
 }
+const cartProducts: Product[] = [];
 
-function presentCart(cartProducts: Product[]) {
+let cartModalBody: HTMLDivElement = document.getElementById(
+  "modal-body"
+) as HTMLDivElement;
+
+let cartBtn: HTMLButtonElement = document.getElementById(
+  "addToCart"
+) as HTMLButtonElement;
+
+cartModalBody.innerHTML = "";
+
+cartBtn.addEventListener("click", () => {
+  presentCart(cartProducts);
+});
+
+export function presentCart(cartProducts: Product[]) {
   for (let i = 0; i < cartProducts.length; i++) {
     const cartProductName: HTMLParagraphElement = document.createElement("p");
     const cartProductPrice: HTMLParagraphElement = document.createElement("p");
@@ -29,5 +44,13 @@ function presentCart(cartProducts: Product[]) {
     cartProductAmount.innerHTML = cartProducts[i].amount.toString();
     cartProductAdd.innerHTML = "+";
     cartProductRemove.innerHTML = "-";
+
+    cartModalBody.appendChild(cartProductName);
+    cartModalBody.appendChild(cartProductPrice);
+    cartModalBody.appendChild(cartProductImg);
+    cartModalBody.appendChild(cartProductAmount);
+    cartModalBody.appendChild(cartProductAdd);
+    cartModalBody.appendChild(cartProductAmount);
+    cartModalBody.appendChild(cartProductRemove);
   }
 }
