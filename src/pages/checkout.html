@@ -26,14 +26,70 @@
     <title>Document</title>
   </head>
   <body>
-    <header class="header">
-      <h1 class="header__logo">Logo</h1>
-      <p class="header__products">
-        <a href="./products.html">products</a>
-      </p>
-      <p class="header__about"><a href="./about.html">about</a></p>
-      <p class="header__contact"><a href="./contact.html">contact</a></p>
-      <i class="bi bi-cart" class="header__icon" id="icon"></i>
+    <header class="header row">
+      <!--bootstrap hamburgermeny-->
+      <nav class="navbar fixed-top">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-start text-bg-white"
+            tabindex="-1"
+            id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                Logo
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./products.html"
+                    >products</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./about.html">about</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact.html">contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!--slut på hamburgermeny-->
+      <div class="d-flex justify-content-center align-items-center">
+        <h1 class="align-items-center">Logo</h1>
+      </div>
+
+      <button
+        type="button"
+        class="btn"
+        data-bs-toggle="modal"
+        data-bs-target="#cartModal"
+      >
+        <i class="bi bi-cart"></i>
+      </button>
     </header>
 
     <footer class="footer">
