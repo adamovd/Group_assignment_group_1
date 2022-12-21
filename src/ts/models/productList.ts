@@ -2,7 +2,7 @@ import { Product } from "./Product";
 
 export let products: Product[] = [
   new Product(
-    "Ring",
+    "Bespoken",
     899,
     "https://images.pexels.com/photos/14466168/pexels-photo-14466168.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Ring",
@@ -11,7 +11,7 @@ export let products: Product[] = [
   ),
 
   new Product(
-    "Ring",
+    "Resplendent",
     899,
     "https://images.pexels.com/photos/14466167/pexels-photo-14466167.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Ring",
@@ -20,7 +20,7 @@ export let products: Product[] = [
   ),
 
   new Product(
-    "Ring",
+    "Rococo",
     899,
     "https://images.pexels.com/photos/14466164/pexels-photo-14466164.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Ring",
@@ -29,7 +29,7 @@ export let products: Product[] = [
   ),
 
   new Product(
-    "Ring",
+    "Elixir",
     899,
     "https://images.pexels.com/photos/14466162/pexels-photo-14466162.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Ring",
@@ -37,7 +37,7 @@ export let products: Product[] = [
     "M"
   ),
   new Product(
-    "Ring",
+    "Chatoyant",
     899,
     "https://images.pexels.com/photos/14466158/pexels-photo-14466158.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Ring",
@@ -46,70 +46,70 @@ export let products: Product[] = [
   ),
 
   new Product(
-    "Ring",
+    "Ethereal",
     899,
     "https://images.pexels.com/photos/14466157/pexels-photo-14466157.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Ring",
-    "This beautiful ring is the perfect way to add a little sparkle to your look. Featuring a silver band with white diamonds on each side, and a large diamond in the center, this ring will make anyone feel special when they wear it.This diamond and silver ring is the perfect accessory for your every day. Its clean lines and beautiful design make it a go-to piece you never want to take off while its big diamonds play off in a subtle way.",
+    "This beautiful ring is the perfect way to add a little sparkle to your look. Featuring a silver band with white diamonds on each side, and a large diamond in the center, this ring will make anyone feel special when they wear it.This diamond and silver ring is the perfect accessory for your every day. Its clean lines and beautiful design make it a go-to piece you never want to take off.",
     "M"
   ),
 
   new Product(
-    "Necklace",
+    "Opulence",
     899,
     "https://images.pexels.com/photos/14111401/pexels-photo-14111401.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "Ring",
+    "Necklace",
     "This is the best necklace, crafted with the utmost care. It's perfect for all occasions and all genders. Great for gifts or as a self-gift.",
     "M"
   ),
 
   new Product(
-    "Necklace",
+    "Quintessence",
     899,
     "https://images.pexels.com/photos/14111400/pexels-photo-14111400.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "Ring",
+    "Necklace",
     "This 14k yellow gold chain necklace is a must-have accessory in your accessories collection. The curb style chain is perfect for everyday wear, and will keep you looking chic in any occasion. Our classic curb style necklace has been a best seller since we launched the line. Its versatile design adds sophistication to both casual and evening looks.",
     "M"
   ),
 
   new Product(
-    "Necklace",
+    "Zenith",
     899,
     "https://images.pexels.com/photos/14111399/pexels-photo-14111399.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "Ring",
+    "Necklace",
     "This beautiful chain necklace is handcrafted and made of 24K gold. Its curb style design highlights your best assets, while adding a touch of sophistication to any outfit.",
     "M"
   ),
 
   new Product(
-    "Necklace",
+    "Sumptuous",
     899,
     "https://images.pexels.com/photos/14111397/pexels-photo-14111397.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "Ring",
+    "Necklace",
     "Quality doesn't always have to come with a hefty price. Made from the finest metals and materials, you can rest assured that this necklace will last for years to come. A simple rosegold chain necklace will never go out of style.",
     "M"
   ),
 
   new Product(
-    "Necklace",
+    "Sonder",
     899,
     "https://images.pexels.com/photos/14111396/pexels-photo-14111396.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "Ring",
+    "Necklace",
     "This rosegold chain is perfect for accessorizing. It has a nice weight to it and is adjustable, so you can make it as long or as short as you want. A fabulous addition to your collection of necklaces!",
     "M"
   ),
 
   new Product(
-    "Necklace",
+    "Redamancy",
     899,
     "https://images.pexels.com/photos/14111395/pexels-photo-14111395.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "Ring",
+    "Necklace",
     "The rosegold chain is a great accessory for any outfit. This piece signifies elegance and timeless style.The rosegold color is perfect for all skin tones and will add a subtle sparkle to your outfit. This necklace is an elegant addition to your jewelry collection.",
     "M"
   ),
 
   new Product(
-    "Necklace",
+    "Solivagant",
     899,
     "https://images.pexels.com/photos/14111394/pexels-photo-14111394.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Necklace",
@@ -117,15 +117,15 @@ export let products: Product[] = [
     "M"
   ),
   new Product(
-    "Necklace",
+    "Ataraxia",
     899,
     "https://images.pexels.com/photos/14111393/pexels-photo-14111393.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Necklace",
-    "You'll look effortlessly chic in this 24 golden chain necklace. The wide square style is finished with a lobster clasp and is perfect for layering or wearing solo. Layer it under a simple blouse or sweater, or make it the focal point of any outfit by wearing it over a solid color top.",
+    "You'll look effortlessly chic in this 24 golden chain necklace. The wide square style is finished with a lobster clasp and is perfect for layering or wearing solo.",
     "M"
   ),
   new Product(
-    "Necklace",
+    "Irenic",
     899,
     "https://images.pexels.com/photos/14111392/pexels-photo-14111392.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Necklace",
@@ -134,7 +134,7 @@ export let products: Product[] = [
   ),
 
   new Product(
-    "Necklace",
+    "Apricity",
     899,
     "https://images.pexels.com/photos/10983782/pexels-photo-10983782.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Necklace",
@@ -143,7 +143,7 @@ export let products: Product[] = [
   ),
 
   new Product(
-    "Earring",
+    "Lucid",
     899,
     "https://images.pexels.com/photos/10983783/pexels-photo-10983783.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Earring",
@@ -151,7 +151,7 @@ export let products: Product[] = [
     "M"
   ),
   new Product(
-    "Necklace",
+    "Serenity",
     899,
     "https://images.pexels.com/photos/10983785/pexels-photo-10983785.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Necklace",
@@ -160,7 +160,7 @@ export let products: Product[] = [
   ),
 
   new Product(
-    "Earring",
+    "Apotelesma",
     899,
     "https://images.pexels.com/photos/10983778/pexels-photo-10983778.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Earring",
@@ -169,7 +169,7 @@ export let products: Product[] = [
   ),
 
   new Product(
-    "Necklace",
+    "Esmaralda",
     899,
     "https://images.pexels.com/photos/10983780/pexels-photo-10983780.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Ring",
@@ -178,7 +178,7 @@ export let products: Product[] = [
   ),
 
   new Product(
-    "Earrings",
+    "Granular",
     899,
     "https://images.pexels.com/photos/10983781/pexels-photo-10983781.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Earrings",
@@ -186,16 +186,16 @@ export let products: Product[] = [
     "M"
   ),
   new Product(
-    "Ring",
+    "Talisman",
     899,
     "https://images.pexels.com/photos/10976653/pexels-photo-10976653.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Ring",
-    "Wear bold, classic style with these two gold rings. With shimmering diamonds, these rings will add a touch of sophistication to any outfit.These finger rings are the perfect addtion to your jewelry collection. They feature gold, which is known for its durability and is a great complement to the prominent diamond set in these rings.",
+    "Wear bold, classic style with these two gold rings. With shimmering diamonds, these rings will add a touch of sophistication to any outfit.These rings are the perfect addtion to your jewelry collection. They feature gold, which is known for its durability and is a great complement to the prominent diamond set in these rings.",
     "M"
   ),
 
   new Product(
-    "Earring",
+    "Ineffable",
     899,
     "https://images.pexels.com/photos/10976654/pexels-photo-10976654.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Earring",
@@ -204,16 +204,16 @@ export let products: Product[] = [
   ),
 
   new Product(
-    "Ring",
+    "Bucolic",
     899,
     "https://images.pexels.com/photos/10976655/pexels-photo-10976655.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Ring",
-    "Dazzle with the classic, vintage-inspired Two Diamond Rose Gold Rings.These two rings in rose gold are a fresh take on the classic, timeless look of diamond. The chic and modern designs of these rings are sure to be a hit at any occasion. Each ring features two rose gold sparkling diamonds, which reflect the light back through their prisms and add a pop of color.",
+    "Dazzle with the classic, vintage-inspired Two Diamond Rose Gold Rings.These two rings in rose gold are a fresh take on the classic, timeless look of diamond. The chic and modern designs of these rings are sure to be a hit at any occasion. Each ring features two sparkling diamonds, which reflect the light back through their prisms.",
     "M"
   ),
 
   new Product(
-    "Bracelet",
+    "Sempiternal",
     899,
     "https://images.pexels.com/photos/8891954/pexels-photo-8891954.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Bracelet",
@@ -222,7 +222,7 @@ export let products: Product[] = [
   ),
 
   new Product(
-    "Bracelet",
+    "Opaline",
     899,
     "https://images.pexels.com/photos/8891956/pexels-photo-8891956.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Bracelet",
@@ -231,7 +231,7 @@ export let products: Product[] = [
   ),
 
   new Product(
-    "Ring",
+    "Petrichor",
     899,
     "https://images.pexels.com/photos/8891950/pexels-photo-8891950.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "Ring",
@@ -239,7 +239,7 @@ export let products: Product[] = [
     "M"
   ),
   new Product(
-    "Ring",
+    "Confluence",
     899,
     "https://images.pexels.com/photos/8891959/pexels-photo-8891959.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Ring",

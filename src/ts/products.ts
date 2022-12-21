@@ -1,10 +1,12 @@
-import { cartModal } from "./functions/cartModal";
 import { addToCart } from "./functions/cartProducts";
+import { Product } from "./models/Product";
 import { products } from "./models/productList";
 
 window.onload = () => {
   createHTML();
 };
+
+const cartProducts: Product[] = [];
 
 function createHTML() {
   for (let i = 0; i < products.length; i++) {
@@ -34,9 +36,9 @@ function createHTML() {
 
     //lägg till funktion som visar varukorgen
     productBtn.addEventListener("click", () => {
-      localStorage.setItem("productToCart", JSON.stringify(products[i]));
-      cartModal();
-      addToCart(products[i]);
+      cartProducts.push(products[i]);
+      localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
+      addToCart(cartProducts);
     });
 
     productContainer.appendChild(productName);
