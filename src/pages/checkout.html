@@ -95,6 +95,147 @@
       </button>
     </header>
 
+
+    <h2>Billing information</h2>
+    <form class="container">
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="name"
+            id="name"
+            placeholder="Full name"
+            required
+          />
+         
+        <div class="col-md-4 mb-3">
+          <label for="adress">Adress</label>
+          <input
+            type="text"
+            class="adress"
+            id="adress"
+            placeholder="Adress"
+            required
+          />
+          
+
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="cityname">City</label>
+            <input
+              type="text"
+              class="cityname"
+              id="city-name"
+              placeholder="City"
+              required
+            />
+           
+          <div class="col-md-3 mb-3">
+            <label for="statename">State</label>
+            <input
+              type="text"
+              class="statename"
+              id="state_name"
+              placeholder="State"
+              required
+            />
+           
+          <div class="col-md-3 mb-3">
+            <label for="zipcode">Zip</label>
+            <input
+              type="text"
+              class="zipcode"
+              id="zip_code"
+              placeholder="Zip"
+              required
+            />
+          
+        <div class="col-md-3 mb-3">
+          <label for="phone">Phone Number</label>
+          <input
+            class="phonenum"
+            id="phone"
+            type="text"
+            maxlength="10"
+            pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
+            required
+            placeholder="Enter Your Mobile Number"
+          />
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <label for="email">Email address</label>
+        <input
+        for="email"
+          type="email"
+          class="email"
+          name="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+          required
+          placeholder="Enter your email adress"
+        />
+      </div>
+
+       <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+      <label class="form-check-label" for="invalidCheck3">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div> 
+
+      <div class="invoice-radio-btn">
+        <input
+          type="radio"
+          id="invoice-btn"
+          name="invoice-btn"
+          class="invoice-btn"
+        />
+        <label class="invoice-button" for="invoice-bt">Invoice</label>
+      </div>
+      <div class="card-radio-button">
+        <input
+          type="radio"
+          id="card-btn"
+          name="card-btn"
+          class="card-btn"
+        />
+        <label class="card-button" for="card-btn"
+          >Card Payment</label
+        >
+        <i class="fa-sharp fa-solid fa-credit-card"></i>
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <i class="fa-brands fa-cc-amex"></i>
+        <i class="fa-brands fa-cc-paypal"></i>
+        
+      </div>
+
+      <div class="shipping-btn">
+        <input
+          type="radio"
+          id="shipping-btn"
+          name="shipping-btn"
+          class="shipping-btn"
+          checked=""
+          disabled
+        />
+        <label class="shipping-button" for="shipping-bt">Shipping</label>
+      </div>
+      <button class="btn btn-primary" type="submit">Pay and place order</button>
+      <button class="btn btn-primary" type="submit">Cancel order</button>
+    </form>
+   
+         
+        </div>
+
+
     <footer class="footer">
       <ul class="footer__ul">
         <li>HAJ jewelry</li>
