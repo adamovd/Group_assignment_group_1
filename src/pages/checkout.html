@@ -20,11 +20,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
     />
-    
+
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
 
     <script src="../ts/checkout.ts" defer type="module"></script>
     <link rel="stylesheet" href="../scss/checkout.scss" />
@@ -103,161 +103,256 @@
       </button>
     </header>
 
+    <!--checkout-->
+    <main class="checkout-page container">
+      <article class="row g-5">
+        <h4 class="col-md-5 col-lg-4">Order Summary</h4>
 
-    <h2>Billing information</h2>
-    <form class="container">
-      <div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            class="name"
-            id="name"
-            placeholder="Full name"
-            required
-          />
-         
-        <div class="col-md-4 mb-3">
-          <label for="adress">Adress</label>
-          <input
-            type="text"
-            class="adress"
-            id="adress"
-            placeholder="Adress"
-            required
-          />
+        <section>
+          <span class="mb-6">Items total</span>
+          <span class="badge bg-primary rounded-pill mb-6">visa antal</span>
+        </section>
+
+        <section>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div>
+                <h6 class="my-0">Product name</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">12</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div>
+                <h6 class="my-0">Second product</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">8</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div>
+                <h6 class="my-0">Third item</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">5</span>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div>
+                <h6 class="my-0">Shipping</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">5</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between bg-light">
+
+              <div class="text-success">
+                <h6 class="my-0">Promo code</h6>
+                <small>EXAMPLECODE</small>
+              </div>
+              <span class="text-success">-5</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total </span>
+              <strong>20</strong>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <article>
+        <h4>Billing adress</h4>
+        <form ><div class="form-row">
+          <div class="col-md-12 ">
+            <label for="name" class="col-12 control-label fcap"> First Name</label>
+            <input
+              type="text"
+              class="name col-12"
+              id="name"
+              placeholder="First name"
+              required
+            />
+          </div>
           
-
-        <div class="form-row">
-          <div class="col-md-6 mb-3">
-            <label for="cityname">City</label>
+          <div class="col-md-12 mb-12">
+            <label for="name" class="col-12 control-label fcap"> Last Name</label>
             <input
               type="text"
-              class="cityname"
-              id="city-name"
-              placeholder="City"
+              class="name col-12 "
+              id="name"
+              placeholder="Last name"
               required
             />
-           
-          <div class="col-md-3 mb-3">
-            <label for="statename">State</label>
+          </div>
+
+          <div class="col-md-12 mb-12">
+            <label for="adress">Adress</label>
             <input
               type="text"
-              class="statename"
-              id="state_name"
-              placeholder="State"
+              class="adress col-12"
+              id="adress"
+              placeholder="Adress"
               required
             />
-           
-          <div class="col-md-3 mb-3">
-            <label for="zipcode">Zip</label>
-            <input
-              type="text"
-              class="zipcode"
-              id="zip_code"
-              placeholder="Zip"
-              required
-            />
-          
-        <div class="col-md-3 mb-3">
-          <label for="phone">Phone Number</label>
-          <input
-            class="phonenum"
-            id="phone"
-            type="text"
-            maxlength="10"
-            pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
-            required
-            placeholder="Enter Your Mobile Number"
-          />
-        </div>
-      </div>
+  
+            <div class="col-md-6 mb-6">
+                <label for="cityname">City</label>
+                <input
+                  type="text"
+                  class="cityname col-4 "
+                  id="city-name"
+                  placeholder="City"
+                  required
+                />
+            </div>
 
-      <div class="col-md-3 mb-3">
-        <label for="email">Email address</label>
-        <input
-        for="email"
-          type="email"
-          class="email"
-          name="email"
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-          required
-          placeholder="Enter your email adress"
-        />
-      </div>
+            <div class="col-md-6 mb-6">
+              <label for="zipcode">Zip</label>
+              <input
+                type="text"
+                class="zipcode col-4"
+                id="zip_code"
+                placeholder="Zip"
+                required
+              />
+            
+              </div>
+              <div class="col-md-12 mb-12">
+                <label for="phone">Phone Number</label>
+                <input
+                  class="phonenum col-12"
+                  id="phone"
+                  type="text"
+                  maxlength="10"
+                  pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
+                  required
+                  placeholder="Enter Your Mobile Number"
+                />
+              </div>
 
-       <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
-      <label class="form-check-label" for="invalidCheck3">
-        Agree to terms and conditions
-      </label>
-      <div class="invalid-feedback">
-        You must agree before submitting.
-      </div>
-    </div>
-  </div> 
-
-      <div class="invoice-radio-btn">
-        <input
-          type="radio"
-          id="invoice-btn"
-          name="invoice-btn"
-          class="invoice-btn"
-        />
-        <label class="invoice-button" for="invoice-bt">Invoice</label>
-      </div>
-      <div class="card-radio-button">
-        <input
-          type="radio"
-          id="card-btn"
-          name="card-btn"
-          class="card-btn"
-        />
-        <label class="card-button" for="card-btn"
-          >Card Payment</label
-        >
-        <i class="fa-sharp fa-solid fa-credit-card"></i>
-        <i class="fa-brands fa-cc-visa"></i>
-        <i class="fa-brands fa-cc-mastercard"></i>
-        <i class="fa-brands fa-cc-amex"></i>
-        <i class="fa-brands fa-cc-paypal"></i>
+              <div class="col-md-12 mb-12">
+                <label for="email">Email address</label>
+                <input
+                for="email"
+                  type="email"
+                  class="email col-12"
+                  name="email"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                  required
+                  placeholder="Enter your email adress"
+                />
+              </div>
         
-      </div>
+      
+    
+            
+            
+               </form>
 
-      <div class="shipping-btn">
-        <input
-          type="radio"
-          id="shipping-btn"
-          name="shipping-btn"
-          class="shipping-btn"
-          checked=""
-          disabled
-        />
-        <label class="shipping-button" for="shipping-bt">Shipping</label>
-      </div>
-      <button class="btn btn-primary" type="submit">Pay and place order</button>
-      <button class="btn btn-primary" type="submit">Cancel order</button>
-    </form>
-   
-         
-        </div>
+              <section>
+                <h4>Shipping Metod</h4>
+
+                <div class="shipping-btn">
+                  <input
+                    type="radio"
+                    id="shipping-btn"
+                    name="shipping-btn"
+                    class="shipping-btn"
+                    checked=""
+                    disabled
+                  />
+
+                  <span>Express Courier</span><br>
+                  <small>2 to 3 business days</small>
+          
+              </section>
+
+              <section><h4 class="mb-3">Payment</h4>
+
+                <div class="my-3">
+                  
+                  <div class="form-check">
+
+                    
+                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                    <label class="form-check-label" for="credit">Credit card</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="debit">Debit card</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="paypal">PayPal</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="invoice" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="invoice">Invoice</label>
+                  </div>
+                  <i class="fa-sharp fa-solid fa-credit-card"></i>
+                  <i class="fa-brands fa-cc-visa"></i>
+                  <i class="fa-brands fa-cc-mastercard"></i>
+                  <i class="fa-brands fa-cc-amex"></i>
+                  <i class="fa-brands fa-cc-paypal"></i>
+                  
+          
+                </div>
+      
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <label for="cc-name" class="form-label">Name on card</label>
+                    <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                    <small class="text-muted">Full name as displayed on card</small>
+                    <div class="invalid-feedback">
+                      Name on card is required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-6">
+                    <label for="cc-number" class="form-label">Credit card number</label>
+                    <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Credit card number is required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="cc-expiration" class="form-label">Expiration</label>
+                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Expiration date required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="cc-cvv" class="form-label">CVV</label>
+                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Security code required
+                    </div>
+                  </div>
+                </div>
+      </section>
+
+      <section>
+        <button class="btn btn-primary" type="submit">Pay and place order</button>
+        <button class="btn btn-primary" type="submit">Cancel order</button>
+  
+      </section>
+
+      </article>
 
 
-        <footer
-        class="footer navbar fixed-bottom column d-flex justify-content-center align-items-center"
-      >
-        <div class="icons">
-          <i class="bi bi-mailbox"></i>
-          <i class="bi bi-envelope"></i>
-          <i class="bi bi-telephone"></i>
-        </div>
-        <ul class="footer__ul">
-          <li>HAJ jewelry</li>
-          <li>Address: Gästrikegatan 11, 113 62 Stockholm</li>
-          <li>Email: HAJ@webbshop.se</li>
-          <li>Phone: 073-564 76 54</li>
-        </ul>
-      </footer>
+    </main>
+    <footer class="footer">
+      <ul class="footer__ul">
+        <li>HAJ jewelry</li>
+        <li>Address: Gästrikegatan 11, 113 62 Stockholm</li>
+        <li>Email: HAJ@webbshop.se</li>
+        <li>Phone: 073-564 76 54</li>
+      </ul>
+    </footer>
   </body>
 </html>
+
+
