@@ -1,8 +1,9 @@
+import { cartButton, presentCart } from "./functions/addToCart";
 import { addToCart } from "./functions/cartProducts";
 import { Product } from "./models/Product";
 import { products } from "./models/productList";
-
 window.onload = () => {
+  cartButton();
   createHTML();
 };
 
@@ -36,6 +37,7 @@ function createHTML() {
       cartProducts.push(products[i]);
       localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
       addToCart(cartProducts);
+      presentCart(cartProducts);
     });
 
     productContainer.appendChild(productImg);

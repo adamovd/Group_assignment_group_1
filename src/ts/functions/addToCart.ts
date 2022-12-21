@@ -7,21 +7,26 @@ export function addToCart(cartProducts: Product[]) {
 }
 const cartProducts: Product[] = [];
 
-let cartModalBody: HTMLDivElement = document.getElementById(
-  "modal-body"
-) as HTMLDivElement;
-
-let cartBtn: HTMLButtonElement = document.getElementById(
-  "addToCart"
-) as HTMLButtonElement;
-
-cartModalBody.innerHTML = "";
-
-cartBtn.addEventListener("click", () => {
-  presentCart(cartProducts);
-});
+export function cartButton() {
+  const modalBtn: HTMLButtonElement = document.getElementById(
+    "openCart"
+  ) as HTMLButtonElement;
+  modalBtn.addEventListener("click", () => {
+    presentCart(cartProducts);
+  });
+}
 
 export function presentCart(cartProducts: Product[]) {
+  const modal: HTMLDivElement = document.getElementById(
+    "cartModal"
+  ) as HTMLDivElement;
+
+  let cartModalBody: HTMLDivElement = document.getElementById(
+    "modal-body"
+  ) as HTMLDivElement;
+
+  modal.appendChild(cartModalBody);
+
   for (let i = 0; i < cartProducts.length; i++) {
     const cartProductName: HTMLParagraphElement = document.createElement("p");
     const cartProductPrice: HTMLParagraphElement = document.createElement("p");
