@@ -47,10 +47,10 @@ function createHTML() {
       presentCart(cartProducts);
     });
     if (productImgSecond.src !== productImg.src) {
-      productImg.addEventListener("mouseenter", () => {
+      productImgContainer.addEventListener("mouseenter", () => {
         productImg.src = products[i].secondImage || "";
       });
-      productImg.addEventListener("mouseleave", () => {
+      productImgContainer.addEventListener("mouseleave", () => {
         productImg.src = products[i].image;
       });
     }

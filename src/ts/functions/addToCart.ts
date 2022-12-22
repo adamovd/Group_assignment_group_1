@@ -1,6 +1,4 @@
 import { CartItem } from "../models/CartItem";
-import { Product } from "../models/Product";
-import { products } from "../models/productList";
 
 let cartProductsFromLS: CartItem[] = [];
 
@@ -18,8 +16,6 @@ export function cartButton() {
   modalBtn.setAttribute("data-bs-target", "#cartModal");
   cartProductsFromLS = JSON.parse(localStorage.getItem("cart") || "[]");
   modalBtn.addEventListener("click", () => {
-    console.log("Klick");
-
     presentCart(cartProductsFromLS);
   });
 }
@@ -103,11 +99,15 @@ export function presentCart(cartProducts: CartItem[]) {
   const totalAmount: HTMLParagraphElement = document.createElement("p");
   totalAmount.classList.add("totalAmount");
 
-  for (let i = 0; i < cartProducts.length; i++) {
-    sum = sum + cartProducts[i].product.price * cartProducts[i].amount;
-  }
+  if (cartProducts.length > 0) {
+    for (let i = 0; i < cartProducts.length; i++) {
+      sum = sum + cartProducts[i].product.price * cartProducts[i].amount;
+    }
 
-  totalAmount.innerHTML = "Total amount:" + sum;
+    totalAmount.innerHTML = "Total amount:" + sum;
+  } else {
+    totalAmount.innerHTML = "Your cart is empty";
+  }
   cartModalBody.appendChild(totalAmount);
 
   // function checkoutButton() {
