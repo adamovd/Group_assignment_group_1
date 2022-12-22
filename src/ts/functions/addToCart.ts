@@ -104,8 +104,11 @@ export function presentCart(cartProducts: CartItem[]) {
   let prices: number[] = [];
   const totalAmount: HTMLParagraphElement = document.createElement("p");
   totalAmount.classList.add("totalAmount");
-  totalAmount.innerHTML = "Total amount:";
-  cartModalBody.appendChild(totalAmount);
 
-  for (let i = 0; i < cartProducts.length; i++) {}
+  for (let i = 0; i < cartProducts.length; i++) {
+    sum = sum + cartProducts[i].product.price;
+  }
+
+  totalAmount.innerHTML = "Total amount:" + sum;
+  cartModalBody.appendChild(totalAmount);
 }
