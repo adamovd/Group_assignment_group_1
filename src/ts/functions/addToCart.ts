@@ -1,11 +1,11 @@
 import { Product } from "../models/Product";
+let cartProducts: Product[] = [];
 
 export function addToCart(cartProducts: Product[]) {
   cartProducts = JSON.parse(localStorage.getItem("cart") || "[]");
   console.log(cartProducts);
   presentCart(cartProducts);
 }
-const cartProducts: Product[] = [];
 
 export function cartButton() {
   const modalBtn: HTMLButtonElement = document.getElementById(
@@ -15,6 +15,7 @@ export function cartButton() {
   modalBtn.classList.add("btn");
   modalBtn.setAttribute("data-bs-toggle", "modal");
   modalBtn.setAttribute("data-bs-target", "#cartModal");
+  cartProducts = JSON.parse(localStorage.getItem("cart") || "[]");
   modalBtn.addEventListener("click", () => {
     console.log("Klick");
 
@@ -31,7 +32,6 @@ export function presentCart(cartProducts: Product[]) {
   let cartModalBody: HTMLDivElement = document.getElementById(
     "modal-body"
   ) as HTMLDivElement;
-  cartModalBody.innerHTML = "";
 
   for (let i = 0; i < cartProducts.length; i++) {
     const cartProductName: HTMLParagraphElement = document.createElement("p");
