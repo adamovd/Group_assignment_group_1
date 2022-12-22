@@ -1,22 +1,30 @@
 import { Product } from "../models/Product";
+let cartProducts: Product[] = [];
 
 export function addToCart(cartProducts: Product[]) {
   cartProducts = JSON.parse(localStorage.getItem("cart") || "[]");
   console.log(cartProducts);
   presentCart(cartProducts);
 }
-const cartProducts: Product[] = [];
 
 export function cartButton() {
   const modalBtn: HTMLButtonElement = document.getElementById(
     "openCart"
   ) as HTMLButtonElement;
+  modalBtn.type = "button";
+  modalBtn.classList.add("btn");
+  modalBtn.setAttribute("data-bs-toggle", "modal");
+  modalBtn.setAttribute("data-bs-target", "#cartModal");
+  cartProducts = JSON.parse(localStorage.getItem("cart") || "[]");
   modalBtn.addEventListener("click", () => {
+    console.log("Klick");
+
     presentCart(cartProducts);
   });
 }
 
 export function presentCart(cartProducts: Product[]) {
+  cartProducts = JSON.parse(localStorage.getItem("cart") || "[]");
   const modal: HTMLDivElement = document.getElementById(
     "cartModal"
   ) as HTMLDivElement;
@@ -24,8 +32,6 @@ export function presentCart(cartProducts: Product[]) {
   let cartModalBody: HTMLDivElement = document.getElementById(
     "modal-body"
   ) as HTMLDivElement;
-
-  modal.appendChild(cartModalBody);
 
   for (let i = 0; i < cartProducts.length; i++) {
     const cartProductName: HTMLParagraphElement = document.createElement("p");
@@ -50,10 +56,9 @@ export function presentCart(cartProducts: Product[]) {
     cartProductAdd.innerHTML = "+";
     cartProductRemove.innerHTML = "-";
 
+    cartModalBody.appendChild(cartProductImg);
     cartModalBody.appendChild(cartProductName);
     cartModalBody.appendChild(cartProductPrice);
-    cartModalBody.appendChild(cartProductImg);
-    cartModalBody.appendChild(cartProductAmount);
     cartModalBody.appendChild(cartProductAdd);
     cartModalBody.appendChild(cartProductAmount);
     cartModalBody.appendChild(cartProductRemove);

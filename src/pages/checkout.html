@@ -92,32 +92,54 @@
       <div class="d-flex justify-content-center align-items-center">
         <h1 class="align-items-center">Logo</h1>
       </div>
-
-      <button
-        type="button"
-        class="btn"
-        data-bs-toggle="modal"
-        data-bs-target="#cartModal"
-      >
+      <button id="openCart">
         <i class="bi bi-cart"></i>
       </button>
+      <div class="modal fade" id="cartModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Cart</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Continue shopping
+              </button>
+              <button type="button" class="btn btn-primary">
+                Go to checkout
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!--checkout-->
-    <main class="checkout-page container">
-      <article class="row g-5">
-        <h4 class="col-md-5 col-lg-4">Order Summary</h4>
+    <main class="checkout-page ">
+      <article class="row" >
 
         <section>
-          <span class="mb-6">Items total</span>
-          <span class="badge bg-primary rounded-pill mb-6">visa antal</span>
-        </section>
-
-        <section>
+          <p>        
+            <h4 class="col-md-5 col-lg-4 "  >Order Summary</h4>
+            <span class="mb-6">Items total</span>
+            <span class="badge bg-primary rounded-pill mb-6">Antal</span>
+          </p>
           <ul class="list-group mb-3">
             <li class="list-group-item d-flex justify-content-between lh-sm">
               <div>
                 <h6 class="my-0">Product name</h6>
+
                 <small class="text-muted">Brief description</small>
               </div>
               <span class="text-muted">12</span>
@@ -160,114 +182,114 @@
         </section>
       </article>
 
-      <article>
-        <h4>Billing adress</h4>
-        <form ><div class="form-row">
-          <div class="col-md-12 ">
-            <label for="name" class="col-12 control-label fcap"> First Name</label>
+      <article class="row p-3 m-3 ">
+        
+        <form class="form col-lg-6 p-3 border border-dark border-primary">
+          <h4 >Billing adress</h4>
+          
+          <div class=" col-xs-10 col-md-6 col-lg-6 m-3" >
+            <label for="name" class=" form-label"> First Name</label>
             <input
               type="text"
-              class="name col-12"
+              class="form-control "
               id="name"
-              placeholder="First name"
+              placeholder="First name *"
               required
             />
           </div>
           
-          <div class="col-md-12 mb-12">
-            <label for="name" class="col-12 control-label fcap"> Last Name</label>
+          <div class="col-xs-10 col-md-6 col-lg-6 m-3">
+            <label for="name" class=" form-label"> Last Name</label>
             <input
               type="text"
-              class="name col-12 "
+              class="form-control "
               id="name"
-              placeholder="Last name"
+              placeholder="Last name *"
               required
             />
           </div>
 
-          <div class="col-md-12 mb-12">
-            <label for="adress">Adress</label>
+          <div class="col-xs-10 col-md-6 col-lg-6 m-3">
+            <label for="adress" class=" form-label">Adress</label>
             <input
               type="text"
-              class="adress col-12"
+              class="form-control"
               id="adress"
-              placeholder="Adress"
+              placeholder="Adress *"
               required
             />
+            </div>
   
-            <div class="col-md-6 mb-6">
-                <label for="cityname">City</label>
+            <div class="col-xs-10 col-md-6 col-lg-6 m-3">
+              <label for="cityname" class=" form-label">City</label>
                 <input
                   type="text"
-                  class="cityname col-4 "
+                  class="form-control"
                   id="city-name"
-                  placeholder="City"
+                  placeholder="City *"
                   required
                 />
             </div>
 
-            <div class="col-md-6 mb-6">
-              <label for="zipcode">Zip</label>
+            <div class="col-xs-10 col-md-6 col-lg-6 m-3">
+              <label for="zipcode" class=" form-label">Zip</label>
               <input
                 type="text"
-                class="zipcode col-4"
+                class="form-control"
                 id="zip_code"
-                placeholder="Zip"
+                placeholder="Zip-code *"
                 required
               />
             
               </div>
-              <div class="col-md-12 mb-12">
-                <label for="phone">Phone Number</label>
+              <div class="col-xs-10 col-md-6 col-lg-6 m-3 ">
+                <label for="phone" class=" form-label">Phone Number</label>
                 <input
-                  class="phonenum col-12"
+                  class="form-control"
                   id="phone"
                   type="text"
                   maxlength="10"
                   pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
                   required
-                  placeholder="Enter Your Mobile Number"
+                  placeholder="Enter Your Mobile Number *"
                 />
               </div>
 
-              <div class="col-md-12 mb-12">
-                <label for="email">Email address</label>
+              <div class="col-xs-10 col-md-6 col-lg-6 m-3 ">
+                <label for="email" class=" form-label">Email address</label>
                 <input
                 for="email"
                   type="email"
-                  class="email col-12"
+                  class="form-control"
                   name="email"
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
                   required
-                  placeholder="Enter your email adress"
+                  placeholder="Enter your email adress *"
                 />
               </div>
-        
-      
     
-            
-            
                </form>
 
-              <section>
+        <aside class="col-xs-10 col-md-6 col-lg-6 mx-auto d-flex flex-column justify-content-center align-items-center"> 
+          <section class=" col-xs-10 col-md-6 col-lg-6 p-3 border border-dark border-primary m-6 mb-4 mt-2">
                 <h4>Shipping Metod</h4>
 
-                <div class="shipping-btn">
+                <div class="shipping-btn form-check">
                   <input
                     type="radio"
                     id="shipping-btn"
                     name="shipping-btn"
-                    class="shipping-btn"
+                    class="shipping-btn form-check-input"
                     checked=""
                     disabled
                   />
 
                   <span>Express Courier</span><br>
-                  <small>2 to 3 business days</small>
+                  <small class="text-muted">2 to 3 business days</small>
           
               </section>
 
-              <section><h4 class="mb-3">Payment</h4>
+              <section class=" col-xs-10 col-md-6 col-lg-6 border border-dark border-primary m-6 p-3"><h4 class="mb-3 ">Payment</h4>
 
                 <div class="my-3">
                   
@@ -286,7 +308,7 @@
                     <label class="form-check-label" for="paypal">PayPal</label>
                   </div>
                   <div class="form-check">
-                    <input id="invoice" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <input id="invoice" name="paymentMethod" type="radio" class="form-check-input" required  ;>
                     <label class="form-check-label" for="invoice">Invoice</label>
                   </div>
                   <i class="fa-sharp fa-solid fa-credit-card"></i>
@@ -294,11 +316,12 @@
                   <i class="fa-brands fa-cc-mastercard"></i>
                   <i class="fa-brands fa-cc-amex"></i>
                   <i class="fa-brands fa-cc-paypal"></i>
+                  <i class='fab fa-cc-amazon-pay'></i>
                   
           
                 </div>
       
-                <div class="row gy-3">
+                <div class="row gy-3 ">
                   <div class="col-md-6">
                     <label for="cc-name" class="form-label">Name on card</label>
                     <input type="text" class="form-control" id="cc-name" placeholder="" required>
@@ -309,11 +332,11 @@
                   </div>
       
                   <div class="col-md-6">
-                    <label for="cc-number" class="form-label">Credit card number</label>
+                    <label for="cc-number" class="form-label">Card number</label>
                     <input type="text" class="form-control" id="cc-number" placeholder="" required>
                     <div class="invalid-feedback">
                       Credit card number is required
-                    </div>
+                    </div> 
                   </div>
       
                   <div class="col-md-3">
@@ -334,16 +357,24 @@
                 </div>
       </section>
 
-      <section>
-        <button class="btn btn-primary" type="submit">Pay and place order</button>
-        <button class="btn btn-primary" type="submit">Cancel order</button>
+       <section class="mt-4">
+        <button  class=" btn btn-outline-secondary  " type="submit">Pay and place order</button>
+        <button class="btn btn-outline-secondary " type="submit">Return to cart</button>
   
-      </section>
+          </section>
+    </aside>
 
       </article>
 
 
+
+      
+
+
     </main>
+
+
+
     <footer class="footer">
       <ul class="footer__ul">
         <li>HAJ jewelry</li>
@@ -351,6 +382,24 @@
         <li>Email: HAJ@webbshop.se</li>
         <li>Phone: 073-564 76 54</li>
       </ul>
+
+      <ul class="social-media">
+        <li class="social-media__item">
+          <i class="bi bi-instagram social-media__icons"></i>Instagram
+        </li>
+        <li class="social-media__item">
+          <i class="bi bi-twitter social-media__icons"></i>Twitter
+        </li>
+        <li class="social-media__item">
+          <i class="bi bi-facebook social-media__icons"></i>Facebook
+        </li>
+      </ul>
+
+      
+      <p class="footer-copyright">
+        Haj © 2022 Copyright
+      </p>
+    
     </footer>
   </body>
 </html>
