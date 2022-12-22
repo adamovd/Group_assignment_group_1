@@ -41,6 +41,8 @@ export function presentCart(cartProducts: CartItem[]) {
     "modal-body"
   ) as HTMLDivElement;
 
+  cartModalBody.innerHTML = "";
+
   for (let i = 0; i < cartProducts.length; i++) {
     const cartProductUl: HTMLUListElement = document.createElement("ul");
     const cartProductLi: HTMLLIElement = document.createElement("li");
@@ -101,7 +103,6 @@ export function presentCart(cartProducts: CartItem[]) {
   }
 
   let sum = 0;
-  let prices: number[] = [];
   const totalAmount: HTMLParagraphElement = document.createElement("p");
   totalAmount.classList.add("totalAmount");
 
