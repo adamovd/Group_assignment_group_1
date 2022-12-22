@@ -1,5 +1,5 @@
 import { Product } from "../models/Product";
-let cartProducts: Product[] = [];
+let cartProductsFromLS: Product[] = [];
 
 export function addToCart(cartProducts: Product[]) {
   cartProducts = JSON.parse(localStorage.getItem("cart") || "[]");
@@ -15,16 +15,30 @@ export function cartButton() {
   modalBtn.classList.add("btn");
   modalBtn.setAttribute("data-bs-toggle", "modal");
   modalBtn.setAttribute("data-bs-target", "#cartModal");
-  cartProducts = JSON.parse(localStorage.getItem("cart") || "[]");
+  cartProductsFromLS = JSON.parse(localStorage.getItem("cart") || "[]");
   modalBtn.addEventListener("click", () => {
     console.log("Klick");
 
-    presentCart(cartProducts);
+    presentCart(cartProductsFromLS);
   });
 }
 
 export function presentCart(cartProducts: Product[]) {
-  cartProducts = JSON.parse(localStorage.getItem("cart") || "[]");
+  cartProductsFromLS = JSON.parse(localStorage.getItem("cart") || "[]");
+
+  cartProductsFromLS.map((cartProducts) => {
+    return new Product(
+      cartProducts.name,
+      cartProducts.price,
+      cartProducts.image,
+      cartProducts.type,
+      cartProducts.description,
+      cartProducts.size,
+      cartProducts.secondImage,
+      cartProducts.thirdImage
+    );
+  });
+
   const modal: HTMLDivElement = document.getElementById(
     "cartModal"
   ) as HTMLDivElement;
@@ -65,6 +79,18 @@ export function presentCart(cartProducts: Product[]) {
     cartProductAdd.innerHTML = "+";
     cartProductRemove.innerHTML = "-";
 
+    cartProductAdd.addEventListener("click", () => {
+      console.log(cartProducts[i]);
+      cartProducts[i].addItem(1);
+      localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
+      console.log(cartProducts[i].amount);
+    });
+
+    cartProductRemove.addEventListener("click", () => {
+      cartProducts[i].removeItem(1);
+      localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
+    });
+
     cartModalBody.appendChild(cartProductUl);
     cartProductUl.appendChild(cartProductLi);
     cartProductLi.appendChild(cartProductContainer);
@@ -75,4 +101,16 @@ export function presentCart(cartProducts: Product[]) {
     cartProductLi.appendChild(cartProductAmount);
     cartProductLi.appendChild(cartProductRemove);
   }
+
+  // let sum = 0;
+  // let prices: number[] = [];
+
+  // for (let i = 0; i < cartProducts.length; i++) {
+
+  // }
+
+  // const totalAmount:HTMLParagraphElement = document.createElement("p");
+  // totalAmount.classList.add("totalAmount");
+
+  // totalAmount.innerHTML = "Total amount:" +
 }
