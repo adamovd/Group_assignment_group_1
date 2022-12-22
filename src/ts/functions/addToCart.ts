@@ -34,6 +34,9 @@ export function presentCart(cartProducts: Product[]) {
   ) as HTMLDivElement;
 
   for (let i = 0; i < cartProducts.length; i++) {
+    const cartProductUl: HTMLUListElement = document.createElement("ul");
+    const cartProductLi: HTMLLIElement = document.createElement("li");
+    const cartProductContainer: HTMLDivElement = document.createElement("div");
     const cartProductName: HTMLParagraphElement = document.createElement("p");
     const cartProductPrice: HTMLParagraphElement = document.createElement("p");
     const cartProductImg: HTMLImageElement = document.createElement("img");
@@ -42,6 +45,12 @@ export function presentCart(cartProducts: Product[]) {
     const cartProductRemove: HTMLButtonElement =
       document.createElement("button");
 
+    cartProductUl.classList.add("list-group");
+    cartProductLi.classList.add("list-group-item");
+    cartProductLi.classList.add("d-flex");
+    cartProductLi.classList.add("justify-content-between");
+    cartProductLi.classList.add("lh-sm");
+    cartProductContainer.classList.add("cartproduct");
     cartProductName.classList.add("cartproduct__name");
     cartProductPrice.classList.add("cartproduct__price");
     cartProductImg.classList.add("cartproduct__img");
@@ -56,11 +65,14 @@ export function presentCart(cartProducts: Product[]) {
     cartProductAdd.innerHTML = "+";
     cartProductRemove.innerHTML = "-";
 
-    cartModalBody.appendChild(cartProductImg);
-    cartModalBody.appendChild(cartProductName);
-    cartModalBody.appendChild(cartProductPrice);
-    cartModalBody.appendChild(cartProductAdd);
-    cartModalBody.appendChild(cartProductAmount);
-    cartModalBody.appendChild(cartProductRemove);
+    cartModalBody.appendChild(cartProductUl);
+    cartProductUl.appendChild(cartProductLi);
+    cartProductLi.appendChild(cartProductContainer);
+    cartProductLi.appendChild(cartProductImg);
+    cartProductLi.appendChild(cartProductName);
+    cartProductLi.appendChild(cartProductPrice);
+    cartProductLi.appendChild(cartProductAdd);
+    cartProductLi.appendChild(cartProductAmount);
+    cartProductLi.appendChild(cartProductRemove);
   }
 }
