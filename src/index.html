@@ -90,23 +90,10 @@
       <div class="d-flex justify-content-center align-items-center">
         <h1 class="align-items-center">Logo</h1>
       </div>
-
-      <button
-        type="button"
-        class="btn"
-        data-bs-toggle="modal"
-        data-bs-target="#cartModal"
-        id="addToCart"
-      >
+      <button id="openCart">
         <i class="bi bi-cart"></i>
       </button>
-      <div
-        class="modal fade"
-        id="cartModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
+      <div class="modal fade" id="cartModal">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -118,7 +105,7 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body" id="modal-body">...</div>
+            <div class="modal-body" id="modal-body"></div>
             <div class="modal-footer">
               <button
                 type="button"

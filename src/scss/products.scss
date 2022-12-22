@@ -1,2 +1,38 @@
 @use "header";
 @use "footer";
+@use "cartmodal";
+@use "variables" as var;
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+  &__name {
+    font-family: var.$title-font;
+    font-size: 20px;
+    margin: -5px;
+  }
+
+  &__type {
+    font-family: var.$font;
+    font-size: 10px;
+  }
+
+  &__img {
+    height: 50%;
+    width: 50%;
+    position: relative;
+  }
+
+  &__price {
+    font-style: italic;
+  }
+
+  &__btn {
+    background-color: var.$popup-color;
+    border-radius: 4px;
+  }
+}
