@@ -31,7 +31,7 @@ function createHTML() {
     productPrice.innerHTML = products[i].price.toString() + "kr";
     productType.innerHTML = products[i].type;
     productImg.src = products[i].image;
-    productImgSecond.src = products[i].secondImage || "";
+    productImgSecond.src = products[i].secondImage || productImg.src;
     productImg.alt = products[i].name;
     productBtn.innerHTML = "add to cart";
 
@@ -42,7 +42,7 @@ function createHTML() {
       localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
       presentCart(cartProducts);
     });
-    if (productImgSecond.src !== "") {
+    if (productImgSecond.src !== productImg.src) {
       productImg.addEventListener("mouseenter", () => {
         productImg.src = products[i].secondImage || "";
       });
