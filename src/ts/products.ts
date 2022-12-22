@@ -11,20 +11,24 @@ const cartProducts: CartItem[] = [];
 
 function createHTML() {
   for (let i = 0; i < products.length; i++) {
-    let productContainer: HTMLDivElement = document.createElement("div");
-    let productName: HTMLParagraphElement = document.createElement("p");
-    let productPrice: HTMLParagraphElement = document.createElement("p");
-    let productType: HTMLParagraphElement = document.createElement("p");
-    let productImg: HTMLImageElement = document.createElement("img");
-    let productImgSecond: HTMLImageElement = document.createElement("img");
-    let productBtn: HTMLButtonElement = document.createElement("button");
+    const productContainer: HTMLDivElement = document.createElement("div");
+    const productImgContainer: HTMLDivElement = document.createElement("div");
+    const productName: HTMLParagraphElement = document.createElement("p");
+    const productPrice: HTMLParagraphElement = document.createElement("p");
+    const productType: HTMLParagraphElement = document.createElement("p");
+    const productImg: HTMLImageElement = document.createElement("img");
+    const productImgSecond: HTMLImageElement = document.createElement("img");
+    const productBtn: HTMLButtonElement = document.createElement("button");
 
     productContainer.classList.add("product");
+    productImgContainer.classList.add("productimgcontainer");
     productName.classList.add("product__name");
     productPrice.classList.add("product__price");
     productType.classList.add("product__type");
     productImg.classList.add("product__img");
     productImgSecond.classList.add("product__img--second");
+    productBtn.classList.add("btn");
+    productBtn.classList.add("btn-dark");
     productBtn.classList.add("product__btn");
 
     productName.innerHTML = products[i].name;
@@ -33,7 +37,7 @@ function createHTML() {
     productImg.src = products[i].image;
     productImgSecond.src = products[i].secondImage || productImg.src;
     productImg.alt = products[i].name;
-    productBtn.innerHTML = "add to cart";
+    productBtn.innerHTML = `<i class="bi bi-cart-plus-fill"></i>`;
 
     //lägg till funktion som visar varukorgen
     productBtn.addEventListener("click", () => {
@@ -51,11 +55,12 @@ function createHTML() {
       });
     }
 
-    productContainer.appendChild(productImg);
+    productContainer.appendChild(productImgContainer);
+    productImgContainer.appendChild(productImg);
+    productImgContainer.appendChild(productBtn);
     productContainer.appendChild(productType);
     productContainer.appendChild(productName);
     productContainer.appendChild(productPrice);
-    productContainer.appendChild(productBtn);
     document.body.appendChild(productContainer);
   }
 }

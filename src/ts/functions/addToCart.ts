@@ -4,11 +4,9 @@ import { products } from "../models/productList";
 
 let cartProductsFromLS: CartItem[] = [];
 
-export function addToCart(cartProducts: CartItem[]) {
-  cartProducts = JSON.parse(localStorage.getItem("cart") || "[]");
-  console.log(cartProducts);
-  presentCart(cartProducts);
-}
+const cartModalBody: HTMLDivElement = document.getElementById(
+  "modal-body"
+) as HTMLDivElement;
 
 export function cartButton() {
   const modalBtn: HTMLButtonElement = document.getElementById(
@@ -32,14 +30,6 @@ export function presentCart(cartProducts: CartItem[]) {
   cartProducts = cartProductsFromLS.map((cartProducts) => {
     return new CartItem(cartProducts.product, cartProducts.amount);
   });
-
-  const modal: HTMLDivElement = document.getElementById(
-    "cartModal"
-  ) as HTMLDivElement;
-
-  let cartModalBody: HTMLDivElement = document.getElementById(
-    "modal-body"
-  ) as HTMLDivElement;
 
   cartModalBody.innerHTML = "";
 
@@ -66,7 +56,11 @@ export function presentCart(cartProducts: CartItem[]) {
     cartProductImg.classList.add("cartproduct__img");
     cartProductAmount.classList.add("cartproduct__amount");
     cartProductAdd.classList.add("cartproduct__add");
+    cartProductAdd.classList.add("btn");
+    cartProductAdd.classList.add("btn-dark");
     cartProductRemove.classList.add("cartproduct__remove");
+    cartProductRemove.classList.add("btn");
+    cartProductRemove.classList.add("btn-dark");
 
     cartProductName.innerHTML = cartProducts[i].product.name;
     cartProductPrice.innerHTML = cartProducts[i].product.price.toString();
@@ -86,6 +80,9 @@ export function presentCart(cartProducts: CartItem[]) {
     cartProductRemove.addEventListener("click", () => {
       console.log(cartProducts[i]);
       cartProducts[i].removeItem(1);
+      if (cartProducts[i].amount < 1) {
+        cartProducts.splice(i, 1);
+      }
       localStorage.setItem("cart", JSON.stringify(cartProducts) || "[]");
       presentCart(cartProducts);
       console.log(cartProducts[i].amount);
@@ -97,9 +94,9 @@ export function presentCart(cartProducts: CartItem[]) {
     cartProductLi.appendChild(cartProductImg);
     cartProductLi.appendChild(cartProductName);
     cartProductLi.appendChild(cartProductPrice);
-    cartProductLi.appendChild(cartProductAdd);
-    cartProductLi.appendChild(cartProductAmount);
     cartProductLi.appendChild(cartProductRemove);
+    cartProductLi.appendChild(cartProductAmount);
+    cartProductLi.appendChild(cartProductAdd);
   }
 
   let sum = 0;
