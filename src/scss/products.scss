@@ -26,8 +26,13 @@
     width: 50%;
   }
 
+  &__img--second {
+    height: 50%;
+    width: 50%;
+  }
+
   &__price {
-    font-style: italic;
+    font-family: var.$font;
   }
 
   &__btn {
