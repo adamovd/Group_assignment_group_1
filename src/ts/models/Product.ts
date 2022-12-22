@@ -9,10 +9,4 @@ export class Product {
     public secondImage?: string,
     public thirdImage?: string
   ) {}
-  // addItem(add: number) {
-  //   this.amount += add;
-  // }
-  // removeItem(remove: number) {
-  //   this.amount -= remove;
-  // }
 }

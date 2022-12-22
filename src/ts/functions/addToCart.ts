@@ -100,14 +100,12 @@ export function presentCart(cartProducts: CartItem[]) {
     cartProductLi.appendChild(cartProductRemove);
   }
 
-  // let sum = 0;
-  // let prices: number[] = [];
+  let sum = 0;
+  let prices: number[] = [];
+  const totalAmount: HTMLParagraphElement = document.createElement("p");
+  totalAmount.classList.add("totalAmount");
+  totalAmount.innerHTML = "Total amount:";
+  cartModalBody.appendChild(totalAmount);
 
-  // for (let i = 0; i < cartProducts.length; i++) {
-
-  // }
-
-  //  const totalAmount:HTMLParagraphElement = document.createElement("p");
-  // totalAmount.classList.add("totalAmount");
-  // totalAmount.innerHTML = "Total amount:" +
+  for (let i = 0; i < cartProducts.length; i++) {}
 }
