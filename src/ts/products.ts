@@ -1,13 +1,13 @@
 import { cartButton, presentCart } from "./functions/addToCart";
 import { addToCart } from "./functions/cartProducts";
-import { Product } from "./models/Product";
+import { CartItem } from "./models/CartItem";
 import { products } from "./models/productList";
 window.onload = () => {
   cartButton();
   createHTML();
 };
 
-const cartProducts: Product[] = [];
+const cartProducts: CartItem[] = [];
 
 function createHTML() {
   for (let i = 0; i < products.length; i++) {
@@ -34,9 +34,9 @@ function createHTML() {
 
     //lägg till funktion som visar varukorgen
     productBtn.addEventListener("click", () => {
-      cartProducts.push(products[i]);
+      const cartProduct: CartItem = new CartItem(products[i]);
+      cartProducts.push(cartProduct);
       localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
-      addToCart(cartProducts);
       presentCart(cartProducts);
     });
 

@@ -1,7 +1,9 @@
+import { CartItem } from "../models/CartItem";
 import { Product } from "../models/Product";
-let cartProductsFromLS: Product[] = [];
+import { products } from "../models/productList";
+let cartProductsFromLS: CartItem[] = [];
 
-export function addToCart(cartProducts: Product[]) {
+export function addToCart(cartProducts: CartItem[]) {
   cartProducts = JSON.parse(localStorage.getItem("cart") || "[]");
   console.log(cartProducts);
   presentCart(cartProducts);
@@ -23,20 +25,11 @@ export function cartButton() {
   });
 }
 
-export function presentCart(cartProducts: Product[]) {
+export function presentCart(cartProducts: CartItem[]) {
   cartProductsFromLS = JSON.parse(localStorage.getItem("cart") || "[]");
 
   cartProductsFromLS.map((cartProducts) => {
-    return new Product(
-      cartProducts.name,
-      cartProducts.price,
-      cartProducts.image,
-      cartProducts.type,
-      cartProducts.description,
-      cartProducts.size,
-      cartProducts.secondImage,
-      cartProducts.thirdImage
-    );
+    return new CartItem(cartProducts.product);
   });
 
   const modal: HTMLDivElement = document.getElementById(
@@ -72,9 +65,9 @@ export function presentCart(cartProducts: Product[]) {
     cartProductAdd.classList.add("cartproduct__add");
     cartProductRemove.classList.add("cartproduct__remove");
 
-    cartProductName.innerHTML = cartProducts[i].name;
-    cartProductPrice.innerHTML = cartProducts[i].price.toString();
-    cartProductImg.src = cartProducts[i].image;
+    cartProductName.innerHTML = cartProducts[i].product.name;
+    cartProductPrice.innerHTML = cartProducts[i].product.price.toString();
+    cartProductImg.src = cartProducts[i].product.image;
     cartProductAmount.innerHTML = cartProducts[i].amount.toString();
     cartProductAdd.innerHTML = "+";
     cartProductRemove.innerHTML = "-";
