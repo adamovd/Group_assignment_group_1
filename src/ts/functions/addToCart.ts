@@ -29,7 +29,7 @@ export function cartButton() {
 export function presentCart(cartProducts: CartItem[]) {
   cartProductsFromLS = JSON.parse(localStorage.getItem("cart") || "[]");
 
-  cartProductsFromLS.map((cartProducts) => {
+  cartProducts = cartProductsFromLS.map((cartProducts) => {
     return new CartItem(cartProducts.product, cartProducts.amount);
   });
 
@@ -107,9 +107,16 @@ export function presentCart(cartProducts: CartItem[]) {
   totalAmount.classList.add("totalAmount");
 
   for (let i = 0; i < cartProducts.length; i++) {
-    sum = sum + cartProducts[i].product.price;
+    sum = sum + cartProducts[i].product.price * cartProducts[i].amount;
   }
 
   totalAmount.innerHTML = "Total amount:" + sum;
   cartModalBody.appendChild(totalAmount);
+
+  // function checkoutButton() {
+  //   const checkoutBtn: HTMLButtonElement = document.getElementById(
+  //     "checkout-btn"
+  //   ) as HTMLButtonElement;
+  //   checkoutBtn.addEventListener("click", () => {});
+  // }
 }
