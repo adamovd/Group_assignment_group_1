@@ -77,6 +77,7 @@ export function presentCart(cartProducts: CartItem[]) {
       console.log(cartProducts[i]);
       cartProducts[i].addItem(1);
       localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
+      presentCart(cartProducts);
       console.log(cartProducts[i].amount);
     });
 
@@ -84,6 +85,7 @@ export function presentCart(cartProducts: CartItem[]) {
       console.log(cartProducts[i]);
       cartProducts[i].removeItem(1);
       localStorage.setItem("cart", JSON.stringify(cartProducts) || "[]");
+      presentCart(cartProducts);
       console.log(cartProducts[i].amount);
     });
 
@@ -105,8 +107,7 @@ export function presentCart(cartProducts: CartItem[]) {
 
   // }
 
-  // const totalAmount:HTMLParagraphElement = document.createElement("p");
+  //  const totalAmount:HTMLParagraphElement = document.createElement("p");
   // totalAmount.classList.add("totalAmount");
-
   // totalAmount.innerHTML = "Total amount:" +
 }
