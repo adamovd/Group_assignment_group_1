@@ -11,11 +11,13 @@
   margin-top: 10px;
 
   &__name {
+    font-family: var.$title-font;
     font-size: 20px;
     margin: -5px;
   }
 
   &__type {
+    font-family: var.$font;
     font-size: 10px;
   }
 

@@ -31,6 +31,7 @@ export function presentCart(cartProducts: Product[]) {
   let cartModalBody: HTMLDivElement = document.getElementById(
     "modal-body"
   ) as HTMLDivElement;
+  cartModalBody.innerHTML = "";
 
   for (let i = 0; i < cartProducts.length; i++) {
     const cartProductName: HTMLParagraphElement = document.createElement("p");
@@ -55,10 +56,9 @@ export function presentCart(cartProducts: Product[]) {
     cartProductAdd.innerHTML = "+";
     cartProductRemove.innerHTML = "-";
 
+    cartModalBody.appendChild(cartProductImg);
     cartModalBody.appendChild(cartProductName);
     cartModalBody.appendChild(cartProductPrice);
-    cartModalBody.appendChild(cartProductImg);
-    cartModalBody.appendChild(cartProductAmount);
     cartModalBody.appendChild(cartProductAdd);
     cartModalBody.appendChild(cartProductAmount);
     cartModalBody.appendChild(cartProductRemove);
