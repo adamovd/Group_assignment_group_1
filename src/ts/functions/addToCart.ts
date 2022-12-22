@@ -1,6 +1,7 @@
 import { CartItem } from "../models/CartItem";
 import { Product } from "../models/Product";
 import { products } from "../models/productList";
+
 let cartProductsFromLS: CartItem[] = [];
 
 export function addToCart(cartProducts: CartItem[]) {
@@ -29,7 +30,7 @@ export function presentCart(cartProducts: CartItem[]) {
   cartProductsFromLS = JSON.parse(localStorage.getItem("cart") || "[]");
 
   cartProductsFromLS.map((cartProducts) => {
-    return new CartItem(cartProducts.product);
+    return new CartItem(cartProducts.product, cartProducts.amount);
   });
 
   const modal: HTMLDivElement = document.getElementById(
@@ -80,8 +81,10 @@ export function presentCart(cartProducts: CartItem[]) {
     });
 
     cartProductRemove.addEventListener("click", () => {
+      console.log(cartProducts[i]);
       cartProducts[i].removeItem(1);
-      localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
+      localStorage.setItem("cart", JSON.stringify(cartProducts) || "[]");
+      console.log(cartProducts[i].amount);
     });
 
     cartModalBody.appendChild(cartProductUl);

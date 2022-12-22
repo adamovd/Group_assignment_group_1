@@ -1,9 +1,8 @@
 import { Product } from "./Product";
 
 export class CartItem {
-  amount: number;
-  constructor(public product: Product) {
-    this.amount = 1;
+  constructor(public product: Product, public amount: number) {
+    this.amount = amount;
   }
   addItem(add: number) {
     this.amount += add;

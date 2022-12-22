@@ -34,7 +34,7 @@ function createHTML() {
 
     //lägg till funktion som visar varukorgen
     productBtn.addEventListener("click", () => {
-      const cartProduct: CartItem = new CartItem(products[i]);
+      const cartProduct: CartItem = new CartItem(products[i], 1);
       cartProducts.push(cartProduct);
       localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
       presentCart(cartProducts);
