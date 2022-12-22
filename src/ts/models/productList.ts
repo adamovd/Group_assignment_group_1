@@ -7,16 +7,8 @@ export let products: Product[] = [
     "https://images.pexels.com/photos/14466168/pexels-photo-14466168.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Ring",
     "A symbol of love and commitment, our beautiful diamond and gold ring speaks elegantly of the love you have for one another. Crafted from 14k gold, this sparkling piece is the perfect token of your love. Delicate gold ring with a delicate but stunning diamond band.",
-    "M"
-  ),
-
-  new Product(
-    "Resplendent",
-    899,
-    "https://images.pexels.com/photos/14466167/pexels-photo-14466167.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "Ring",
-    "This stunning gold ring is a perfect piece for any occasion. With a diamond band and a large, yet stunning diamond in the center, this ring will make an amazing addition to any jewelry collection. It can be used as an engagement ring or just as a nice present to your significant other.",
-    "M"
+    "M",
+    "https://images.pexels.com/photos/14466167/pexels-photo-14466167.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
   ),
 
   new Product(
@@ -25,51 +17,18 @@ export let products: Product[] = [
     "https://images.pexels.com/photos/14466164/pexels-photo-14466164.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Ring",
     "If you're looking for the perfect gift for your loved one, consider a golden ring. This ring is made of pure, natural gold and features a diamond that is cut in an elegant way. The delicate platinum band lets the diamond shine through beautifully.",
-    "M"
+    "M",
+    "https://images.pexels.com/photos/14466162/pexels-photo-14466162.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
   ),
 
-  new Product(
-    "Elixir",
-    899,
-    "https://images.pexels.com/photos/14466162/pexels-photo-14466162.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "Ring",
-    "Our rose gold ring with diamond is the perfect way to add a touch of luxury to your look. Featuring a beautiful solitaire diamond, this ring is perfect for special occasions or everyday wear. Made with the finest quality materials, our rose gold ring with diamond is sure to impress.",
-    "M"
-  ),
   new Product(
     "Chatoyant",
     899,
     "https://images.pexels.com/photos/14466158/pexels-photo-14466158.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Ring",
     "This ring is made of high quality silver and encrusted with real diamonds. The design is glamorous and eye-catching, perfect for any occasion.This diamond ring is crafted from sterling silver and features a cluster of shimmering diamonds. The unique design of this ring is sure to stand out from the crowd. The diamonds are cut to perfection and catch the light beautifully. This ring is the perfect way to add a touch of glamour to any outfit.",
-    "M"
-  ),
-
-  new Product(
-    "Ethereal",
-    899,
-    "https://images.pexels.com/photos/14466157/pexels-photo-14466157.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "Ring",
-    "This beautiful ring is the perfect way to add a little sparkle to your look. Featuring a silver band with white diamonds on each side, and a large diamond in the center, this ring will make anyone feel special when they wear it.This diamond and silver ring is the perfect accessory for your every day. Its clean lines and beautiful design make it a go-to piece you never want to take off.",
-    "M"
-  ),
-
-  new Product(
-    "Opulence",
-    899,
-    "https://images.pexels.com/photos/14111401/pexels-photo-14111401.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "Necklace",
-    "This is the best necklace, crafted with the utmost care. It's perfect for all occasions and all genders. Great for gifts or as a self-gift.",
-    "M"
-  ),
-
-  new Product(
-    "Quintessence",
-    899,
-    "https://images.pexels.com/photos/14111400/pexels-photo-14111400.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "Necklace",
-    "This 14k yellow gold chain necklace is a must-have accessory in your accessories collection. The curb style chain is perfect for everyday wear, and will keep you looking chic in any occasion. Our classic curb style necklace has been a best seller since we launched the line. Its versatile design adds sophistication to both casual and evening looks.",
-    "M"
+    "M",
+    "https://images.pexels.com/photos/14466157/pexels-photo-14466157.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
   ),
 
   new Product(
@@ -78,25 +37,9 @@ export let products: Product[] = [
     "https://images.pexels.com/photos/14111399/pexels-photo-14111399.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Necklace",
     "This beautiful chain necklace is handcrafted and made of 24K gold. Its curb style design highlights your best assets, while adding a touch of sophistication to any outfit.",
-    "M"
-  ),
-
-  new Product(
-    "Sumptuous",
-    899,
-    "https://images.pexels.com/photos/14111397/pexels-photo-14111397.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "Necklace",
-    "Quality doesn't always have to come with a hefty price. Made from the finest metals and materials, you can rest assured that this necklace will last for years to come. A simple rosegold chain necklace will never go out of style.",
-    "M"
-  ),
-
-  new Product(
-    "Sonder",
-    899,
-    "https://images.pexels.com/photos/14111396/pexels-photo-14111396.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "Necklace",
-    "This rosegold chain is perfect for accessorizing. It has a nice weight to it and is adjustable, so you can make it as long or as short as you want. A fabulous addition to your collection of necklaces!",
-    "M"
+    "M",
+    "https://images.pexels.com/photos/14111401/pexels-photo-14111401.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "https://images.pexels.com/photos/14111400/pexels-photo-14111400.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
   ),
 
   new Product(
@@ -105,32 +48,20 @@ export let products: Product[] = [
     "https://images.pexels.com/photos/14111395/pexels-photo-14111395.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Necklace",
     "The rosegold chain is a great accessory for any outfit. This piece signifies elegance and timeless style.The rosegold color is perfect for all skin tones and will add a subtle sparkle to your outfit. This necklace is an elegant addition to your jewelry collection.",
-    "M"
+    "M",
+    "https://images.pexels.com/photos/14111397/pexels-photo-14111397.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "https://images.pexels.com/photos/14111396/pexels-photo-14111396.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
   ),
 
-  new Product(
-    "Solivagant",
-    899,
-    "https://images.pexels.com/photos/14111394/pexels-photo-14111394.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "Necklace",
-    "This delightful chain necklace features a wide square style made in golden metal. The necklace is sleek and modern, with enough edge to add a glamourous touch to any outfit.",
-    "M"
-  ),
-  new Product(
-    "Ataraxia",
-    899,
-    "https://images.pexels.com/photos/14111393/pexels-photo-14111393.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    "Necklace",
-    "You'll look effortlessly chic in this 24 golden chain necklace. The wide square style is finished with a lobster clasp and is perfect for layering or wearing solo.",
-    "M"
-  ),
   new Product(
     "Irenic",
     899,
     "https://images.pexels.com/photos/14111392/pexels-photo-14111392.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Necklace",
     "Reflecting heritage and style, this wide golden chain necklace will add effortless glamour to any outfit. The epitome of sophistication, statement-making and alluring, this golden chain necklace will lend your outfits a touch of exuberant glamour and style.",
-    "M"
+    "M",
+    "https://images.pexels.com/photos/14111394/pexels-photo-14111394.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "https://images.pexels.com/photos/14111393/pexels-photo-14111393.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
   ),
 
   new Product(
