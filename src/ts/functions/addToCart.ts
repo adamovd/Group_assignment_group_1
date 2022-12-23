@@ -110,10 +110,15 @@ export function presentCart(cartProducts: CartItem[]) {
   }
   cartModalBody.appendChild(totalAmount);
 
-  // function checkoutButton() {
-  //   const checkoutBtn: HTMLButtonElement = document.getElementById(
-  //     "checkout-btn"
-  //   ) as HTMLButtonElement;
-  //   checkoutBtn.addEventListener("click", () => {});
-  // }
+  const checkoutBtn: HTMLButtonElement = document.getElementById(
+    "btn-checkout"
+  ) as HTMLButtonElement;
+
+  checkoutBtn.addEventListener("click", () => {
+    checkOutClick();
+  });
+}
+
+export function checkOutClick() {
+  window.location.href = "http://localhost:1234/pages/checkout.html";
 }
