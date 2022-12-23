@@ -43,6 +43,17 @@ function createHTML() {
     productBtn.addEventListener("click", () => {
       const cartProduct: CartItem = new CartItem(products[i], 1);
       cartProducts.push(cartProduct);
+      // if (cartProducts.length === 0) {
+      //   cartProducts.push(cartProduct);
+      //   localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
+      //   presentCart(cartProducts);
+      // }
+      // if (cartProduct.product.id === cartProducts[i].product.id) {
+      //   cartProducts[i].addItem(1);
+      // } else {
+      //   localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
+      //   presentCart(cartProducts);
+      // }
       localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
       presentCart(cartProducts);
     });

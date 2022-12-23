@@ -1,9 +1,58 @@
 @use "variables" as var;
 
-.cartproduct__name {
-  font-size: 1rem;
+.list-group {
+  margin: 0;
+  padding: 0;
 }
 
-.cartproduct__img {
-  width: 50px;
+.cartproduct {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &__img {
+    width: 15%;
+    margin-right: 10px;
+  }
+
+  &__name {
+    width: 40%;
+    font-family: var.$title-font;
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+
+  &__price {
+    width: 10%;
+    font-family: var.$font;
+    margin-right: 30px;
+  }
+
+  &__amountcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 30%;
+  }
+
+  &__amount {
+    width: 10%;
+    font-family: var.$font;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  &__add,
+  &__remove {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+  }
+}
+
+.totalAmount {
+  font-family: var.$font;
+  padding: 10px;
 }
