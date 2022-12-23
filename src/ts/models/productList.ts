@@ -2,6 +2,7 @@ import { Product } from "./Product";
 
 export let products: Product[] = [
   new Product(
+    "1",
     "Bespoken",
     899,
     "https://images.pexels.com/photos/14466168/pexels-photo-14466168.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -12,6 +13,7 @@ export let products: Product[] = [
   ),
 
   new Product(
+    "2",
     "Rococo",
     899,
     "https://images.pexels.com/photos/14466164/pexels-photo-14466164.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -22,6 +24,7 @@ export let products: Product[] = [
   ),
 
   new Product(
+    "3",
     "Chatoyant",
     899,
     "https://images.pexels.com/photos/14466158/pexels-photo-14466158.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -32,6 +35,7 @@ export let products: Product[] = [
   ),
 
   new Product(
+    "4",
     "Zenith",
     899,
     "https://images.pexels.com/photos/14111399/pexels-photo-14111399.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -43,6 +47,7 @@ export let products: Product[] = [
   ),
 
   new Product(
+    "5",
     "Redamancy",
     899,
     "https://images.pexels.com/photos/14111395/pexels-photo-14111395.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -54,6 +59,25 @@ export let products: Product[] = [
   ),
 
   new Product(
+    "6",
+    "Solivagant",
+    899,
+    "https://images.pexels.com/photos/14111394/pexels-photo-14111394.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "Necklace",
+    "This delightful chain necklace features a wide square style made in golden metal. The necklace is sleek and modern, with enough edge to add a glamourous touch to any outfit.",
+    "M"
+  ),
+  new Product(
+    "7",
+    "Ataraxia",
+    899,
+    "https://images.pexels.com/photos/14111393/pexels-photo-14111393.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "Necklace",
+    "You'll look effortlessly chic in this 24 golden chain necklace. The wide square style is finished with a lobster clasp and is perfect for layering or wearing solo.",
+    "M"
+  ),
+  new Product(
+    "8",
     "Irenic",
     899,
     "https://images.pexels.com/photos/14111392/pexels-photo-14111392.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -65,6 +89,7 @@ export let products: Product[] = [
   ),
 
   new Product(
+    "9",
     "Apricity",
     899,
     "https://images.pexels.com/photos/10983782/pexels-photo-10983782.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -74,6 +99,7 @@ export let products: Product[] = [
   ),
 
   new Product(
+    "10",
     "Lucid",
     899,
     "https://images.pexels.com/photos/10983783/pexels-photo-10983783.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -82,6 +108,7 @@ export let products: Product[] = [
     "M"
   ),
   new Product(
+    "11",
     "Serenity",
     899,
     "https://images.pexels.com/photos/10983785/pexels-photo-10983785.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -91,6 +118,7 @@ export let products: Product[] = [
   ),
 
   new Product(
+    "12",
     "Apotelesma",
     899,
     "https://images.pexels.com/photos/10983778/pexels-photo-10983778.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -100,6 +128,7 @@ export let products: Product[] = [
   ),
 
   new Product(
+    "13",
     "Esmaralda",
     899,
     "https://images.pexels.com/photos/10983780/pexels-photo-10983780.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -109,6 +138,7 @@ export let products: Product[] = [
   ),
 
   new Product(
+    "14",
     "Granular",
     899,
     "https://images.pexels.com/photos/10983781/pexels-photo-10983781.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -117,6 +147,7 @@ export let products: Product[] = [
     "M"
   ),
   new Product(
+    "15",
     "Talisman",
     899,
     "https://images.pexels.com/photos/10976653/pexels-photo-10976653.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -126,6 +157,7 @@ export let products: Product[] = [
   ),
 
   new Product(
+    "16",
     "Ineffable",
     899,
     "https://images.pexels.com/photos/10976654/pexels-photo-10976654.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -135,6 +167,7 @@ export let products: Product[] = [
   ),
 
   new Product(
+    "17",
     "Bucolic",
     899,
     "https://images.pexels.com/photos/10976655/pexels-photo-10976655.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -144,6 +177,7 @@ export let products: Product[] = [
   ),
 
   new Product(
+    "18",
     "Sempiternal",
     899,
     "https://images.pexels.com/photos/8891954/pexels-photo-8891954.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -153,6 +187,7 @@ export let products: Product[] = [
   ),
 
   new Product(
+    "19",
     "Opaline",
     899,
     "https://images.pexels.com/photos/8891956/pexels-photo-8891956.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -162,6 +197,7 @@ export let products: Product[] = [
   ),
 
   new Product(
+    "20",
     "Petrichor",
     899,
     "https://images.pexels.com/photos/8891950/pexels-photo-8891950.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -170,6 +206,7 @@ export let products: Product[] = [
     "M"
   ),
   new Product(
+    "21",
     "Confluence",
     899,
     "https://images.pexels.com/photos/8891959/pexels-photo-8891959.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
