@@ -26,6 +26,7 @@ html {
 
 a {
   text-decoration: none;
+  color: var(--black);
 }
 li {
   list-style: none;
@@ -96,12 +97,15 @@ header .navbar {
   top: 100%;
   left: -120%;
   width: 100%;
-  background: #eee;
+  background: #f9f5f0;
   border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
 }
 
 header .navbar.active {
   left: 0;
+  display: inline;
+  top: 20%;
+  z-index: 100;
 }
 
 header .navbar a {
@@ -121,7 +125,8 @@ header .icons a {
   margin-left: 1.5rem;
 }
 
-header .icons a:hover {
+header .icons a:hover,
+.navbar.active a:hover {
   color: var(--orange);
 }
 
