@@ -1,6 +1,8 @@
 import { cartButton, presentCart } from "./functions/addToCart";
 import { CartItem } from "./models/CartItem";
+import { Product } from "./models/Product";
 import { products } from "./models/productList";
+
 window.onload = () => {
   cartButton();
   createHTML();
