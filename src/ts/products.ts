@@ -5,9 +5,36 @@ import { products } from "./models/productList";
 window.onload = () => {
   cartButton();
   createHTML();
+  sortRing();
 };
 
 const cartProducts: CartItem[] = [];
+
+let ringButton = document.createElement("button");
+ringButton.addEventListener("click", () => {
+  sortRing();
+  createHTML();
+});
+
+ringButton.innerHTML = "Ring";
+
+document.body.appendChild(ringButton);
+
+function sortRing() {
+  let sortItem = products.filter(function (products) {
+    return products.type == "Ring";
+  });
+
+  console.log(sortItem);
+}
+
+// function sortItems() {
+//   for (let i = 0; i < products.length; i++) {
+//     if (products[i].type === "Ring") {
+//       createHTML();
+//     }
+//   }
+// }
 
 function createHTML() {
   for (let i = 0; i < products.length; i++) {
