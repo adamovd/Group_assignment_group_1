@@ -20,6 +20,8 @@ export function displayProduct(listOfProducts: Product[]) {
   for (let i = 0; i < products.length; i++) {
     if (id === products[i].id) {
       const productContainer: HTMLDivElement = document.createElement("div");
+      const productInfoContainer: HTMLDivElement =
+        document.createElement("div");
       const productImgContainer: HTMLDivElement = document.getElementById(
         "carouselExampleControls"
       ) as HTMLDivElement;
@@ -51,7 +53,8 @@ export function displayProduct(listOfProducts: Product[]) {
       const productSizeThird: HTMLButtonElement =
         document.createElement("button");
 
-      productContainer.classList.add("detailed");
+      productContainer.classList.add("product");
+      productInfoContainer.classList.add("detailed");
       productImgCarousel.classList.add("carousel-inner");
       firstCarouselItem.classList.add("carousel-item");
       firstCarouselItem.classList.add("active");
@@ -136,12 +139,12 @@ export function displayProduct(listOfProducts: Product[]) {
       thirdCarouselItem.appendChild(productThirdImg);
       carouselBtnPrev.appendChild(carouselPrevIcon);
       carouselBtnNext.appendChild(carouselNextIcon);
-      productContainer.appendChild(productType);
-      productContainer.appendChild(productName);
-      productContainer.appendChild(productPrice);
-      productContainer.appendChild(productSizeContainer);
-      productContainer.appendChild(productCartBtn);
-      productContainer.appendChild(productDescribe);
+      productInfoContainer.appendChild(productType);
+      productInfoContainer.appendChild(productName);
+      productInfoContainer.appendChild(productPrice);
+      productInfoContainer.appendChild(productSizeContainer);
+      productInfoContainer.appendChild(productCartBtn);
+      productInfoContainer.appendChild(productDescribe);
       if (listOfProducts[i].type === "Earring") {
         productSizeContainer.appendChild(productSizeFirst);
       } else {
@@ -149,7 +152,8 @@ export function displayProduct(listOfProducts: Product[]) {
         productSizeContainer.appendChild(productSizeSecond);
         productSizeContainer.appendChild(productSizeThird);
       }
-      document.body.appendChild(productImgContainer);
+      productContainer.appendChild(productImgContainer);
+      productContainer.appendChild(productInfoContainer);
       document.body.appendChild(productContainer);
     }
   }

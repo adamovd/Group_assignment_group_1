@@ -11,6 +11,9 @@ window.onload = () => {
 
 const cartProducts: CartItem[] = [];
 
+const allProducts: HTMLDivElement = document.createElement("div");
+allProducts.classList.add("products");
+
 let ringButton = document.createElement("button");
 ringButton.addEventListener("click", () => {
   sortRing();
@@ -125,12 +128,13 @@ function createHTML() {
       });
     }
 
+    allProducts.appendChild(productContainer);
     productContainer.appendChild(productImgContainer);
     productImgContainer.appendChild(productImg);
     productImgContainer.appendChild(productBtn);
     productContainer.appendChild(productType);
     productContainer.appendChild(productName);
     productContainer.appendChild(productPrice);
-    document.body.appendChild(productContainer);
+    document.body.appendChild(allProducts);
   }
 }

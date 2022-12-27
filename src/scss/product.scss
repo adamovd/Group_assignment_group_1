@@ -2,12 +2,52 @@
 @use "footer";
 @use "cartmodal";
 @use "variables" as var;
+@use "mixins";
 
+.product {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  @include mixins.for-size(tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.imgcontainer {
+  width: 100%;
+
+  @include mixins.for-size(tablet) {
+    width: 50%;
+  }
+}
+
+.carousel-item {
+  width: 100%;
+  @include mixins.for-size(tablet) {
+    border: 100px solid var.$popup-color;
+  }
+}
 .detailed {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px;
+
+  @include mixins.for-size(tablet) {
+    justify-content: center;
+    width: 50%;
+  }
+
+  &__img {
+    width: 100%;
+
+    @include mixins.for-size(tablet) {
+      width: 50%;
+    }
+  }
 
   &__type {
     font-family: var.$font;
@@ -33,5 +73,9 @@
     font-family: var.$font;
     text-align: center;
     margin-top: 10px;
+
+    @include mixins.for-size(tablet) {
+      padding: 20px;
+    }
   }
 }
