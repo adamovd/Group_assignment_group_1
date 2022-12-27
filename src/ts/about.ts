@@ -18,7 +18,7 @@ export function createHeader() {
 
   <a href="#" aria-label="logo" class="logo">Shop <i class="fas fa-gem"></i></a>
 
-  <nav class="navbar id="hambmenu">
+  <nav class="navbar">
     <a href="#home">home</a>
     <a href="#products">Products</a>
     <a href="#about">About Us</a>
@@ -38,6 +38,19 @@ export function createHeader() {
 
   document.body.appendChild(headerWrapper);
   headerWrapper.appendChild(navigationWrapper);
+
+  let menu: HTMLDivElement = document.querySelector(
+    "#menu-bar"
+  ) as HTMLDivElement;
+  let navbar: HTMLDivElement = document.querySelector(
+    ".navbar"
+  ) as HTMLDivElement;
+
+  menu.addEventListener("click", () => {
+    menu.classList.toggle("fa-times");
+
+    navbar.classList.toggle("active");
+  });
 }
 
 //  <div id="menu-bar" class="fas fa-bars "></div>
@@ -235,5 +248,3 @@ window.addEventListener("load", () => {
   createPromotion();
   createFooter();
 });
-
-window.addEventListener("DOMContentLoaded", (event) => {});
