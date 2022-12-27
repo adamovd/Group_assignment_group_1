@@ -1,3 +1,407 @@
 @use "header";
 @use "footer";
 @use "cartmodal";
+
+:root {
+  --black: black;
+  --orange: #e7cab3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+//////
+///
+section {
+  padding: 2rem 9%;
+}
+
+.heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: var(--black);
+  padding: 1rem;
+}
+
+.heading span {
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--black);
+  font-weight: bolder;
+  font-size: 1.7rem;
+  color: var(--black);
+  cursor: pointer;
+  background: #fff;
+  padding: 0.8rem 3rem;
+}
+
+.btn:hover {
+  background: var(--orange);
+  color: #fff;
+}
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #f9f5f0;
+  //padding: 1rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+  // position: fixed;
+}
+
+header .logo {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+/* header .navbar {
+  display: none;
+} */
+
+header .navbar {
+  position: absolute;
+  top: 100%;
+  left: -120%;
+  width: 100%;
+  background: #eee;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+header .navbar.active {
+  left: 0;
+}
+
+header .navbar a {
+  font-size: 2rem;
+  background: #fff;
+  border: 0.1rem solid var(--black);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  display: block;
+  text-align: center;
+}
+
+header .icons a {
+  font-size: 2.5rem;
+  color: var(--black);
+  margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+  color: var(--orange);
+}
+
+#menu-bar {
+  font-size: 2.5rem;
+  padding: 0.5rem 1.5rem;
+  border: 0.1rem solid var(--black);
+  color: var(--black);
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+/////////////////////////////////////////////////fixa tablet?
+/* @media screen and (min-width: 1200px;) {
+
+  }
+} */
+
+////footer
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+li {
+  text-align: justify;
+}
+.footer {
+  background-color: #f9f5f0;
+  padding: 8px 0;
+}
+.footer-col {
+  width: 50%;
+  margin-bottom: 8px;
+
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: black;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: black;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: var(--orange);
+  padding-left: 2px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: #f9f5f0;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: black;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: var(--orange);
+  border-radius: 50%;
+}
+
+.arrow:hover {
+  color: #24262b;
+  background-color: var(--orange);
+  border-radius: 30%;
+  font-size: 16px;
+}
+
+ol,
+ul {
+  padding-left: 0;
+}
+
+.arrow-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  color: black;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  margin-top: 2rem;
+  color: black;
+  margin-bottom: 3rem;
+}
+
+////////////////////////////////faq
+.faq-mtitle {
+  display: flex;
+  background-color: #f9f5f0;
+  padding: 3px;
+  border-radius: 7px;
+
+  justify-content: center;
+  align-items: center;
+}
+.faq {
+  max-width: 500px;
+  margin: 20px auto;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.faq-item {
+  margin-bottom: 5px;
+}
+
+.faq-title {
+  display: block;
+  padding: 10px 15px;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s ease-out;
+}
+
+.faq-title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: black transparent transparent transparent;
+}
+
+.faq-title:hover {
+  background-color: var(--orange);
+}
+
+.faq-input {
+  width: 0;
+  height: 0;
+  //-webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.faq-input:checked ~ .faq-title {
+  background-color: var(--orange);
+}
+
+.faq-input:checked ~ .faq-title:after {
+  border-style: solid;
+  border-width: 0 5px 8px 5px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.faq-input:checked ~ .faq-text {
+  display: block;
+}
+
+.faq-text {
+  display: none;
+  padding: 10px 15px;
+  color: black;
+  font-size: 16px;
+}
+
+////////////////////////////////////////////////////promo
+
+.container-fluid .banner {
+  background: linear-gradient(to bottom, #f9f5f0, #f9f3ea);
+  /*   height: 300px;
+  width: 1000px; */
+  margin: 20px;
+  border-radius: 40px;
+}
+.inner-banner {
+  line-height: 25px;
+  // border: 2px solid #e7cab3;
+  border: 2px solid black;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around; */
+  border-radius: 40px;
+}
+.container-fluid .image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 200px;
+  margin: 14px;
+  padding: 4px;
+  border-radius: 6px;
+}
+.container-fluid .banner .content {
+  line-height: 25px;
+}
+.container-fluid .banner .content h4 {
+  /* font-family: "Dancing Script", cursive;
+  font-size: 5em; */
+  font-weight: 600;
+  color: --orange;
+  font-size: 14px;
+  text-shadow: 2px #0a0a0a;
+
+  //#eb9379;
+}
+
+.button .btn,
+.card .btn {
+  font-size: 14px;
+  font-weight: 600;
+
+  border: 1px solid #e7cab3;
+  //border: 1px solid black;
+  border-radius: 0;
+  background-color: #f9f5f0;
+  border-radius: 7px;
+}
+.button .btn:hover,
+.card .btn:hover {
+  color: #24262b;
+  background-color: var(--orange);
+}
+
+@media screen and (min-width: 768px) {
+  #menu-bar {
+    display: none;
+  }
+
+  header .navbar {
+    display: flex;
+    position: relative;
+    left: 0%;
+    background: none;
+    border-top: none;
+    margin-left: auto;
+    width: auto;
+  }
+
+  header .navbar.active {
+    display: none;
+  }
+
+  header .navbar a {
+    font-size: 1.7rem;
+    color: var(--black);
+    // margin: 0 1rem;
+    background: none;
+
+    border: none;
+  }
+
+  header .navbar a:hover {
+    color: var(--orange);
+  }
+
+  .footer-col {
+    width: 25%;
+    margin-bottom: 8px;
+  }
+}
