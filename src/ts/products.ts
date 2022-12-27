@@ -68,20 +68,46 @@ function createHTML() {
     //lägg till funktion som visar varukorgen
     productBtn.addEventListener("click", () => {
       const cartProduct: CartItem = new CartItem(products[i], 1);
-      if (cartProducts.length < 1) {
+      if (cartProducts.length > 0) {
+        for (let i = 0; i < cartProducts.length; i++) {
+          if (cartProduct.product.id === cartProducts[i].product.id) {
+            let index: number = cartProducts.indexOf(cartProducts[i]);
+            let amount: number = cartProduct.amount;
+            cartProducts.splice(index, 1);
+            amount++;
+            localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
+            console.log(2);
+
+            presentCart(cartProducts);
+          } else {
+            cartProducts.push(cartProduct);
+            localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
+            console.log(3);
+
+            presentCart(cartProducts);
+          }
+        }
+      } else {
         cartProducts.push(cartProduct);
         localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
+        console.log(1);
         presentCart(cartProducts);
-        console.log("andra");
       }
-      for (let i = 0; i < cartProducts.length; i++) {
-        if (cartProduct.product.id === cartProducts[i].product.id) {
-          cartProducts[i].addItem(1);
-          localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
-          presentCart(cartProducts);
-          console.log("första");
-        }
-      }
+
+      // if (cartProducts.length < 1) {
+      //   cartProducts.push(cartProduct);
+      //   localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
+      //   presentCart(cartProducts);
+      //   console.log("andra");
+      // }
+      // for (let i = 0; i < cartProducts.length; i++) {
+      //   if (cartProduct.product.id === cartProducts[i].product.id) {
+      //     cartProducts[i].addItem(1);
+      //     localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
+      //     presentCart(cartProducts);
+      //     console.log("första");
+      //   }
+      // }
     });
 
     if (productImgSecond.src !== productImg.src) {
