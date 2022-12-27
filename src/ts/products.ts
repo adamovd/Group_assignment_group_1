@@ -110,6 +110,10 @@ function createHTML() {
       // }
     });
 
+    productImgContainer.addEventListener("click", () => {
+      location.href = "../pages/product.html?id=" + products[i].id;
+    });
+
     if (productImgSecond.src !== productImg.src) {
       productImgContainer.addEventListener("mouseenter", () => {
         productImg.src = products[i].secondImage || "";

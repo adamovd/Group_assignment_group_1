@@ -1,6 +1,6 @@
 import { Product } from "./Product";
 
-export let products: Product[] = [
+export const products: Product[] = [
   new Product(
     "1",
     "Bespoken",
