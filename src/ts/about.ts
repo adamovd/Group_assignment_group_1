@@ -1,4 +1,4 @@
-import { cartButton } from "./functions/addToCart";
+import { cartButton } from "./cart";
 
 cartButton();
 

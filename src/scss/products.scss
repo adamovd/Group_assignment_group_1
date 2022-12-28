@@ -4,6 +4,15 @@
 @use "variables" as var;
 @use "mixins";
 
+.dropdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 20vw;
+}
+.sort__btn {
+  width: 20vw;
+}
 .products {
   display: flex;
   flex-direction: column;
