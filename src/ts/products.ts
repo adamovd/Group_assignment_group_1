@@ -7,9 +7,8 @@ import { products } from "./models/productList";
 
 window.onload = () => {
   cartButton();
-
   createHTML();
-  sortRing();
+  // sortRing();
 };
 
 const cartProducts: CartItem[] = [];
@@ -21,23 +20,23 @@ const cartModalBody: HTMLUListElement = document.getElementById(
 const allProducts: HTMLDivElement = document.createElement("div");
 allProducts.classList.add("products");
 
-let ringButton = document.createElement("button");
-ringButton.addEventListener("click", () => {
-  sortRing();
-  createHTML();
-});
+// let ringButton = document.createElement("button");
+// ringButton.addEventListener("click", () => {
+//   sortRing();
+//   createHTML();
+// });
 
-ringButton.innerHTML = "Ring";
+// ringButton.innerHTML = "Ring";
 
-document.body.appendChild(ringButton);
+// document.body.appendChild(ringButton);
 
-function sortRing() {
-  let sortItem = products.filter(function (products) {
-    return products.type == "Ring";
-  });
+// function sortRing() {
+//   let sortItem = products.filter(function (products) {
+//     return products.type == "Ring";
+//   });
 
-  console.log(sortItem);
-}
+//   console.log(sortItem);
+// }
 
 // function sortItems() {
 //   for (let i = 0; i < products.length; i++) {
