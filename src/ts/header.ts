@@ -61,32 +61,33 @@ export function createMenu() {
 
   menuBarWrap.classList.add("header__menuBar");
 
-  logo.href = "#";
+  logo.href = "../index.html";
   logo.setAttribute("aria-label", "logo");
   logo.classList.add("header__logo");
   logo.innerHTML = 'Shop <i class="fas fa-gem"></i>';
 
   navbar.classList.add("header__navbar");
 
-  homeLink.href = "#home";
+  homeLink.href = "../index.html";
   homeLink.innerText = "home";
   homeLink.classList.add("links");
 
-  productsLink.href = "#products";
+  productsLink.href = "../pages/products.html";
   productsLink.innerText = "Products";
   productsLink.classList.add("links");
 
-  aboutLink.href = "#about";
+  aboutLink.href = "../pages/about.html";
   aboutLink.innerText = "About Us";
   aboutLink.classList.add("links");
 
-  contactLink.href = "#contact";
+  contactLink.href = "../pages/contact.html";
   contactLink.innerText = "Contact";
   contactLink.classList.add("links");
 
   shoppingBag.href = "#";
   shoppingBag.setAttribute("aria-label", "shopping-cart-icon");
   shoppingBag.classList.add("icons__shoppingbag");
+  shoppingBag.id = "openCart";
 
   icons.classList.add("icons");
 
