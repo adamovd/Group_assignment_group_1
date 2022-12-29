@@ -1,4 +1,6 @@
-import { cartButton, presentCart } from "./functions/addToCart";
+import { cartButton, presentCart } from "./cart";
+import { addToCart } from "./functions/addToCart";
+import { cartModal } from "./functions/cartModal";
 import { CartItem } from "./models/CartItem";
 import { Product } from "./models/Product";
 import { products } from "./models/productList";
@@ -6,31 +8,35 @@ import { products } from "./models/productList";
 window.onload = () => {
   cartButton();
   createHTML();
-  sortRing();
+  // sortRing();
 };
 
 const cartProducts: CartItem[] = [];
 
+const cartModalBody: HTMLUListElement = document.getElementById(
+  "modal-body"
+) as HTMLUListElement;
+
 const allProducts: HTMLDivElement = document.createElement("div");
 allProducts.classList.add("products");
 
-let ringButton = document.createElement("button");
-ringButton.addEventListener("click", () => {
-  sortRing();
-  createHTML();
-});
+// let ringButton = document.createElement("button");
+// ringButton.addEventListener("click", () => {
+//   sortRing();
+//   createHTML();
+// });
 
-ringButton.innerHTML = "Ring";
+// ringButton.innerHTML = "Ring";
 
-document.body.appendChild(ringButton);
+// document.body.appendChild(ringButton);
 
-function sortRing() {
-  let sortItem = products.filter(function (products) {
-    return products.type == "Ring";
-  });
+// function sortRing() {
+//   let sortItem = products.filter(function (products) {
+//     return products.type == "Ring";
+//   });
 
-  console.log(sortItem);
-}
+//   console.log(sortItem);
+// }
 
 // function sortItems() {
 //   for (let i = 0; i < products.length; i++) {
@@ -72,29 +78,25 @@ function createHTML() {
 
     //lägg till funktion som visar varukorgen
     productBtn.addEventListener("click", () => {
+      // addToCart(products[i]);
       const cartProduct: CartItem = new CartItem(products[i], 1);
       if (cartProducts.length > 0) {
         for (let i = 0; i < cartProducts.length; i++) {
           if (cartProduct.product.id === cartProducts[i].product.id) {
-            let index: number = cartProducts.indexOf(cartProducts[i]);
-            let amount: number = cartProduct.amount;
-            cartProducts.splice(index, 1);
-            amount++;
-            localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
+            cartProducts[i].addItem(1);
+            localStorage.setItem("cart", JSON.stringify(cartProducts) || "[]");
             console.log(2);
-
             presentCart(cartProducts);
           } else {
             cartProducts.push(cartProduct);
-            localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
+            localStorage.setItem("cart", JSON.stringify(cartProducts) || "[]");
             console.log(3);
-
             presentCart(cartProducts);
           }
         }
       } else {
         cartProducts.push(cartProduct);
-        localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
+        localStorage.setItem("cart", JSON.stringify(cartProducts) || "[]");
         console.log(1);
         presentCart(cartProducts);
       }
@@ -115,8 +117,8 @@ function createHTML() {
       // }
     });
 
-    productImgContainer.addEventListener("click", () => {
-      location.href = "../pages/product.html?id=" + products[i].id;
+    productImg.addEventListener("click", () => {
+      location.href = "../pages/productdetails.html?id=" + products[i].id;
     });
 
     if (productImgSecond.src !== productImg.src) {
