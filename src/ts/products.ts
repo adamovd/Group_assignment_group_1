@@ -8,7 +8,7 @@ import { products } from "./models/productList";
 window.onload = () => {
   cartButton();
   createHTML(productList);
-  // sortRing();
+  sortRing();
 };
 let productList: Product[] = products;
 const cartProducts: CartItem[] = [];
@@ -20,19 +20,21 @@ const cartModalBody: HTMLUListElement = document.getElementById(
 const allProducts: HTMLDivElement = document.createElement("div");
 allProducts.classList.add("products");
 
-// function sortRing() {
-//   let ringButton: HTMLAnchorElement = document.getElementById(
-//     "ringItem"
-//   ) as HTMLAnchorElement;
+function sortRing() {
+  let ringButton: HTMLAnchorElement = document.querySelector(
+    ".filter__rings"
+  ) as HTMLAnchorElement;
 
-//   let sortItem = productList.filter(function (products) {
-//     return products.type == "Ring";
-//   });
+  let sortItem = productList.filter(function (products) {
+    return products.type == "Ring";
+  });
 
-//   createHTML();
+  ringButton.addEventListener("click", () => {
+    createHTML(sortItem);
+  });
 
-//   console.log(sortItem);
-// }
+  console.log(sortItem);
+}
 
 // function sortItems() {
 //   for (let i = 0; i < products.length; i++) {
@@ -42,9 +44,10 @@ allProducts.classList.add("products");
 //   }
 // }
 
-function createHTML(Products: Product[]) {
+function createHTML(products: Product[]) {
+  const productContainer: HTMLDivElement = document.createElement("div");
+  productContainer.innerHTML = "";
   for (let i = 0; i < products.length; i++) {
-    const productContainer: HTMLDivElement = document.createElement("div");
     const productImgContainer: HTMLDivElement = document.createElement("div");
     const productName: HTMLParagraphElement = document.createElement("p");
     const productPrice: HTMLParagraphElement = document.createElement("p");
@@ -113,29 +116,27 @@ export function filterProducts() {
 
   ringButton.addEventListener("click", () => {
     let selectedFilter = "All";
-    filterAlternatives(products, selectedFilter);
+    filterAlternatives(productList, selectedFilter);
   });
 
   ringButton.addEventListener("click", () => {
-    let selectedFilter = "Rings";
-    filterAlternatives(products, selectedFilter);
+    console.log("ringar");
+
+    selectedFilter = "Rings";
+    filterAlternatives(productList, selectedFilter);
   });
 }
 
 function filterAlternatives(products: Product[], selectedFilter: string) {
-  let productList = products.filter((product) => {
+  let filteredProductList = products.filter((product) => {
     return product.type === selectedFilter;
   });
+  console.log(filteredProductList);
 
-  if (selectedFilter === "All") {
-    allProducts.innerHTML = "";
-    createHTML(products);
-  } else {
-    showFilteredProducts(productList);
-  }
+  createHTML(filteredProductList);
 }
 
-const showFilteredProducts = (productList: Product[]) => {
+const showFilteredProducts = (products: Product[]) => {
   allProducts.innerHTML = "";
 
   for (let i = 0; i < products.length; i++) {
