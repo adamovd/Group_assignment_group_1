@@ -10,7 +10,7 @@ window.onload = () => {
   createHTML();
   // sortRing();
 };
-
+const productList: Product[] = products;
 const cartProducts: CartItem[] = [];
 
 const cartModalBody: HTMLUListElement = document.getElementById(
