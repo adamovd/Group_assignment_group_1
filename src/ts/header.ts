@@ -1,6 +1,6 @@
 export function createMenu() {
-  const header: HTMLDivElement = document.createElement(
-    "div"
+  const header: HTMLDivElement = document.querySelector(
+    ".header"
   ) as HTMLDivElement;
 
   const menuBarWrap: HTMLDivElement = document.createElement(
@@ -115,8 +115,28 @@ export function createMenu() {
   header.appendChild(logo);
   header.appendChild(navbar);
   header.appendChild(icons);
-
-  document.body.appendChild(header);
 }
 
-createMenu();
+export function toggleHamburgerMenu() {
+  let menu: HTMLSpanElement = document.getElementById(
+    "header__menu-bar"
+  ) as HTMLSpanElement;
+  let navbar: HTMLParagraphElement = document.querySelector(
+    ".header__navbar"
+  ) as HTMLParagraphElement;
+
+  menu.addEventListener("click", () => {
+    menu.classList.toggle("fa-times");
+    navbar.classList.toggle("active");
+  });
+
+  /*  window.onscroll = () => {
+    menu.classList.remove("fa-times");
+    navbar.classList.remove("active");
+  }; */
+
+  window.addEventListener("scroll", () => {
+    menu.classList.remove("fa-times");
+    navbar.classList.remove("active");
+  });
+}

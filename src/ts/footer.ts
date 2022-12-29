@@ -1,9 +1,7 @@
 export function createFooter() {
-  const footer: HTMLDivElement = document.createElement(
-    "div"
+  const footer: HTMLDivElement = document.querySelector(
+    ".footer"
   ) as HTMLDivElement;
-
-  footer.classList.add("footer");
 
   const footerContainer: HTMLDivElement = document.createElement(
     "div"
@@ -283,8 +281,6 @@ socialsLi.classList.add("footer__li"); */
   ) as HTMLParagraphElement;
   copyRight.classList.add("copyright");
 
-  footer.appendChild(footerContainer);
-
   footerContainer.appendChild(footerRow);
   footerRow.appendChild(arrowWrapper);
   arrowWrapper.appendChild(arrowIcon);
@@ -338,6 +334,5 @@ socialsLi.classList.add("footer__li"); */
   footerRow.appendChild(copyRightWrapper);
   copyRightWrapper.appendChild(copyRight);
 
-  document.body.appendChild(footer);
+  footer.appendChild(footerContainer);
 }
-createFooter();
