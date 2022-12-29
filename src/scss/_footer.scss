@@ -111,3 +111,10 @@ ul {
   color: black;
   margin-bottom: 3rem;
 }
+
+@media screen and (min-width: 768px) {
+  .footer-col {
+    width: 25%;
+    margin-bottom: 8px;
+  }
+}

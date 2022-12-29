@@ -161,3 +161,39 @@ li {
 .icons__shoppingbag:hover {
   color: var(--orange);
 }
+
+@media screen and (min-width: 768px) {
+  #header__menu-bar {
+    display: none;
+  }
+
+  .header__navbar {
+    display: flex;
+    position: relative;
+    left: 0%;
+    background: none;
+    border-top: none;
+    margin-left: auto;
+    width: auto;
+    min-height: 0;
+  }
+
+  .header__navbar.active {
+    display: none;
+    top: 2rem;
+    z-index: 0;
+  }
+
+  .links {
+    font-size: 1.7rem;
+    color: var(--black);
+    margin: 0 1rem;
+    background: none;
+
+    border: none;
+  }
+
+  .links:hover {
+    color: var(--orange);
+  }
+}

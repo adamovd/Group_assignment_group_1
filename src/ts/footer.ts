@@ -24,7 +24,8 @@ export function createFooter() {
     "span"
   ) as HTMLSpanElement;
 
-  arrowIcon.classList.add("bi", "bi-arrow-up arrow");
+  arrowIcon.classList.add("bi", "bi-arrow-up", "arrow");
+  arrowIcon.classList.add("arrow");
 
   const footerCol: HTMLDivElement = document.createElement(
     "div"
@@ -189,7 +190,7 @@ export function createFooter() {
     "a"
   ) as HTMLAnchorElement;
   storeAdress.classList.add("footer__links");
-  storeAdress.innerText = `<i class="fa fa-map-marker"></i>Address:Gågatan 2,Stockholm`; //////////////kolla här skapa kanske span för i
+  storeAdress.innerHTML = `<i class="fa fa-map-marker"></i>Address:Gågatan 2,Stockholm`; //////////////kolla här skapa kanske span för i
   storeAdress.href = "#";
 
   const storeLiEmail: HTMLLIElement = document.createElement(
@@ -201,7 +202,7 @@ export function createFooter() {
     "a"
   ) as HTMLAnchorElement;
   storeEmail.classList.add("footer__links");
-  storeEmail.innerText = `<i class="fa fa-envelope"></i>Email:shop@webbshop.se`; //////////////kolla här skapa kanske span för i
+  storeEmail.innerHTML = `<i class="fa fa-envelope"></i>Email:shop@webbshop.se`; //////////////kolla här skapa kanske span för i
   storeEmail.href = "#";
 
   const storeLiTel: HTMLLIElement = document.createElement(
@@ -213,7 +214,7 @@ export function createFooter() {
     "a"
   ) as HTMLAnchorElement;
   storeTel.classList.add("footer__links");
-  storeTel.innerText = `<i class="fa fa-phone"></i>Phone:073-5647654</a>`; //////////////kolla här skapa kanske span för i
+  storeTel.innerHTML = `<i class="fa fa-phone"></i>Phone:073-5647654</a>`; //////////////kolla här skapa kanske span för i
   storeTel.href = "#";
 
   /////
@@ -261,7 +262,7 @@ socialsLi.classList.add("footer__li"); */
   insta.href = "#";
   insta.setAttribute("aria-label", "instagram-logo");
   insta.classList.add("footer__links"); /////////////////////???????
-  insta.innerHTML = '<i class="fab fa-instagram"></i>';
+  insta.innerHTML = `<i class="fab fa-instagram"></i>`;
 
   const twitter: HTMLAnchorElement = document.createElement(
     "a"
@@ -281,7 +282,6 @@ socialsLi.classList.add("footer__li"); */
   ) as HTMLParagraphElement;
   copyRight.classList.add("copyright");
 
-  footerContainer.appendChild(footerRow);
   footerRow.appendChild(arrowWrapper);
   arrowWrapper.appendChild(arrowIcon);
 
@@ -333,6 +333,7 @@ socialsLi.classList.add("footer__li"); */
 
   footerRow.appendChild(copyRightWrapper);
   copyRightWrapper.appendChild(copyRight);
+  footerContainer.appendChild(footerRow);
 
   footer.appendChild(footerContainer);
 }
