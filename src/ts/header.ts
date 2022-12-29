@@ -118,3 +118,5 @@ export function createMenu() {
 
   document.body.appendChild(header);
 }
+
+createMenu();
