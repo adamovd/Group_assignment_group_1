@@ -5,12 +5,73 @@
 * {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  box-sizing: border;
 }
 
 main {
   background-image: url("https://images.unsplash.com/photo-1591892150204-2f872745bc4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
   width: 100%;
+}
+
+.promo-text {
+  white-space: pre-line;
+}
+
+.container-fluid .banner {
+  background: linear-gradient(to bottom, #f9f5f0, #f9f3ea);
+  /*   height: 300px;
+  width: 1000px; */
+  margin: 20px;
+  border-radius: 40px;
+}
+.inner-banner {
+  line-height: 25px;
+  // border: 2px solid #e7cab3;
+  border: 2px solid black;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around; */
+  border-radius: 40px;
+}
+.container-fluid .image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 200px;
+  margin: 14px;
+  padding: 4px;
+  border-radius: 6px;
+}
+.container-fluid .banner .content {
+  line-height: 25px;
+}
+.container-fluid .banner .content h4 {
+  /* font-family: "Dancing Script", cursive;
+  font-size: 5em; */
+  font-weight: 600;
+  color: --orange;
+  font-size: 14px;
+  text-shadow: 2px #0a0a0a;
+
+  //#eb9379;
+}
+
+.button .btn,
+.card .btn {
+  font-size: 14px;
+  font-weight: 600;
+
+  border: 1px solid #e7cab3;
+  //border: 1px solid black;
+  border-radius: 0;
+  background-color: #f9f5f0;
+  border-radius: 7px;
+}
+.button .btn:hover,
+.card .btn:hover {
+  color: #24262b;
+  background-color: var(--orange);
 }

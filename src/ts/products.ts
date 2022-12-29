@@ -1,15 +1,12 @@
 import { cartButton, presentCart } from "./cart";
+import { createFooter } from "./footer";
 import { addToCart } from "./functions/addToCart";
 import { cartModal } from "./functions/cartModal";
+import { createMenu, toggleHamburgerMenu } from "./header";
 import { CartItem } from "./models/CartItem";
 import { Product } from "./models/Product";
 import { products } from "./models/productList";
 
-window.onload = () => {
-  cartButton();
-  createHTML();
-  // sortRing();
-};
 const productList: Product[] = products;
 const cartProducts: CartItem[] = [];
 
@@ -140,3 +137,14 @@ function createHTML() {
     document.body.appendChild(allProducts);
   }
 }
+
+window.addEventListener("load", () => {
+  createMenu();
+  toggleHamburgerMenu();
+  cartButton();
+});
+
+window.addEventListener("load", () => {
+  createHTML();
+  createFooter();
+});

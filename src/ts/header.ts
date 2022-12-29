@@ -69,7 +69,7 @@ export function createMenu() {
   navbar.classList.add("header__navbar");
 
   homeLink.href = "../index.html";
-  homeLink.innerText = "home";
+  homeLink.innerText = "Home";
   homeLink.classList.add("links");
 
   productsLink.href = "../pages/products.html";

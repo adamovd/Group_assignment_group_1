@@ -54,7 +54,7 @@ export function createFooter() {
   ) as HTMLAnchorElement;
   shopLinkHome.classList.add("footer__links");
   shopLinkHome.innerText = "Home";
-  shopLinkHome.href = "#";
+  shopLinkHome.href = "../index.html";
 
   //
 
@@ -68,7 +68,7 @@ export function createFooter() {
   ) as HTMLAnchorElement;
   shopLinkProducts.classList.add("footer__links");
   shopLinkProducts.innerText = "Products";
-  shopLinkProducts.href = "#";
+  shopLinkProducts.href = "../pages/products.html";
 
   const shopLiAbout: HTMLLIElement = document.createElement(
     "li"
@@ -80,7 +80,7 @@ export function createFooter() {
   ) as HTMLAnchorElement;
   shopLinkAbout.classList.add("footer__links");
   shopLinkAbout.innerText = "About Us:";
-  shopLinkAbout.href = "#";
+  shopLinkAbout.href = "../pages/about.html";
 
   //
   const shopLiContact: HTMLLIElement = document.createElement(
@@ -93,7 +93,7 @@ export function createFooter() {
   ) as HTMLAnchorElement;
   shopLinkContact.classList.add("footer__links");
   shopLinkContact.innerText = "Contact";
-  shopLinkContact.href = "#";
+  shopLinkContact.href = "../pages/contact.html";
 
   /////////////////////////////////////
   const footerCol2: HTMLDivElement = document.createElement(
@@ -123,7 +123,7 @@ export function createFooter() {
   ) as HTMLAnchorElement;
   faqLinkShipping.classList.add("footer__links");
   faqLinkShipping.innerText = "Shipping";
-  faqLinkShipping.href = "#";
+  faqLinkShipping.href = "../pages/contact.html";
 
   ///
   const faqLiReturns: HTMLLIElement = document.createElement(
@@ -136,7 +136,7 @@ export function createFooter() {
   ) as HTMLAnchorElement;
   faqLinkReturns.classList.add("footer__links");
   faqLinkReturns.innerText = "Returns";
-  faqLinkReturns.href = "#";
+  faqLinkReturns.href = "../pages/contact.html";
 
   //
   const faqLiOrderS: HTMLLIElement = document.createElement(
@@ -149,7 +149,7 @@ export function createFooter() {
   ) as HTMLAnchorElement;
   faqLinkOrderS.classList.add("footer__links");
   faqLinkOrderS.innerText = "Order Status";
-  faqLinkOrderS.href = "#";
+  faqLinkOrderS.href = "../pages/contact.html";
 
   const faqLiPaymentO: HTMLLIElement = document.createElement(
     "li"
@@ -161,7 +161,7 @@ export function createFooter() {
   ) as HTMLAnchorElement;
   faqLinkPaymentO.classList.add("footer__links");
   faqLinkPaymentO.innerText = "Payment Optins";
-  faqLinkPaymentO.href = "#";
+  faqLinkPaymentO.href = "../pages/contact.html";
 
   ///////////7
   const footerCol3: HTMLDivElement = document.createElement(
@@ -190,8 +190,7 @@ export function createFooter() {
     "a"
   ) as HTMLAnchorElement;
   storeAdress.classList.add("footer__links");
-  storeAdress.innerHTML = `<i class="fa fa-map-marker"></i>Address:Gågatan 2,Stockholm`; //////////////kolla här skapa kanske span för i
-  storeAdress.href = "#";
+  storeAdress.innerHTML = `<i class="fa fa-map-marker"></i>Address:Gågatan 2,Stockholm`;
 
   const storeLiEmail: HTMLLIElement = document.createElement(
     "li"
@@ -202,7 +201,7 @@ export function createFooter() {
     "a"
   ) as HTMLAnchorElement;
   storeEmail.classList.add("footer__links");
-  storeEmail.innerHTML = `<i class="fa fa-envelope"></i>Email:shop@webbshop.se`; //////////////kolla här skapa kanske span för i
+  storeEmail.innerHTML = `<i class="fa fa-envelope"></i>Email:shop@webbshop.se`;
   storeEmail.href = "#";
 
   const storeLiTel: HTMLLIElement = document.createElement(
@@ -214,10 +213,9 @@ export function createFooter() {
     "a"
   ) as HTMLAnchorElement;
   storeTel.classList.add("footer__links");
-  storeTel.innerHTML = `<i class="fa fa-phone"></i>Phone:073-5647654</a>`; //////////////kolla här skapa kanske span för i
+  storeTel.innerHTML = `<i class="fa fa-phone"></i>Phone:073-5647654</a>`;
   storeTel.href = "#";
 
-  /////
   const footerCol4: HTMLDivElement = document.createElement(
     "div"
   ) as HTMLDivElement;
@@ -235,42 +233,31 @@ export function createFooter() {
   ) as HTMLDivElement;
   socialLinks.classList.add("social-links");
 
-  /* 
-const socialsUl: HTMLUListElement = document.createElement(
-  "ul"
-) as HTMLUListElement;
-socialsUl.classList.add("footer__ul");
-
-const socialsLi: HTMLLIElement = document.createElement(
-  "li"
-) as HTMLLIElement;
-socialsLi.classList.add("footer__li"); */
-
   const fb: HTMLAnchorElement = document.createElement(
     "a"
   ) as HTMLAnchorElement;
 
-  fb.href = "#";
+  fb.href = "https://sv-se.facebook.com/";
   fb.setAttribute("aria-label", "facebook-logo");
-  fb.classList.add("footer__links"); /////////////////////???????
+  fb.classList.add("footer__links");
   fb.innerHTML = '<i class="fab fa-facebook-f"></i>';
 
   const insta: HTMLAnchorElement = document.createElement(
     "a"
   ) as HTMLAnchorElement;
 
-  insta.href = "#";
+  insta.href = "https://www.instagram.com/";
   insta.setAttribute("aria-label", "instagram-logo");
-  insta.classList.add("footer__links"); /////////////////////???????
+  insta.classList.add("footer__links");
   insta.innerHTML = `<i class="fab fa-instagram"></i>`;
 
   const twitter: HTMLAnchorElement = document.createElement(
     "a"
   ) as HTMLAnchorElement;
 
-  twitter.href = "#";
+  twitter.href = "https://twitter.com/";
   twitter.setAttribute("aria-label", "twitter");
-  twitter.classList.add("footer__links"); /////////////////////???????
+  twitter.classList.add("footer__links");
   twitter.innerHTML = '<i class="fab fa-twitter"></i>';
 
   const copyRightWrapper: HTMLDivElement = document.createElement(
