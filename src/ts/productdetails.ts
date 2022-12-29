@@ -56,12 +56,18 @@ export function displayProduct(listOfProducts: Product[]) {
         document.createElement("button");
       const productSizeContainer: HTMLDivElement =
         document.createElement("div");
-      const productSizeFirst: HTMLButtonElement =
-        document.createElement("button");
-      const productSizeSecond: HTMLButtonElement =
-        document.createElement("button");
-      const productSizeThird: HTMLButtonElement =
-        document.createElement("button");
+      const productSizeFirstLabel: HTMLLabelElement =
+        document.createElement("label");
+      const productSizeSecondLabel: HTMLLabelElement =
+        document.createElement("label");
+      const productSizeThirdLabel: HTMLLabelElement =
+        document.createElement("label");
+      const productSizeFirstInput: HTMLInputElement =
+        document.createElement("input");
+      const productSizeSecondInput: HTMLInputElement =
+        document.createElement("input");
+      const productSizeThirdInput: HTMLInputElement =
+        document.createElement("input");
 
       productContainer.classList.add("product");
       productInfoContainer.classList.add("detailed");
@@ -106,13 +112,34 @@ export function displayProduct(listOfProducts: Product[]) {
       productCartBtn.classList.add("btn-dark");
       productSizeContainer.classList.add("btn-group");
       productSizeContainer.setAttribute("role", "group");
-      productSizeContainer.setAttribute("aria-label", "Basic outlined example");
-      productSizeFirst.classList.add("btn");
-      productSizeFirst.classList.add("btn-outline-dark");
-      productSizeSecond.classList.add("btn");
-      productSizeSecond.classList.add("btn-outline-dark");
-      productSizeThird.classList.add("btn");
-      productSizeThird.classList.add("btn-outline-dark");
+      productSizeContainer.setAttribute(
+        "aria-label",
+        "Basic radio toggle button group"
+      );
+      productSizeFirstLabel.classList.add("btn");
+      productSizeFirstLabel.classList.add("btn-outline-dark");
+      productSizeSecondLabel.classList.add("btn");
+      productSizeSecondLabel.classList.add("btn-outline-dark");
+      productSizeThirdLabel.classList.add("btn");
+      productSizeThirdLabel.classList.add("btn-outline-dark");
+      productSizeFirstLabel.setAttribute("for", "btnradio1");
+      productSizeSecondLabel.setAttribute("for", "btnradio2");
+      productSizeThirdLabel.setAttribute("for", "btnradio3");
+      productSizeFirstInput.type = "radio";
+      productSizeSecondInput.type = "radio";
+      productSizeThirdInput.type = "radio";
+      productSizeFirstInput.classList.add("btn-check");
+      productSizeSecondInput.classList.add("btn-check");
+      productSizeThirdInput.classList.add("btn-check");
+      productSizeFirstInput.setAttribute("name", "btnradio");
+      productSizeSecondInput.setAttribute("name", "btnradio");
+      productSizeThirdInput.setAttribute("name", "btnradio");
+      productSizeFirstInput.setAttribute("id", "btnradio1");
+      productSizeSecondInput.setAttribute("id", "btnradio2");
+      productSizeThirdInput.setAttribute("id", "btnradio3");
+      productSizeFirstInput.setAttribute("autocomplete", "off");
+      productSizeSecondInput.setAttribute("autocomplete", "off");
+      productSizeThirdInput.setAttribute("autocomplete", "off");
 
       productName.innerHTML = listOfProducts[i].name;
       productImg.src = listOfProducts[i].image;
@@ -126,16 +153,16 @@ export function displayProduct(listOfProducts: Product[]) {
       productPrice.innerHTML = listOfProducts[i].price.toString() + " kr";
       productCartBtn.innerHTML = "Add to cart";
       if (listOfProducts[i].type === "Ring") {
-        productSizeFirst.innerHTML = "16";
-        productSizeSecond.innerHTML = "17";
-        productSizeThird.innerHTML = "18";
+        productSizeFirstLabel.innerHTML = "16";
+        productSizeSecondLabel.innerHTML = "17";
+        productSizeThirdLabel.innerHTML = "18";
       } else {
-        productSizeFirst.innerHTML = "S";
-        productSizeSecond.innerHTML = "M";
-        productSizeThird.innerHTML = "L";
+        productSizeFirstLabel.innerHTML = "S";
+        productSizeSecondLabel.innerHTML = "M";
+        productSizeThirdLabel.innerHTML = "L";
       }
       if (listOfProducts[i].type === "Earring") {
-        productSizeFirst.innerHTML = "One size";
+        productSizeFirstLabel.innerHTML = "One size";
       }
 
       productCartBtn.addEventListener("click", () => {
@@ -160,11 +187,15 @@ export function displayProduct(listOfProducts: Product[]) {
       productInfoContainer.appendChild(productCartBtn);
       productInfoContainer.appendChild(productDescribe);
       if (listOfProducts[i].type === "Earring") {
-        productSizeContainer.appendChild(productSizeFirst);
+        productSizeContainer.appendChild(productSizeFirstInput);
+        productSizeContainer.appendChild(productSizeFirstLabel);
       } else {
-        productSizeContainer.appendChild(productSizeFirst);
-        productSizeContainer.appendChild(productSizeSecond);
-        productSizeContainer.appendChild(productSizeThird);
+        productSizeContainer.appendChild(productSizeFirstInput);
+        productSizeContainer.appendChild(productSizeFirstLabel);
+        productSizeContainer.appendChild(productSizeSecondInput);
+        productSizeContainer.appendChild(productSizeSecondLabel);
+        productSizeContainer.appendChild(productSizeThirdInput);
+        productSizeContainer.appendChild(productSizeThirdLabel);
       }
       productContainer.appendChild(productImgContainer);
       productContainer.appendChild(productInfoContainer);

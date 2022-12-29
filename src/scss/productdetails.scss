@@ -52,28 +52,45 @@
 
   &__type {
     font-family: var.$font;
-    font-size: 0.7rem;
+    font-size: 1rem;
+    @include mixins.for-size(tablet) {
+      font-size: 1.5rem;
+    }
   }
 
   &__name {
     font-family: var.$title_font;
-    font-size: 1.6rem;
+    font-size: 2.5rem;
+    @include mixins.for-size(tablet) {
+      font-size: 3rem;
+    }
   }
 
   &__price {
     font-family: var.$font;
-    font-size: 1rem;
+    font-size: 2rem;
+    @include mixins.for-size(tablet) {
+      font-size: 2.5rem;
+    }
   }
 
-  &__btn {
+  &__btn,
+  .btn-group {
+    width: 200px;
     margin-top: 10px;
     font-family: var.$font;
+    font-size: 2rem;
   }
 
   &__describe {
     font-family: var.$font;
+    font-size: 1.2rem;
     text-align: center;
     margin-top: 10px;
+
+    @include mixins.for-size(tablet) {
+      font-size: 1.5rem;
+    }
 
     @include mixins.for-size(tablet) {
       padding: 20px;
