@@ -124,29 +124,53 @@
       </div>
     </header>
     <main class="productscontainer">
-      <div class="btn-group dropdown">
-        <button
-          class="sort__btn btn btn-outline-dark dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Sort
-        </button>
-        <ul class="dropdown-menu sort__options">
-          <li><a href="#" class="dropdown-item sort__az">Name A-Z</a></li>
-          <li><a href="#" class="dropdown-item sort__za">Name Z-A</a></li>
-          <li>
-            <a href="#" class="dropdown-item sort__pricehtol"
-              >Price high to low</a
-            >
-          </li>
-          <li>
-            <a href="#" class="dropdown-item sort__priceltoh"
-              >Price low to high</a
-            >
-          </li>
-        </ul>
+      <div class="row selections">
+        <div class="btn-group dropdown sort">
+          <button
+            class="sort__btn btn btn-outline-dark dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Sort
+          </button>
+          <ul class="dropdown-menu sort__options">
+            <li><a href="#" class="dropdown-item sort__az">Name A-Z</a></li>
+            <li><a href="#" class="dropdown-item sort__za">Name Z-A</a></li>
+            <li>
+              <a href="#" class="dropdown-item sort__pricehtol"
+                >Price high to low</a
+              >
+            </li>
+            <li>
+              <a href="#" class="dropdown-item sort__priceltoh"
+                >Price low to high</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="btn-group dropdown filter">
+          <button
+            class="filter__btn btn btn-outline-dark dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Filter
+          </button>
+          <ul class="dropdown-menu filter__options">
+            <li><a href="#" class="dropdown-item filter__rings">Rings</a></li>
+            <li>
+              <a href="#" class="dropdown-item filter__necklaces">Necklaces</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-item filter__bracelets">Bracelets</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-item filter__earrings">Earrings</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </main>
     <main class="productscontainer">
