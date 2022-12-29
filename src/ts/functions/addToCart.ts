@@ -1,8 +1,13 @@
 import { CartItem } from "../models/CartItem";
 import { Product } from "../models/Product";
 
-let cartProducts: CartItem[] = [];
+let cartProductsFromLS: CartItem[] = [];
 export function addToCart(product: Product) {
+  cartProductsFromLS = JSON.parse(localStorage.getItem("cart") || "[]");
+
+  let cartProducts = cartProductsFromLS.map((cartProducts) => {
+    return new CartItem(cartProducts.product, cartProducts.amount);
+  });
   let cartProduct: CartItem = new CartItem(product, 1);
   let found: boolean = false;
 

@@ -1,9 +1,17 @@
+import { cartButton } from "./cart";
+import { createFooter } from "./footer";
+import { addToCart } from "./functions/addToCart";
+import { createMenu, toggleHamburgerMenu } from "./header";
 import { Product } from "./models/Product";
 import { products } from "./models/productList";
 
-window.onload = () => {
+window.addEventListener("load", () => {
   displayProduct(listOfProducts);
-};
+  createMenu();
+  toggleHamburgerMenu();
+  cartButton();
+  createFooter();
+});
 
 let listOfProducts: Product[] = products;
 
@@ -19,7 +27,9 @@ export function displayProduct(listOfProducts: Product[]) {
   let id: string = getProductId();
   for (let i = 0; i < products.length; i++) {
     if (id === products[i].id) {
-      const productContainer: HTMLDivElement = document.createElement("div");
+      const productContainer: HTMLElement = document.querySelector(
+        ".productcontainer"
+      ) as HTMLElement;
       const productInfoContainer: HTMLDivElement =
         document.createElement("div");
       const productImgContainer: HTMLDivElement = document.getElementById(
@@ -128,6 +138,10 @@ export function displayProduct(listOfProducts: Product[]) {
         productSizeFirst.innerHTML = "One size";
       }
 
+      productCartBtn.addEventListener("click", () => {
+        addToCart(listOfProducts[i]);
+      });
+
       productImgContainer.appendChild(productImgCarousel);
       productImgContainer.appendChild(carouselBtnPrev);
       productImgContainer.appendChild(carouselBtnNext);
@@ -154,7 +168,6 @@ export function displayProduct(listOfProducts: Product[]) {
       }
       productContainer.appendChild(productImgContainer);
       productContainer.appendChild(productInfoContainer);
-      document.body.appendChild(productContainer);
     }
   }
 }

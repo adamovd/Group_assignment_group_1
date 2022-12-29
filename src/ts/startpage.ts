@@ -6,6 +6,5 @@ window.addEventListener("load", () => {
   createMenu();
   toggleHamburgerMenu();
   cartButton();
-
   createFooter();
 });
