@@ -169,6 +169,19 @@ export function displayProduct(listOfProducts: Product[]) {
         addToCart(listOfProducts[i]);
       });
 
+      productSizeFirstInput.addEventListener("input", () => {
+        listOfProducts[i].size = productSizeFirstLabel.innerHTML;
+        console.log(listOfProducts[i].size);
+      });
+      productSizeSecondInput.addEventListener("input", () => {
+        listOfProducts[i].size = productSizeSecondLabel.innerHTML;
+        console.log(listOfProducts[i].size);
+      });
+      productSizeThirdInput.addEventListener("input", () => {
+        listOfProducts[i].size = productSizeThirdLabel.innerHTML;
+        console.log(listOfProducts[i].size);
+      });
+
       productImgContainer.appendChild(productImgCarousel);
       productImgContainer.appendChild(carouselBtnPrev);
       productImgContainer.appendChild(carouselBtnNext);
