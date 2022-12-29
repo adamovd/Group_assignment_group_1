@@ -20,23 +20,22 @@ const cartModalBody: HTMLUListElement = document.getElementById(
 const allProducts: HTMLDivElement = document.createElement("div");
 allProducts.classList.add("products");
 
-// let ringButton = document.createElement("button");
-// ringButton.addEventListener("click", () => {
-//   sortRing();
-//   createHTML();
-// });
+let ringButton: HTMLAnchorElement = document.getElementById(
+  "ringItem"
+) as HTMLAnchorElement;
+ringButton.addEventListener("click", () => {
+  sortRing();
+});
 
-// ringButton.innerHTML = "Ring";
+function sortRing() {
+  let sortItem = productList.filter(function (products) {
+    return products.type == "Ring";
+  });
 
-// document.body.appendChild(ringButton);
+  createHTML();
 
-// function sortRing() {
-//   let sortItem = products.filter(function (products) {
-//     return products.type == "Ring";
-//   });
-
-//   console.log(sortItem);
-// }
+  console.log(sortItem);
+}
 
 // function sortItems() {
 //   for (let i = 0; i < products.length; i++) {
