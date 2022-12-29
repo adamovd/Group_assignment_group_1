@@ -1,7 +1,5 @@
 export function createFooter() {
-  const footer: HTMLDivElement = document.querySelector(
-    ".footer"
-  ) as HTMLDivElement;
+  const footer: HTMLElement = document.querySelector(".footer") as HTMLElement;
 
   const footerContainer: HTMLDivElement = document.createElement(
     "div"
@@ -162,7 +160,6 @@ export function createFooter() {
   faqLinkPaymentO.innerText = "Payment Optins";
   faqLinkPaymentO.href = "#";
 
-  ///////////7
   const footerCol3: HTMLDivElement = document.createElement(
     "div"
   ) as HTMLDivElement;

@@ -76,45 +76,8 @@ function createHTML() {
     productImg.alt = products[i].name;
     productBtn.innerHTML = `<i class="bi bi-cart-plus-fill"></i>`;
 
-    //lägg till funktion som visar varukorgen
     productBtn.addEventListener("click", () => {
-      // addToCart(products[i]);
-      const cartProduct: CartItem = new CartItem(products[i], 1);
-      if (cartProducts.length > 0) {
-        for (let i = 0; i < cartProducts.length; i++) {
-          if (cartProduct.product.id === cartProducts[i].product.id) {
-            cartProducts[i].addItem(1);
-            localStorage.setItem("cart", JSON.stringify(cartProducts) || "[]");
-            console.log(2);
-            presentCart(cartProducts);
-          } else {
-            cartProducts.push(cartProduct);
-            localStorage.setItem("cart", JSON.stringify(cartProducts) || "[]");
-            console.log(3);
-            presentCart(cartProducts);
-          }
-        }
-      } else {
-        cartProducts.push(cartProduct);
-        localStorage.setItem("cart", JSON.stringify(cartProducts) || "[]");
-        console.log(1);
-        presentCart(cartProducts);
-      }
-
-      // if (cartProducts.length < 1) {
-      //   cartProducts.push(cartProduct);
-      //   localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
-      //   presentCart(cartProducts);
-      //   console.log("andra");
-      // }
-      // for (let i = 0; i < cartProducts.length; i++) {
-      //   if (cartProduct.product.id === cartProducts[i].product.id) {
-      //     cartProducts[i].addItem(1);
-      //     localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
-      //     presentCart(cartProducts);
-      //     console.log("första");
-      //   }
-      // }
+      addToCart(products[i]);
     });
 
     productImg.addEventListener("click", () => {
