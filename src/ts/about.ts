@@ -39,18 +39,31 @@ export function createHeader() {
   document.body.appendChild(headerWrapper);
   headerWrapper.appendChild(navigationWrapper);
 
-  let menu: HTMLDivElement = document.querySelector(
-    "#menu-bar"
-  ) as HTMLDivElement;
-  let navbar: HTMLDivElement = document.querySelector(
-    ".navbar"
-  ) as HTMLDivElement;
+  function toggleHamburgerMenu() {
+    let menu: HTMLDivElement = document.querySelector(
+      "#menu-bar"
+    ) as HTMLDivElement;
+    let navbar: HTMLDivElement = document.querySelector(
+      ".navbar"
+    ) as HTMLDivElement;
 
-  menu.addEventListener("click", () => {
-    menu.classList.toggle("fa-times");
+    menu.addEventListener("click", () => {
+      menu.classList.toggle("fa-times");
+      navbar.classList.toggle("active");
+    });
 
-    navbar.classList.toggle("active");
-  });
+    /*  window.onscroll = () => {
+      menu.classList.remove("fa-times");
+      navbar.classList.remove("active");
+    }; */
+
+    window.addEventListener("scroll", () => {
+      menu.classList.remove("fa-times");
+      navbar.classList.remove("active");
+    });
+  }
+
+  toggleHamburgerMenu();
 }
 
 //  <div id="menu-bar" class="fas fa-bars "></div>

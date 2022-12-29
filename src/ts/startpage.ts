@@ -1,3 +1,11 @@
 import { cartButton } from "./cart";
+import { createFooter } from "./footer";
+import { createMenu, toggleHamburgerMenu } from "./header";
 
-cartButton();
+window.addEventListener("load", () => {
+  createMenu();
+  toggleHamburgerMenu();
+  cartButton();
+
+  createFooter();
+});
