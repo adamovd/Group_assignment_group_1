@@ -11,6 +11,7 @@ window.onload = () => {
   toggleHamburgerMenu();
   cartButton();
   createHTML(productList);
+  filterItem();
   sortItem();
   createFooter();
 };
@@ -31,7 +32,7 @@ const allProductsContainer: HTMLDivElement = document.createElement(
 
 const allProductsFilter: HTMLDivElement = document.createElement("div");
 
-function sortItem() {
+function filterItem() {
   let allButton: HTMLAnchorElement = document.querySelector(
     ".filter__all"
   ) as HTMLAnchorElement;
@@ -86,6 +87,68 @@ function sortItem() {
 
   earringButton.addEventListener("click", () => {
     showFilteredProducts(sortItemEarrings);
+  });
+}
+
+function sortItem() {
+  let sortAzButton: HTMLAnchorElement = document.querySelector(
+    ".sort__az"
+  ) as HTMLAnchorElement;
+
+  let sortItemaz = productList.sort((a, b) => {
+    console.log(a.name);
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+
+    return 0;
+  });
+
+  sortAzButton.addEventListener("click", () => {
+    createHTML(sortItemaz);
+  });
+
+  let sortZaButton: HTMLAnchorElement = document.querySelector(
+    ".sort__za"
+  ) as HTMLAnchorElement;
+
+  let sortItemza = productList.sort((a, b) => {
+    console.log(a.name);
+    if (a.name > b.name) {
+      return -1;
+    }
+    if (a.name < b.name) {
+      return 1;
+    }
+
+    return 0;
+  });
+
+  sortZaButton.addEventListener("click", () => {
+    createHTML(sortItemza);
+  });
+
+  let highToLowButton: HTMLAnchorElement = document.querySelector(
+    ".sort__pricehtol"
+  ) as HTMLAnchorElement;
+
+  let sortItemPriceHighToLow = productList.sort((a, b) => b.price - a.price);
+
+  highToLowButton.addEventListener("click", () => {
+    createHTML(sortItemPriceHighToLow);
+  });
+
+  let lowToHighButton: HTMLAnchorElement = document.querySelector(
+    ".sort__priceltoh"
+  ) as HTMLAnchorElement;
+
+  let sortItemPriceLowToHigh = productList.sort((a, b) => a.price - b.price);
+
+  lowToHighButton.addEventListener("click", () => {
+    createHTML(sortItemPriceLowToHigh);
   });
 }
 
