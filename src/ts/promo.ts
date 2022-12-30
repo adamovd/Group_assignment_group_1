@@ -21,9 +21,15 @@ export function createPromotion() {
       Surprise your loved one with a stunning piece of jewelry from our Valentine's Day collection or treat yourself to something special with our collection of luxury jewelry. From statement necklaces to sparkling gemstone rings, we have something for every occasion and taste.
       </p>
       <div class="button">
-        <button type="button" class="btn">
-          Shop Now <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-        </button>
+      
+      <button type="button" class="btn">
+
+      <a href="../pages/products.html" class="promo-link"
+      > Shop Now <i class="fa fa-shopping-bag" aria-hidden="true"></i></a
+    >
+       
+      </button>
+
       </div>
     </div>
     <div class="col-md-6  alig-end" >

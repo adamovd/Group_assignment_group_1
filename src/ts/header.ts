@@ -1,3 +1,6 @@
+import { CartItem } from "./models/CartItem";
+import { Product } from "./models/Product";
+
 export function createMenu() {
   const header: HTMLDivElement = document.querySelector(
     ".header"
@@ -99,7 +102,15 @@ export function createMenu() {
 
   searchIcon.classList.add("fas", "fa-search");
 
-  ///
+  /////////////7
+  const cartBadge: HTMLSpanElement = document.createElement(
+    "span"
+  ) as HTMLSpanElement;
+  cartBadge.classList.add("cart-badge", "badge", "rounded-pill");
+  cartBadge.id = "badgeOnCart";
+  //cartBadge.innerHTML = "0";
+
+  /////////////////////////////7
   menuBarWrap.appendChild(menuBar);
 
   navbar.appendChild(homeLink);
@@ -108,6 +119,8 @@ export function createMenu() {
   navbar.appendChild(contactLink);
 
   shoppingBag.appendChild(shoppingBagIcon);
+  shoppingBagIcon.appendChild(cartBadge);
+
   search.appendChild(searchIcon);
   icons.appendChild(shoppingBag);
   icons.appendChild(search);
@@ -116,6 +129,17 @@ export function createMenu() {
   header.appendChild(logo);
   header.appendChild(navbar);
   header.appendChild(icons);
+
+  let getLSList: string = localStorage.getItem("cart") || "[]";
+
+  let LSList: CartItem[] = JSON.parse(getLSList);
+
+  let sum = 0;
+  for (let i = 0; i < LSList.length; i++) {
+    sum += LSList[i].amount;
+
+    cartBadge.innerHTML = sum.toString();
+  }
 }
 
 export function toggleHamburgerMenu() {
