@@ -21,7 +21,6 @@ html {
   overflow-x: hidden;
   scroll-padding-top: 6rem;
   scroll-behavior: smooth;
-  font-size: 14px;
 }
 
 a {
@@ -239,7 +238,7 @@ ul {
   position: relative;
   cursor: pointer;
   font-size: 16px;
-  transition: background 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
 }
 
 .faq-title:after {
@@ -321,6 +320,45 @@ ul {
 
   .links:hover {
     color: var(--orange);
+  }
+
+  .contactContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    &__section {
+      display: flex;
+      flex-direction: column;
+      margin: 40px;
+      margin-left: 200px;
+      margin-bottom: -60px;
+    }
+
+    &__title {
+      font-size: 27px;
+    }
+    &__text {
+      font-size: 15px;
+    }
+  }
+  .formContact {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+
+    .form-label {
+      font-size: 12px;
+    }
+
+    .form-control {
+      font-size: 12px;
+    }
   }
 
   .footer-col {
