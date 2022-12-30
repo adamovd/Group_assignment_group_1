@@ -18,7 +18,31 @@
   margin: 10px;
   width: 20vw;
 }
-.products {
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.allProductsContainer {
+  @include mixins.for-size(tablet) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.allProductsContainerFilter {
+  @include mixins.for-size(tablet) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.product {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
