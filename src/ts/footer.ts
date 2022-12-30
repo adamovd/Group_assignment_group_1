@@ -103,7 +103,7 @@ export function createFooter() {
     "h4"
   ) as HTMLHeadingElement;
 
-  faqTitle.innerText = "FQA";
+  faqTitle.innerText = "FAQ";
   faqTitle.classList.add("footer__title");
 
   const faqUl: HTMLUListElement = document.createElement(
