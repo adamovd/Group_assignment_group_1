@@ -21,8 +21,9 @@ const cartModalBody: HTMLUListElement = document.getElementById(
   "modal-body"
 ) as HTMLUListElement;
 
-const allProducts: HTMLDivElement = document.createElement("div");
-allProducts.classList.add("products");
+const allProducts: HTMLElement = document.querySelector(
+  ".productscontainer"
+) as HTMLElement;
 
 function sortRing() {
   let ringButton: HTMLAnchorElement = document.querySelector(
@@ -49,11 +50,8 @@ function sortRing() {
 // }
 
 function createHTML(products: Product[]) {
-  const productContainer: HTMLElement = document.querySelector(
-    ".productscontainer"
-  ) as HTMLElement;
-  productContainer.innerHTML = "";
   for (let i = 0; i < products.length; i++) {
+    const productContainer: HTMLDivElement = document.createElement("div");
     const productImgContainer: HTMLDivElement = document.createElement("div");
     const productName: HTMLParagraphElement = document.createElement("p");
     const productPrice: HTMLParagraphElement = document.createElement("p");
@@ -105,7 +103,6 @@ function createHTML(products: Product[]) {
     productContainer.appendChild(productType);
     productContainer.appendChild(productName);
     productContainer.appendChild(productPrice);
-    document.body.appendChild(allProducts);
   }
 }
 
