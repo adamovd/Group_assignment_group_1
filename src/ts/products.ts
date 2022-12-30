@@ -1,16 +1,22 @@
 import { cartButton, presentCart } from "./cart";
+import { createFooter } from "./footer";
 import { addToCart } from "./functions/addToCart";
 import { cartModal } from "./functions/cartModal";
+import { createMenu, toggleHamburgerMenu } from "./header";
 import { CartItem } from "./models/CartItem";
 import { Product } from "./models/Product";
 import { products } from "./models/productList";
 
+<<<<<<< HEAD
+const productList: Product[] = products;
+=======
 window.onload = () => {
   cartButton();
   createHTML(productList);
   sortRing();
 };
 let productList: Product[] = products;
+>>>>>>> 05ff62ffb5cf0253d51d890365bb5111c7edef88
 const cartProducts: CartItem[] = [];
 
 const cartModalBody: HTMLUListElement = document.getElementById(
@@ -106,6 +112,21 @@ function createHTML(products: Product[]) {
 const allProductsFilter: HTMLDivElement = document.createElement("div");
 allProductsFilter.classList.add("products");
 
+const allProductsFilter: HTMLDivElement = document.createElement("div");
+allProductsFilter.classList.add("products");
+
+<<<<<<< HEAD
+window.addEventListener("load", () => {
+  createMenu();
+  toggleHamburgerMenu();
+  cartButton();
+});
+
+window.addEventListener("load", () => {
+  createHTML();
+  createFooter();
+});
+=======
 export function filterProducts() {
   let allButton: HTMLAnchorElement = document.getElementById(
     "allProductItems"
@@ -204,3 +225,4 @@ const showFilteredProducts = (products: Product[]) => {
     document.body.appendChild(allProductsFilter);
   }
 };
+>>>>>>> 05ff62ffb5cf0253d51d890365bb5111c7edef88
