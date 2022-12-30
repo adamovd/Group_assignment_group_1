@@ -29,8 +29,10 @@ const allProducts: HTMLElement = document.querySelector(
 const allProductsContainer: HTMLDivElement = document.createElement(
   "div"
 ) as HTMLDivElement;
+allProductsContainer.classList.add("allProductsContainer");
 
 const allProductsFilter: HTMLDivElement = document.createElement("div");
+allProductsFilter.classList.add("allProductsContainerFilter");
 
 function filterItem() {
   let allButton: HTMLAnchorElement = document.querySelector(
