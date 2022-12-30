@@ -30,7 +30,7 @@ function sortRing() {
   });
 
   ringButton.addEventListener("click", () => {
-    createHTML(sortItem);
+    showFilteredProducts(sortItem);
   });
 
   console.log(sortItem);
@@ -103,6 +103,9 @@ function createHTML(products: Product[]) {
   }
 }
 
+const allProductsFilter: HTMLDivElement = document.createElement("div");
+allProductsFilter.classList.add("products");
+
 export function filterProducts() {
   let allButton: HTMLAnchorElement = document.getElementById(
     "allProductItems"
@@ -140,60 +143,64 @@ const showFilteredProducts = (products: Product[]) => {
   allProducts.innerHTML = "";
 
   for (let i = 0; i < products.length; i++) {
-    for (let i = 0; i < products.length; i++) {
-      const productContainer: HTMLDivElement = document.createElement("div");
-      const productImgContainer: HTMLDivElement = document.createElement("div");
-      const productName: HTMLParagraphElement = document.createElement("p");
-      const productPrice: HTMLParagraphElement = document.createElement("p");
-      const productType: HTMLParagraphElement = document.createElement("p");
-      const productImg: HTMLImageElement = document.createElement("img");
-      const productImgSecond: HTMLImageElement = document.createElement("img");
-      const productBtn: HTMLButtonElement = document.createElement("button");
+    const productContainerFilter: HTMLDivElement =
+      document.createElement("div");
+    const productImgContainerFilter: HTMLDivElement =
+      document.createElement("div");
+    const productNameFilter: HTMLParagraphElement = document.createElement("p");
+    const productPriceFilter: HTMLParagraphElement =
+      document.createElement("p");
+    const productTypeFilter: HTMLParagraphElement = document.createElement("p");
+    const productImgFilter: HTMLImageElement = document.createElement("img");
+    const productImgSecondFilter: HTMLImageElement =
+      document.createElement("img");
+    const productBtnFilter: HTMLButtonElement =
+      document.createElement("button");
 
-      productContainer.classList.add("product");
-      productImgContainer.classList.add("productimgcontainer");
-      productName.classList.add("product__name");
-      productPrice.classList.add("product__price");
-      productType.classList.add("product__type");
-      productImg.classList.add("product__img");
-      productImgSecond.classList.add("product__img--second");
-      productBtn.classList.add("btn");
-      productBtn.classList.add("btn-dark");
-      productBtn.classList.add("product__btn");
+    productContainerFilter.classList.add("product");
+    productImgContainerFilter.classList.add("productimgcontainer");
+    productNameFilter.classList.add("product__name");
+    productPriceFilter.classList.add("product__price");
+    productTypeFilter.classList.add("product__type");
+    productImgFilter.classList.add("product__img");
+    productImgSecondFilter.classList.add("product__img--second");
+    productBtnFilter.classList.add("btn");
+    productBtnFilter.classList.add("btn-dark");
+    productBtnFilter.classList.add("product__btn");
 
-      productName.innerHTML = products[i].name;
-      productPrice.innerHTML = products[i].price.toString() + "kr";
-      productType.innerHTML = products[i].type;
-      productImg.src = products[i].image;
-      productImgSecond.src = products[i].secondImage || productImg.src;
-      productImg.alt = products[i].name;
-      productBtn.innerHTML = `<i class="bi bi-cart-plus-fill"></i>`;
+    productNameFilter.innerHTML = products[i].name;
+    productPriceFilter.innerHTML = products[i].price.toString() + "kr";
+    productTypeFilter.innerHTML = products[i].type;
+    productImgFilter.src = products[i].image;
+    productImgSecondFilter.src =
+      products[i].secondImage || productImgFilter.src;
+    productImgFilter.alt = products[i].name;
+    productBtnFilter.innerHTML = `<i class="bi bi-cart-plus-fill"></i>`;
 
-      productBtn.addEventListener("click", () => {
-        addToCart(products[i]);
+    productBtnFilter.addEventListener("click", () => {
+      addToCart(products[i]);
+    });
+
+    productImgFilter.addEventListener("click", () => {
+      location.href = "../pages/productdetails.html?id=" + products[i].id;
+    });
+
+    if (productImgSecondFilter.src !== productImgFilter.src) {
+      productImgContainerFilter.addEventListener("mouseenter", () => {
+        productImgFilter.src = products[i].secondImage || "";
       });
-
-      productImg.addEventListener("click", () => {
-        location.href = "../pages/productdetails.html?id=" + products[i].id;
+      productImgContainerFilter.addEventListener("mouseleave", () => {
+        productImgFilter.src = products[i].image;
       });
-
-      if (productImgSecond.src !== productImg.src) {
-        productImgContainer.addEventListener("mouseenter", () => {
-          productImg.src = products[i].secondImage || "";
-        });
-        productImgContainer.addEventListener("mouseleave", () => {
-          productImg.src = products[i].image;
-        });
-      }
-
-      allProducts.appendChild(productContainer);
-      productContainer.appendChild(productImgContainer);
-      productImgContainer.appendChild(productImg);
-      productImgContainer.appendChild(productBtn);
-      productContainer.appendChild(productType);
-      productContainer.appendChild(productName);
-      productContainer.appendChild(productPrice);
-      document.body.appendChild(allProducts);
     }
+
+    allProducts.appendChild(productContainerFilter);
+    productContainerFilter.appendChild(productImgContainerFilter);
+    productImgContainerFilter.appendChild(productImgFilter);
+    productImgContainerFilter.appendChild(productBtnFilter);
+    productContainerFilter.appendChild(productTypeFilter);
+    productContainerFilter.appendChild(productNameFilter);
+    productContainerFilter.appendChild(productPriceFilter);
+    document.body.appendChild(allProductsFilter);
   }
 };
