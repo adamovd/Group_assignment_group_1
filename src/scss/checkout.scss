@@ -3,6 +3,14 @@
 @use "footer";
 @use "cartmodal";
 
+.checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+}
+
 .list-group {
   margin: 10px;
   padding: 0;
@@ -77,4 +85,70 @@
   font-family: var.$font;
   font-size: 1.5rem;
   padding: 10px;
+}
+
+.shipping {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    font-family: var.$title-font;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__methods {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: max-content;
+    position: relative;
+    padding: 30px;
+    border: 0.1px solid var.$secondary-color;
+    border-radius: 5px;
+  }
+}
+
+.customer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__form {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    border: 0.1px solid var.$secondary-color;
+    border-radius: 5px;
+  }
+  &__title {
+    font-family: var.$title-font;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.payment {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  border: 0.1px solid var.$secondary-color;
+  border-radius: 5px;
+
+  &__title {
+    font-family: var.$title-font;
+    font-size: 2rem;
+    text-align: center;
+  }
 }
