@@ -130,61 +130,21 @@
       <article class="row" >
 
         <section>
-          <p>        
-            <h4 class="col-md-5 col-lg-4 "  >Order Summary</h4>
-            <span class="mb-6">Items total</span>
-            <span class="badge bg-primary rounded-pill mb-6">Antal</span>
-          </p>
-          <ul class="list-group mb-3">
-            <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Product name</h6>
-
-                <small class="text-muted">Brief description</small>
-              </div>
-              <span class="text-muted">12</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Second product</h6>
-                <small class="text-muted">Brief description</small>
-              </div>
-              <span class="text-muted">8</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Third item</h6>
-                <small class="text-muted">Brief description</small>
-              </div>
-              <span class="text-muted">5</span>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Shipping</h6>
-                <small class="text-muted">Brief description</small>
-              </div>
-              <span class="text-muted">5</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between bg-light">
-
-              <div class="text-success">
-                <h6 class="my-0">Promo code</h6>
-                <small>EXAMPLECODE</small>
-              </div>
-              <span class="text-success">-5</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between">
-              <span>Total </span>
-              <strong>20</strong>
-            </li>
+          <div class="summary">        
+            <h4 class="col-md-5 col-lg-4 summary__order">Order Summary</h4>
+            <div class="summary__items">
+            <span class="mb-6 summary__items--text">Total Items</span>
+            <span class="badge bg-primary rounded-pill mb-6 summary__items--amount">1</span>
+          </div>
+          </div>
+          <ul class="list-group mb-3" id="checkoutsummary">
           </ul>
         </section>
       </article>
 
       <article class="row p-3 m-3 ">
         
-        <form class="form col-lg-6 p-3 border border-dark border-primary">
+        <form class="form col-lg-6 p-3 border border-dark border-primary customer__form">
           <h4 >Billing adress</h4>
           
           <div class=" col-xs-10 col-md-6 col-lg-6 m-3" >
@@ -199,11 +159,11 @@
           </div>
           
           <div class="col-xs-10 col-md-6 col-lg-6 m-3">
-            <label for="name" class=" form-label"> Last Name</label>
+            <label for="lastname" class=" form-label"> Last Name</label>
             <input
               type="text"
               class="form-control "
-              id="name"
+              id="lastname"
               placeholder="Last name *"
               required
             />
@@ -225,7 +185,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="city-name"
+                  id="cityname"
                   placeholder="City *"
                   required
                 />
@@ -236,7 +196,7 @@
               <input
                 type="text"
                 class="form-control"
-                id="zip_code"
+                id="zipcode"
                 placeholder="Zip-code *"
                 required
               />
@@ -249,7 +209,6 @@
                   id="phone"
                   type="text"
                   maxlength="10"
-                  pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
                   required
                   placeholder="Enter Your Mobile Number *"
                 />
@@ -267,8 +226,8 @@
                   placeholder="Enter your email adress *"
                 />
               </div>
-    
-               </form>
+              <button class=" btn btn-outline-dark customer__btn" type="submit">Continue to payment</button>
+              </form>
 
         <aside class="col-xs-10 col-md-6 col-lg-6 mx-auto d-flex flex-column justify-content-center align-items-center"> 
           <section class=" col-xs-10 col-md-6 col-lg-6 p-3 border border-dark border-primary m-6 mb-4 mt-2">

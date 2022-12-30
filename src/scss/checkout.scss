@@ -1,3 +1,80 @@
+@use "variables" as var;
 @use "header";
 @use "footer";
 @use "cartmodal";
+
+.list-group {
+  margin: 10px;
+  padding: 0;
+  border: 0.1px solid var.$secondary-color;
+}
+
+.summary {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__order {
+    font-family: var.$title-font;
+    font-size: 2.5rem;
+  }
+  &__items {
+    font-family: var.$font;
+    font-size: 1.5rem;
+  }
+}
+
+.checkoutproduct {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &__img {
+    width: 15%;
+    margin-right: 10px;
+  }
+
+  &__name {
+    width: 40%;
+    font-family: var.$title-font;
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+
+  &__price {
+    width: 10%;
+    font-family: var.$font;
+    margin-right: 30px;
+  }
+
+  &__amountcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 30%;
+  }
+
+  &__amount {
+    width: 10%;
+    font-family: var.$font;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  &__add,
+  &__remove {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+  }
+}
+
+.checkoutTotalAmount {
+  font-family: var.$font;
+  font-size: 1.5rem;
+  padding: 10px;
+}
