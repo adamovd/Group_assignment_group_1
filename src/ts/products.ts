@@ -95,60 +95,62 @@ function sortItem() {
     ".sort__az"
   ) as HTMLAnchorElement;
 
-  let sortItemaz = productList.sort((a, b) => {
-    console.log(a.name);
-    if (a.name < b.name) {
-      return -1;
-    }
-    if (a.name > b.name) {
-      return 1;
-    }
-
-    return 0;
-  });
-
   sortAzButton.addEventListener("click", () => {
-    createHTML(sortItemaz);
+    console.log(1);
+    productList.sort((a, b) => {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+
+      return 0;
+    });
+
+    createHTML(productList);
   });
 
   let sortZaButton: HTMLAnchorElement = document.querySelector(
     ".sort__za"
   ) as HTMLAnchorElement;
 
-  let sortItemza = productList.sort((a, b) => {
-    console.log(a.name);
-    if (a.name > b.name) {
-      return -1;
-    }
-    if (a.name < b.name) {
-      return 1;
-    }
-
-    return 0;
-  });
-
   sortZaButton.addEventListener("click", () => {
-    createHTML(sortItemza);
+    console.log(2);
+    productList.sort((a, b) => {
+      if (a.name > b.name) {
+        return -1;
+      }
+      if (a.name < b.name) {
+        return 1;
+      }
+
+      return 0;
+    });
+
+    createHTML(productList);
   });
 
   let highToLowButton: HTMLAnchorElement = document.querySelector(
     ".sort__pricehtol"
   ) as HTMLAnchorElement;
 
-  let sortItemPriceHighToLow = productList.sort((a, b) => b.price - a.price);
-
   highToLowButton.addEventListener("click", () => {
-    createHTML(sortItemPriceHighToLow);
+    console.log(3);
+    productList.sort((a, b) => b.price - a.price);
+
+    createHTML(productList);
   });
 
   let lowToHighButton: HTMLAnchorElement = document.querySelector(
     ".sort__priceltoh"
   ) as HTMLAnchorElement;
 
-  let sortItemPriceLowToHigh = productList.sort((a, b) => a.price - b.price);
-
   lowToHighButton.addEventListener("click", () => {
-    createHTML(sortItemPriceLowToHigh);
+    console.log(4);
+    productList.sort((a, b) => a.price - b.price);
+
+    createHTML(productList);
   });
 }
 
