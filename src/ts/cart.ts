@@ -21,6 +21,8 @@ export function cartButton() {
 }
 
 export function presentCart(cartProducts: CartItem[]) {
+  console.log(cartProducts.length);
+
   cartProductsFromLS = JSON.parse(localStorage.getItem("cart") || "[]");
 
   cartProducts = cartProductsFromLS.map((cartProducts) => {
@@ -30,7 +32,6 @@ export function presentCart(cartProducts: CartItem[]) {
   cartModalBody.innerHTML = "";
 
   for (let i = 0; i < cartProducts.length; i++) {
-    // const cartProductUl: HTMLUListElement = document.createElement("ul");
     const cartProductLi: HTMLLIElement = document.createElement("li");
     const cartProductName: HTMLParagraphElement = document.createElement("p");
     const cartProductPrice: HTMLParagraphElement = document.createElement("p");
@@ -42,7 +43,6 @@ export function presentCart(cartProducts: CartItem[]) {
     const cartProductRemove: HTMLButtonElement =
       document.createElement("button");
 
-    // cartProductUl.classList.add("list-group");
     cartProductLi.classList.add("cartproduct");
     cartProductLi.classList.add("list-group-item");
     cartProductLi.classList.add("d-flex");
@@ -88,7 +88,6 @@ export function presentCart(cartProducts: CartItem[]) {
     });
 
     cartModalBody.appendChild(cartProductLi);
-    // cartProductUl.appendChild(cartProductLi);
     cartProductLi.appendChild(cartProductImg);
     cartProductLi.appendChild(cartProductName);
     cartProductLi.appendChild(cartProductPrice);

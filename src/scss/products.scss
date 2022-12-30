@@ -4,13 +4,17 @@
 @use "variables" as var;
 @use "mixins";
 
+.selections {
+  justify-content: space-between;
+}
 .dropdown {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 20vw;
 }
-.sort__btn {
+.sort__btn,
+.filter__btn {
   margin: 10px;
   width: 20vw;
 }

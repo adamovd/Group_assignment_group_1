@@ -198,6 +198,10 @@ export const products: Product[] = [
   ),
 ];
 
+export let selectedItems: Product[] = JSON.parse(
+  localStorage.getItem("products") || "[]"
+);
+
 /*  new Product("Ring", 899, "", "Ring", "Golden ring", "M"),
   new Product("Ring", 899, "", "Ring", "Golden ring", "M"),
   new Product("Ring", 899, "", "Ring", "Golden ring", "M"),
