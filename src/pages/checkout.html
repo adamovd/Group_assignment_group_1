@@ -32,74 +32,11 @@
   </head>
   <body>
     <header class="header">
-      <!--bootstrap hamburgermeny
-      <nav class="navbar fixed-top">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasDarkNavbar"
-            aria-controls="offcanvasDarkNavbar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-start text-bg-white"
-            tabindex="-1"
-            id="offcanvasDarkNavbar"
-            aria-labelledby="offcanvasDarkNavbarLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
-                Logo
-              </h5>
-              <button
-                type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="../index.html"
-                    >home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./products.html">products</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./about.html">about</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./contact.html">contact</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./checkout.html">checkout</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav> -->
-      <!--slut på hamburgermeny-->
-      <!--   <div class="d-flex justify-content-center align-items-center">
-        <h1 class="align-items-center">Logo</h1>
-      </div>
-      <button id="openCart">
-        <i class="bi bi-cart"></i>
-      </button> -->
       <div class="modal fade" id="cartModal">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Cart</h1>
+              <h1 class="modal-title" id="exampleModalLabel">Cart</h1>
               <button
                 type="button"
                 class="btn-close"
@@ -111,7 +48,7 @@
             <div class="modal-footer">
               <button
                 type="button"
-                class="btn btn-secondary"
+                class="btn btn-secondary  "
                 data-bs-dismiss="modal"
               >
                 Continue shopping
@@ -125,7 +62,7 @@
       </div>
     </header>
 
-    <!--checkout-->
+    
     <main class="checkout">
       <article class="row">
         <section>
@@ -143,10 +80,10 @@
         </section>
       </article>
 
+      <h4 class="col-md-5 col-lg-4 shipping__title">Shipping Method</h4>
       <article class="row p-3 m-3 shipping">
-        <h4 class="col-md-5 col-lg-4 shipping__title">Shipping Method</h4>
         <section
-          class="col-xs-10 col-md-6 col-lg-6 p-3 border border-dark border-primary m-6 mb-4 mt-2 shipping__methods"
+          class="col-xs-10 col-md-6 col-lg-6 p-3 m-6 mb-4 mt-2 shipping__methods"
         >
           <div class="form-check">
             <input
@@ -156,7 +93,7 @@
               class="form-check-input"
             />
             <label class="form-check-label" for="flexRadioDefault1">
-              <span>Express Courier</span>
+              <span>Express Courier</span> </br>
               <small class="text-muted">2 to 3 business days</small>
             </label>
           </div>
@@ -169,7 +106,7 @@
               checked
             />
             <label class="form-check-label" for="flexRadioDefault2"></label>
-            <span>Standard Courier</span>
+            <span>Standard Courier</span> </br>
             <small class="text-muted">3 to 5 business days</small>
           </label>
           </div>
@@ -343,7 +280,7 @@
               </div>
 
               <div class="col-md-3">
-                <label for="cc-cvv" class="form-label">CVV</label>
+                <label for="cc-cvv" class="form-label">CCV</label>
                 <input
                   type="text"
                   class="form-control"
@@ -357,7 +294,7 @@
           </section>
 
           <section class="mt-4">
-            <button class="btn btn-outline-dark pay" type="submit">
+            <button class="btn btn-primary pay" type="submit">
               Pay and place order
             </button>
            

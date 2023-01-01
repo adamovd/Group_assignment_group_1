@@ -1,4 +1,13 @@
 @use "variables" as var;
+@use "mixins";
+
+#exampleModalLabel {
+  font-family: var.$title-font;
+  font-size: 2rem;
+  @include mixins.for-size(tablet) {
+    font-size: 2.5rem;
+  }
+}
 
 .list-group {
   margin: 0;
@@ -19,14 +28,21 @@
   &__name {
     width: 40%;
     font-family: var.$title-font;
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-right: 10px;
+    @include mixins.for-size(tablet) {
+      font-size: 2rem;
+    }
   }
 
   &__price {
     width: 10%;
     font-family: var.$font;
     margin-right: 30px;
+    font-size: 1.2rem;
+    @include mixins.for-size(tablet) {
+      font-size: 2rem;
+    }
   }
 
   &__amountcontainer {
@@ -41,18 +57,41 @@
     font-family: var.$font;
     margin-left: 10px;
     margin-right: 10px;
+    font-size: 1.2rem;
+    @include mixins.for-size(tablet) {
+      font-size: 2rem;
+    }
   }
 
   &__add,
   &__remove {
     width: 40px;
-    height: 40px;
+    height: 38px;
     border-radius: 50%;
     text-align: center;
+    @include mixins.for-size(tablet) {
+      width: 50px;
+      height: 50px;
+    }
   }
 }
 
 .totalAmount {
   font-family: var.$font;
   padding: 10px;
+  font-size: 1.5rem;
+  @include mixins.for-size(tablet) {
+    font-size: 2rem;
+  }
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .btn {
+    font-family: var.$font;
+    font-size: 1.5rem;
+    height: 50px;
+  }
 }
