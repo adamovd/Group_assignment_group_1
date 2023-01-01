@@ -152,3 +152,61 @@
     text-align: center;
   }
 }
+
+.purchase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    font-family: var.$title-font;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  &__text {
+    font-family: var.$font;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 20px;
+  }
+}
+
+.order {
+  margin: 10px;
+
+  &__title {
+    font-family: var.$title-font;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+.orderTotalAmount {
+  font-family: var.$font;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.customerinfo {
+  &__title {
+    font-family: var.$title-font;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  font-family: var.$font;
+  font-size: 1.3rem;
+}
+
+.orderquestions {
+  margin: 20px;
+  font-family: var.$font;
+  font-size: 1.3rem;
+  text-align: center;
+}
