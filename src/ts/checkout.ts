@@ -49,7 +49,7 @@ const payBtn: HTMLButtonElement = document.querySelector(
   ".pay"
 ) as HTMLButtonElement;
 payBtn.addEventListener("click", () => {
-  console.log("Köp");
+  generatePurschase();
 });
 
 customerForm.addEventListener("submit", (event: SubmitEvent) => {
