@@ -2,7 +2,7 @@
 @use "mixins";
 
 ////footer
-///
+
 .footer__title {
   line-height: 2;
 }
@@ -99,4 +99,10 @@ ul {
   margin-top: 2rem;
   color: var.$secondary-color;
   margin-bottom: 3rem;
+}
+
+.fa-phone,
+.fa-envelope,
+.fa-map-marker {
+  font-size: 10px;
 }
