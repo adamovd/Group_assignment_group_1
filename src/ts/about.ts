@@ -39,7 +39,7 @@ export function createAboutUs() {
   aboutTextWrapper.classList.add("aboutTextWrapper");
 
   const aboutTitle: HTMLHeadingElement = document.createElement(
-    "h1"
+    "h4"
   ) as HTMLHeadingElement;
 
   aboutTitle.classList.add("aboutTitle");

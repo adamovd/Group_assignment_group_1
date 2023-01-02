@@ -30,6 +30,7 @@
   </head>
   <body>
     <header class="header">
+      
       <!--bootstrap hamburgermeny-->
    <!--    <nav class="navbar fixed-top">
         <div class="container-fluid">
@@ -114,7 +115,7 @@
               >
                 Continue shopping
               </button>
-              <button type="button" class="btn btn-primary">
+              <button type="button" class="btn btn-primary" id="btn-checkout">
                 Go to checkout
               </button>
             </div>
@@ -124,8 +125,8 @@
     </header>
     <main class="container-fluid">
       <!--contactform -->
-<div class="contactContainer">
-      <article class="contact row  m-6 p-3 ">
+<div class="contactContainer ">
+      <article class="contact row  m-6 p-3 mt-3">
         <section class="contact__section col ">
           <h4 class="contact__title">Contacts Us</h4>
           <p class="contact__text">
@@ -177,10 +178,10 @@
               class="form-control"
               id="phone"
               type="text"
-              maxlength="10"
-              pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
+              maxlength="12"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               placeholder="Enter Your Mobile Number"
-            />
+            /> <!--123-456-7890 -->
           </div>
 
           <div class="col-xs-10 col-md-6 col-lg-6 m-3">
@@ -191,8 +192,8 @@
               class="form-control"
               name="email"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-              required
               placeholder="Enter your email adress *"
+
             />
           </div>
 

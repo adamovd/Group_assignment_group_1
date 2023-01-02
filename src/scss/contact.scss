@@ -1,10 +1,12 @@
 @use "header";
 @use "footer";
 @use "cartmodal";
-:root {
+@use "variables" as var;
+
+/* :root {
   --black: black;
-  --orange: #e7cab3;
-}
+  --: #e7cab3;
+} */
 
 * {
   margin: 0;
@@ -14,6 +16,7 @@
   border: none;
   //text-transform: capitalize;
   transition: all 0.1s linear;
+  font-family: var.$font;
 }
 
 html {
@@ -25,10 +28,13 @@ html {
 
 a {
   text-decoration: none;
-  color: black;
+  color: var.$secondary-color;
 }
 li {
   list-style: none;
+}
+h4 {
+  font-family: var.$title-font;
 }
 
 //////
@@ -38,7 +44,7 @@ li {
   top: 0;
   left: 0;
   right: 0;
-  background: #f9f5f0;
+  background: var.$popup-color;
   //padding: 1rem;
   padding: 2rem;
   display: flex;
@@ -53,7 +59,7 @@ li {
     top: 100%;
     left: -120%;
     width: 100%;
-    background: #f9f5f0;
+    background: var.$popup-color;
     border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
     min-height: 100vh;
   }
@@ -61,8 +67,7 @@ li {
   &__menu-bar {
     font-size: 2.5rem;
     padding: 0.5rem 1.5rem;
-    border: 0.1rem solid var(--black);
-    color: var(--black);
+    border: 0.1rem solid var.$secondary-color;
     border-radius: 0.3rem;
     cursor: pointer;
   }
@@ -73,18 +78,18 @@ li {
 
   &__logo {
     font-size: 2.5rem;
-    color: var(--black);
+    color: var.$secondary-color;
   }
 
   &__logo:hover {
-    color: var(--orange);
+    color: var.$icon-hover;
   }
 }
 
 .links {
   font-size: 2rem;
-  background: #f9f5f0;
-  border: 0.1rem solid var(--black);
+  background: var.$popup-color;
+  border: 0.1rem solid var.$secondary-color;
   border-radius: 0.5rem;
   padding: 1.5rem;
   margin: 1.5rem;
@@ -106,13 +111,13 @@ li {
 .icons__search,
 .icons__shoppingbag {
   font-size: 2.5rem;
-  color: var(--black);
+  color: var.$secondary-color;
   margin-left: 1.5rem;
 }
 
 .icons__search:hover,
 .icons__shoppingbag:hover {
-  color: var(--orange);
+  color: var.$icon-hover;
 }
 
 /////footer
@@ -132,7 +137,7 @@ li {
 }
 
 .footer {
-  background-color: #f9f5f0;
+  background-color: var.$popup-color;
   padding: 8px 0;
 }
 .footer-col {
@@ -143,7 +148,7 @@ li {
 }
 .footer-col h4 {
   font-size: 18px;
-  color: black;
+  color: var.$secondary-color;
   //text-transform: capitalize;
   margin-bottom: 35px;
   font-weight: 500;
@@ -157,30 +162,30 @@ li {
   // text-transform: capitalize;
   text-decoration: none;
   font-weight: 300;
-  color: black;
+  color: var.$secondary-color;
   display: block;
   transition: all 0.3s ease;
 }
 .footer-col ul li a:hover,
 .arrow:hover {
-  color: var(--orange);
+  color: var.$icon-hover;
   padding-left: 2px;
 }
 .footer-col .social-links a {
   display: inline-block;
   height: 40px;
   width: 40px;
-  background-color: #f9f5f0;
+  background-color: var.$popup-color;
   margin: 0 10px 10px 0;
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
-  color: black;
+  color: var.$secondary-color;
   transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover {
-  color: #24262b;
-  background-color: var(--orange);
+  color: var.$secondary-color;
+  background-color: var.$icon-hover;
   border-radius: 50%;
 }
 
@@ -193,7 +198,7 @@ ul {
   display: flex;
   justify-content: flex-end;
   font-size: 20px;
-  color: black;
+  color: var.$secondary-color;
 }
 
 .copyright {
@@ -201,7 +206,7 @@ ul {
   justify-content: center;
   font-size: 16px;
   margin-top: 2rem;
-  color: black;
+  color: var.$secondary-color;
   margin-bottom: 3rem;
 }
 
@@ -212,8 +217,9 @@ ul {
 }
 
 .faq-mtitle {
+  font-family: var.$title-font;
   display: flex;
-  background-color: #f9f5f0;
+  // background-color: #f9f5f0;
   padding: 3px;
   border-radius: 7px;
 
@@ -254,7 +260,7 @@ ul {
 }
 
 .faq-title:hover {
-  background-color: var(--orange);
+  background-color: var.$icon-hover;
 }
 
 .faq-input {
@@ -266,7 +272,7 @@ ul {
 }
 
 .faq-input:checked ~ .faq-title {
-  background-color: var(--orange);
+  background-color: var.$icon-hover;
 }
 
 .faq-input:checked ~ .faq-title:after {
@@ -282,7 +288,7 @@ ul {
 .faq-text {
   display: none;
   padding: 10px 15px;
-  color: black;
+  color: var.$secondary-color;
   font-size: 16px;
   white-space: pre-line;
 }
@@ -311,7 +317,7 @@ ul {
 
   .links {
     font-size: 1.7rem;
-    color: var(--black);
+    color: var.$secondary-color;
     margin: 0 1rem;
     background: none;
 
@@ -319,33 +325,43 @@ ul {
   }
 
   .links:hover {
-    color: var(--orange);
+    color: var.$icon-hover;
   }
 
   .contactContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
+    justify-content: center;
+    align-items: center;
   }
   .contact {
     display: flex;
-    flex-direction: column;
-    width: 50%;
+    flex-direction: row;
+    //width: 50%;
+    margin-left: 8rem;
+    width: 75%;
 
     &__section {
       display: flex;
       flex-direction: column;
-      margin: 40px;
+
+      /* margin: 40px;
       margin-left: 200px;
-      margin-bottom: -60px;
+      margin-bottom: -60px; */
     }
 
-    &__title {
-      font-size: 27px;
-    }
+    /*  &__title {
+     // font-size: 27px;
+    } */
     &__text {
       font-size: 15px;
     }
+  }
+
+  .thankYouMessage {
+    margin: 2rem;
+    width: 50%;
   }
   .formContact {
     display: flex;
@@ -364,5 +380,19 @@ ul {
   .footer-col {
     width: 25%;
     margin-bottom: 8px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contact {
+    margin-left: 250px;
+  }
+
+  .contactForm {
+    width: 75%;
+  }
+
+  .faq {
+    max-width: 750px;
   }
 }

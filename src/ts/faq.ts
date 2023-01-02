@@ -11,7 +11,7 @@ export function createFQA() {
 
   <div class="faq">
 
-  <h3 class="faq-mtitle">FAQ</h3>
+  <h4 class="faq-mtitle">Frequently Asked Questions</h4>
 
   <p class="faq-description">Here, you'll find answers to some of the most common questions we receive from our customers. If you don't see the answer to your question below, feel free to contact us and we'll be happy to help. We hope this page helps to make your experience with our company as smooth and enjoyable as possible.</p>
       <div class="faq-item">
@@ -47,7 +47,7 @@ export function createFQA() {
         <input class="faq-input" type="checkbox" id="faq_3">
         <label class="faq-title" for="faq_3">Shipping</label>
         <div class="faq-text">
-        Our Express Courier service is a fast and reliable way to get your package delivered to its destination. With this service, your package will be picked up from our warehouse and delivered directly to the recipient's address, typically within 1-3 business days. You'll receive tracking updates along the way so you can keep track of your package's progress. This service is available for domestic and international shipping. Please note that delivery times may vary depending on the destination, and additional charges may apply for certain locations. Contact us for more information on our Express Courier service</p>
+        Our Express and Standard Courier service is a fast and reliable way to get your package delivered to its destination. With this services, your package will be picked up from our warehouse and delivered directly to the recipient's address, typically within 1-3 business days. You'll receive tracking updates along the way so you can keep track of your package's progress. This service is available for domestic and international shipping. Please note that delivery times may vary depending on the destination, and additional charges may apply for certain locations. Contact us for more information on our Express Courier service.</p>
         </div>
       </div>
 

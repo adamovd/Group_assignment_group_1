@@ -16,15 +16,19 @@ export function createThankYouMessage() {
     ".thankYouMessage"
   ) as HTMLParagraphElement;
   showMessage.style.display = "none";
-  let formSubmitBtn: HTMLButtonElement = document.querySelector(
+
+  let contactForm: HTMLFormElement = document.querySelector(
+    ".contactForm"
+  ) as HTMLFormElement;
+
+  /* let formSubmitBtn: HTMLButtonElement = document.querySelector(
     ".thankYouBtn"
-  ) as HTMLButtonElement;
-  formSubmitBtn.addEventListener("click", (e) => {
+  ) as HTMLButtonElement; */
+  contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    let hideForm: HTMLFormElement = document.querySelector(
-      ".contactForm"
-    ) as HTMLFormElement;
-    hideForm.style.display = "none";
+
+    contactForm.style.display = "none";
+
     let showMessage: HTMLParagraphElement = document.querySelector(
       ".thankYouMessage"
     ) as HTMLParagraphElement;
