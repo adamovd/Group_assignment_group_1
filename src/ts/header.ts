@@ -96,9 +96,9 @@ export function createMenu() {
 
   shoppingBagIcon.classList.add("fa", "fa-shopping-bag");
 
-  search.href = "#";
+  /* search.href = "#";
   search.setAttribute("aria-label", "search-icon");
-  search.classList.add("icons__search");
+  search.classList.add("icons__search"); */
 
   searchIcon.classList.add("fas", "fa-search");
 
@@ -123,7 +123,7 @@ export function createMenu() {
 
   search.appendChild(searchIcon);
   icons.appendChild(shoppingBag);
-  icons.appendChild(search);
+  //icons.appendChild(search);
 
   header.appendChild(menuBarWrap);
   header.appendChild(logo);
