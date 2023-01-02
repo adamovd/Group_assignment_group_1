@@ -278,8 +278,12 @@ li {
 .footer-col {
   width: 50%;
   margin-bottom: 8px;
-
   padding: 0 15px;
+
+  @include mixins.for-size(tablet) {
+    width: 25%;
+    margin-bottom: 8px;
+  }
 }
 .footer-col h4 {
   font-size: 18px;
@@ -343,41 +347,4 @@ ul {
   margin-top: 2rem;
   color: black;
   margin-bottom: 3rem;
-}
-
-@media screen and (min-width: 768px) {
-  // .header__navbar {
-  //   display: flex;
-  //   position: relative;
-  //   left: 0%;
-  //   background: none;
-  //   border-top: none;
-  //   margin-left: auto;
-  //   width: auto;
-  //   min-height: 0;
-  // }
-
-  // .header__navbar.active {
-  //   display: none;
-  //   top: 2rem;
-  //   z-index: 0;
-  // }
-
-  // .links {
-  //   font-size: 1.7rem;
-  //   color: var(--black);
-  //   margin: 0 1rem;
-  //   background: none;
-
-  //   border: none;
-  // }
-
-  // .links:hover {
-  //   color: var(--orange);
-  // }
-
-  .footer-col {
-    width: 25%;
-    margin-bottom: 8px;
-  }
 }

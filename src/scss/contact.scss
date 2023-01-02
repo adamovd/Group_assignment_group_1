@@ -1,6 +1,7 @@
 @use "header";
 @use "footer";
 @use "cartmodal";
+@use "mixins";
 :root {
   --black: black;
   --orange: #e7cab3;
@@ -34,6 +35,12 @@ li {
 //////
 ///
 
+#header__menu-bar {
+  @include mixins.for-size(tablet) {
+    display: none;
+  }
+}
+
 .header {
   top: 0;
   left: 0;
@@ -56,6 +63,17 @@ li {
     background: #f9f5f0;
     border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
     min-height: 100vh;
+
+    @include mixins.for-size(tablet) {
+      display: flex;
+      position: relative;
+      left: 0%;
+      background: none;
+      border-top: none;
+      margin-left: auto;
+      width: auto;
+      min-height: 0;
+    }
   }
 
   &__menu-bar {
@@ -90,6 +108,18 @@ li {
   margin: 1.5rem;
   display: block;
   text-align: center;
+
+  @include mixins.for-size(tablet) {
+    font-size: 1.7rem;
+    color: var(--black);
+    margin: 0 1rem;
+    background: none;
+    border: none;
+
+    .links:hover {
+      color: var(--orange);
+    }
+  }
 }
 
 /* header .navbar {
@@ -101,6 +131,12 @@ li {
   display: inline;
   top: 8rem;
   z-index: 100;
+
+  @include mixins.for-size(tablet) {
+    display: none;
+    top: 2rem;
+    z-index: 0;
+  }
 }
 
 .icons__search,
@@ -113,6 +149,53 @@ li {
 .icons__search:hover,
 .icons__shoppingbag:hover {
   color: var(--orange);
+}
+
+.contactContainer {
+  @include mixins.for-size(tablet) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+.contact {
+  @include mixins.for-size(tablet) {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    &__section {
+      display: flex;
+      flex-direction: column;
+      margin: 40px;
+      margin-left: 200px;
+      margin-bottom: -60px;
+    }
+
+    &__title {
+      font-size: 27px;
+    }
+    &__text {
+      font-size: 15px;
+    }
+  }
+}
+
+.formContact {
+  @include mixins.for-size(tablet) {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+
+    .form-label {
+      font-size: 12px;
+    }
+
+    .form-control {
+      font-size: 12px;
+    }
+  }
 }
 
 /////footer
@@ -138,8 +221,12 @@ li {
 .footer-col {
   width: 50%;
   margin-bottom: 8px;
-
   padding: 0 15px;
+
+  @include mixins.for-size(tablet) {
+    width: 25%;
+    margin-bottom: 8px;
+  }
 }
 .footer-col h4 {
   font-size: 18px;
@@ -285,84 +372,4 @@ ul {
   color: black;
   font-size: 16px;
   white-space: pre-line;
-}
-
-@media screen and (min-width: 768px) {
-  #header__menu-bar {
-    display: none;
-  }
-
-  .header__navbar {
-    display: flex;
-    position: relative;
-    left: 0%;
-    background: none;
-    border-top: none;
-    margin-left: auto;
-    width: auto;
-    min-height: 0;
-  }
-
-  .header__navbar.active {
-    display: none;
-    top: 2rem;
-    z-index: 0;
-  }
-
-  .links {
-    font-size: 1.7rem;
-    color: var(--black);
-    margin: 0 1rem;
-    background: none;
-
-    border: none;
-  }
-
-  .links:hover {
-    color: var(--orange);
-  }
-
-  .contactContainer {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-  }
-  .contact {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-
-    &__section {
-      display: flex;
-      flex-direction: column;
-      margin: 40px;
-      margin-left: 200px;
-      margin-bottom: -60px;
-    }
-
-    &__title {
-      font-size: 27px;
-    }
-    &__text {
-      font-size: 15px;
-    }
-  }
-  .formContact {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-
-    .form-label {
-      font-size: 12px;
-    }
-
-    .form-control {
-      font-size: 12px;
-    }
-  }
-
-  .footer-col {
-    width: 25%;
-    margin-bottom: 8px;
-  }
 }
