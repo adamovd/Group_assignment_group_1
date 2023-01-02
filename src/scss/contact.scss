@@ -17,6 +17,9 @@ html {
   scroll-behavior: smooth;
 }
 
+h4 {
+  font-size: 2rem;
+}
 .contact {
   display: flex;
   flex-direction: row;
@@ -25,7 +28,7 @@ html {
   margin-left: 2rem;
 
   @include mixins.for-size(tablet) {
-    margin-left: 9rem;
+    margin-left: 10rem;
   }
 
   @include mixins.for-size(laptop) {
@@ -63,8 +66,8 @@ html {
   }
 
   @include mixins.for-size(laptop) {
-    width: 50vw;
-    margin-left: 25%;
+    width: 35vw;
+    margin-left: 30%;
   }
 }
 
@@ -90,6 +93,27 @@ html {
   width: 90px;
   font-size: 1.5rem;
   margin-top: 20px;
+}
+
+.thankYouMessage {
+  margin: 2.5rem;
+  width: 80%;
+  font-size: 1.5rem;
+
+  @include mixins.for-size(tablet) {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  @include mixins.for-size(laptop) {
+    width: 50%;
+    margin-left: 35%;
+  }
+  @include mixins.for-size(desktop) {
+    font-size: 1.7rem;
+    width: 30%;
+    margin-left: 35%;
+  }
 }
 
 ////FAQ
