@@ -1,5 +1,4 @@
 import { CartItem } from "./models/CartItem";
-import { Product } from "./models/Product";
 
 export function createMenu() {
   const header: HTMLDivElement = document.querySelector(
@@ -14,9 +13,7 @@ export function createMenu() {
     "span"
   ) as HTMLSpanElement;
 
-  const logo: HTMLAnchorElement = document.createElement(
-    "a"
-  ) as HTMLAnchorElement;
+  const logo: HTMLImageElement = document.createElement("img");
 
   const navbar: HTMLParagraphElement = document.createElement(
     "p"
@@ -64,10 +61,13 @@ export function createMenu() {
 
   menuBarWrap.classList.add("header__menuBar");
 
-  logo.href = "../index.html";
-  logo.setAttribute("aria-label", "logo");
   logo.classList.add("header__logo");
-  logo.innerHTML = 'Shop <i class="fas fa-gem"></i>';
+
+  logo.src = "https://i.ibb.co/0f6g50Q/aurora-logo-2.png";
+
+  logo.addEventListener("click", () => {
+    location.href = "../index.html";
+  });
 
   navbar.classList.add("header__navbar");
 
@@ -95,10 +95,6 @@ export function createMenu() {
   icons.classList.add("icons");
 
   shoppingBagIcon.classList.add("fa", "fa-shopping-bag");
-
-  /* search.href = "#";
-  search.setAttribute("aria-label", "search-icon");
-  search.classList.add("icons__search"); */
 
   searchIcon.classList.add("fas", "fa-search");
 
