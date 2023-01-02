@@ -1,6 +1,7 @@
 @use "header";
 @use "footer";
 @use "cartmodal";
+@use "variables" as var;
 
 * {
   overflow-x: hidden;
@@ -23,19 +24,13 @@
 }
 
 .container-fluid .banner {
-  background: linear-gradient(to bottom, #f9f5f0, #f9f3ea);
-  /*   height: 300px;
-  width: 1000px; */
+  background: linear-gradient(to bottom, var.$popup-color, #f2e1d3);
   margin: 20px;
   border-radius: 40px;
 }
 .inner-banner {
-  line-height: 25px;
-  // border: 2px solid #e7cab3;
-  border: 2px solid black;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-around; */
+  line-height: 15px;
+  border: 2px solid var.$secondary-color;
   border-radius: 40px;
 }
 .container-fluid .image {
@@ -51,12 +46,10 @@
   line-height: 25px;
 }
 .container-fluid .banner .content h4 {
-  /* font-family: "Dancing Script", cursive;
-  font-size: 5em; */
   font-weight: 600;
-  color: --orange;
+  color: var.$secondary-color;
   font-size: 14px;
-  text-shadow: 2px #0a0a0a;
+  text-shadow: 2px var.$secondary-color;
 
   //#eb9379;
 }
@@ -65,16 +58,20 @@
 .card .btn {
   font-size: 14px;
   font-weight: 600;
-
-  border: 1px solid #e7cab3;
-  //border: 1px solid black;
+  border: 1px solid var.$icon-hover;
   border-radius: 0;
-  background-color: #f9f5f0;
+  background-color: var.$popup-color;
   border-radius: 7px;
 }
 .button .btn:hover,
 .card .btn:hover,
 .promo-link:hover {
-  color: #24262b;
-  background-color: var(--orange);
+  color: var.$secondary-color;
+  background-color: var.$popup-color;
+}
+
+h4,
+h5 {
+  margin-bottom: 0;
+  line-height: 2;
 }
