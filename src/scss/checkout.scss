@@ -198,6 +198,9 @@ body {
     }
   }
   &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     padding: 0;
     border: 0.1px solid var.$secondary-color;
@@ -209,9 +212,6 @@ body {
     @include mixins.for-size(tablet) {
       font-size: 2rem;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     @include mixins.for-size(laptop) {
@@ -220,13 +220,14 @@ body {
 
     div {
       height: 50px;
+      width: 90%;
       text-align: start;
       @include mixins.for-size(laptop) {
         width: 80%;
       }
 
       input {
-        height: 30px;
+        height: 40px;
         font-size: 1.3rem;
         @include mixins.for-size(laptop) {
           height: 40px;
@@ -235,8 +236,9 @@ body {
       }
     }
     button {
-      margin: 20px;
+      margin-bottom: 20px;
       font-size: 1.5rem;
+      width: 90%;
       @include mixins.for-size(tablet) {
         margin-top: 30px;
         font-size: 2rem;
@@ -247,10 +249,11 @@ body {
 
 .payment {
   margin-top: 10px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 95vw;
   position: relative;
   padding: 0;
@@ -281,6 +284,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    margin-bottom: 20px;
 
     #credit,
     #invoice {
@@ -289,13 +293,31 @@ body {
       margin-right: 10px;
     }
   }
-}
 
-.pay {
-  margin: 10px;
-  font-size: 1.5rem;
-  @include mixins.for-size(tablet) {
-    font-size: 2rem;
+  &__choice {
+    width: 100%;
+
+    .form-floating {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 70px;
+
+      input {
+        height: 65px;
+        font-size: 1.5rem;
+      }
+    }
+    .pay {
+      margin-top: 20px;
+      width: 100%;
+      height: 40px;
+      font-size: 1.5rem;
+      @include mixins.for-size(tablet) {
+        font-size: 2rem;
+      }
+    }
   }
 }
 
