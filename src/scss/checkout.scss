@@ -205,6 +205,7 @@ body {
     width: 95vw;
     font-family: var.$font;
     font-size: 1.3rem;
+    gap: 15px;
     @include mixins.for-size(tablet) {
       font-size: 2rem;
       text-align: center;
@@ -219,24 +220,25 @@ body {
 
     div {
       height: 50px;
-
+      text-align: start;
       @include mixins.for-size(laptop) {
         width: 80%;
       }
-    }
 
-    input {
-      height: 30px;
-      font-size: 1.3rem;
-      @include mixins.for-size(laptop) {
-        font-size: 1.7rem;
+      input {
+        height: 30px;
+        font-size: 1.3rem;
+        @include mixins.for-size(laptop) {
+          height: 40px;
+          font-size: 2rem;
+        }
       }
     }
-
-    .btn {
+    button {
       margin: 20px;
       font-size: 1.5rem;
       @include mixins.for-size(tablet) {
+        margin-top: 30px;
         font-size: 2rem;
       }
     }
@@ -263,17 +265,6 @@ body {
     width: 50vw;
   }
 
-  #credit,
-  #invoice {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-  }
-
-  i {
-    font-size: 2.5rem;
-  }
-
   &__title {
     font-family: var.$title-font;
     font-size: 2rem;
@@ -281,6 +272,21 @@ body {
     @include mixins.for-size(tablet) {
       font-size: 2.5rem;
       margin: 20px;
+    }
+  }
+
+  &__methods {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    #credit,
+    #invoice {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
     }
   }
 }

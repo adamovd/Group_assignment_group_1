@@ -116,7 +116,7 @@
       <article class="row p-3 m-3 customer">
         <h4 class="col-md-5 col-lg-4 customer__title">Delivery</h4>
         <form
-          class="form mb-3 col-lg-6 p-3 border border-dark border-primary customer__form"
+          class="form mb-3 col-lg-6 p-3 customer__form"
         >
           <div class="col-xs-10 col-md-6 col-lg-6 m-3">
             <label for="name" class="form-label"> First Name</label>
@@ -202,17 +202,14 @@
             Continue to payment
           </button>
         </form>
+      </article>
 
-        <aside
-          class="col-xs-10 col-md-6 col-lg-6 mx-auto d-flex flex-column justify-content-center align-items-center"
-        >
+      
         <h4 class="col-md-5 col-lg-4 payment__title">Payment</h4>
           <section
             class="col-xs-10 col-md-6 col-lg-6 m-6 p-3 payment"
           >
-    
-
-            <div class="my-3">
+          <div class="payment__methods">
               <div class="form-check">
                 <input
                   id="credit"
@@ -235,72 +232,20 @@
                 />
                 <label class="form-check-label" for="invoice">Invoice</label>
               </div>
-              <i class="fa-brands fa-cc-visa"></i>
-              <i class="fa-brands fa-cc-mastercard"></i>
-            </div>
+          </div>
+              
+            
+            <article class="payment__choice"></article>
 
-            <div class="row gy-3">
-              <div class="col-md-6">
-                <label for="cc-name" class="form-label">Name on card</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="cc-name"
-                  placeholder=""
-                  required
-                />
-                <small class="text-muted">Full name as displayed on card</small>
-                <div class="invalid-feedback">Name on card is required</div>
-              </div>
-
-              <div class="col-md-6">
-                <label for="cc-number" class="form-label">Card number</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="cc-number"
-                  placeholder=""
-                  required
-                />
-                <div class="invalid-feedback">
-                  Credit card number is required
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <label for="cc-expiration" class="form-label">Expiration</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="cc-expiration"
-                  placeholder=""
-                  required
-                />
-                <div class="invalid-feedback">Expiration date required</div>
-              </div>
-
-              <div class="col-md-3">
-                <label for="cc-cvv" class="form-label">CCV</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="cc-cvv"
-                  placeholder=""
-                  required
-                />
-                <div class="invalid-feedback">Security code required</div>
-              </div>
-            </div>
           </section>
 
-          <section class="mt-4">
-            <button class="btn btn-primary pay" type="submit">
-              Pay and place order
-            </button>
-           
-          </section>
-        </aside>
-      </article>
+        
+        <section class="mt-4">
+          <button class="btn btn-primary pay" type="submit">
+            Pay and place order
+          </button>
+         
+        </section>
     </main>
 
     <footer class="footer"></footer>
