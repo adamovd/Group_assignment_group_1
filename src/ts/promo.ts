@@ -46,6 +46,9 @@ export function createPromotion() {
 `;
 
   promo.innerHTML += contentPromo;
-  document.body.appendChild(wrapperPromo);
+
+  const main: HTMLElement = document.querySelector(".main") as HTMLElement;
+
+  main.appendChild(wrapperPromo);
   wrapperPromo.appendChild(promo);
 }
