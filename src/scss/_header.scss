@@ -1,53 +1,5 @@
 @use "variables" as var;
-/* .header {
-  height: 30%;
-  background-color: var.$popup-color;
-  display: flex;
-  flex-direction: row;
-  gap: 10%;
 
-  //används inte just nu.
-  &__products {
-    a {
-      text-decoration: none;
-      color: black;
-      a:hover {
-        color: black;
-      }
-      a:visited {
-        color: black;
-      }
-    }
-  }
-  &__about {
-    a {
-      text-decoration: none;
-      color: black;
-      a:hover {
-        color: black;
-      }
-      a:visited {
-        color: black;
-      }
-    }
-  }
-
-  &__contact {
-    a {
-      text-decoration: none;
-      color: black;
-      a:hover {
-        color: black;
-      }
-      a:visited {
-        color: black;
-      }
-    }
-  }
-  &__icon {
-    font-size: 40px;
-  }
-} */
 :root {
   --black: black;
   --orange: #e7cab3;
@@ -62,6 +14,7 @@
   border: none;
   // text-transform: capitalize;
   transition: all 0.1s linear;
+  font-family: var.$title-font;
 }
 
 html {

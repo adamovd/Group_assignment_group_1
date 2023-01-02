@@ -4,6 +4,23 @@
 @use "variables" as var;
 @use "mixins";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  //text-transform: capitalize;
+  transition: all 0.1s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
 #header__menu-bar {
   @include mixins.for-size(tablet) {
     display: none;
@@ -115,23 +132,6 @@
 :root {
   --black: black;
   --orange: #e7cab3;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  //text-transform: capitalize;
-  transition: all 0.1s linear;
-}
-
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-  scroll-padding-top: 6rem;
-  scroll-behavior: smooth;
 }
 
 a {
@@ -257,7 +257,6 @@ li {
 
 /////footer
 .container {
-  max-width: 1170px;
   margin: auto;
 }
 .row {
