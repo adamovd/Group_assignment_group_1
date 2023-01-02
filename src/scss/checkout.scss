@@ -217,8 +217,24 @@ body {
       width: 50vw;
     }
 
+    div {
+      height: 50px;
+
+      @include mixins.for-size(laptop) {
+        width: 80%;
+      }
+    }
+
+    input {
+      height: 30px;
+      font-size: 1.3rem;
+      @include mixins.for-size(laptop) {
+        font-size: 1.7rem;
+      }
+    }
+
     .btn {
-      margin: 10px;
+      margin: 20px;
       font-size: 1.5rem;
       @include mixins.for-size(tablet) {
         font-size: 2rem;
