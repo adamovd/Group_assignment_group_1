@@ -117,10 +117,10 @@ export function presentCart(cartProducts: CartItem[]) {
   ) as HTMLButtonElement;
 
   checkoutBtn.addEventListener("click", () => {
-    checkOutClick();
+    window.location.href = "../pages/checkout.html";
   });
 }
 
-export function checkOutClick() {
-  window.location.href = "../pages/checkout.html";
-}
+// export function checkOutClick() {
+//   window.location.href = "../pages/checkout.html";
+// }
