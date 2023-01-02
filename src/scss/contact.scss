@@ -1,230 +1,124 @@
+@use "variables" as var;
+@use "mixins";
 @use "header";
 @use "footer";
 @use "cartmodal";
-@use "variables" as var;
 
-/* :root {
-  --black: black;
-  --: #e7cab3;
-} */
-
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  //text-transform: capitalize;
-  transition: all 0.1s linear;
-  font-family: var.$font;
+  max-width: 100vw;
+  font-size: 1.5rem;
 }
 
 html {
-  font-size: 62.5%;
+  font-family: var.$font;
   overflow-x: hidden;
-  scroll-padding-top: 6rem;
   scroll-behavior: smooth;
 }
 
-a {
-  text-decoration: none;
-  color: var.$secondary-color;
-}
-li {
-  list-style: none;
-}
-h4 {
-  font-family: var.$title-font;
-}
-
-//////
-///
-
-.header {
-  top: 0;
-  left: 0;
-  right: 0;
-  background: var.$popup-color;
-  //padding: 1rem;
-  padding: 2rem;
+.contact {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-
-  // position: fixed;
-
-  &__navbar {
-    position: absolute;
-    top: 100%;
-    left: -120%;
-    width: 100%;
-    background: var.$popup-color;
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-    min-height: 100vh;
-  }
-
-  &__menu-bar {
-    font-size: 2.5rem;
-    padding: 0.5rem 1.5rem;
-    border: 0.1rem solid var.$secondary-color;
-    border-radius: 0.3rem;
-    cursor: pointer;
-  }
-
-  .header__menuBar {
-    font-size: 2.5rem;
-  }
-
-  &__logo {
-    font-size: 2.5rem;
-    color: var.$secondary-color;
-  }
-
-  &__logo:hover {
-    color: var.$icon-hover;
-  }
-}
-
-.links {
-  font-size: 2rem;
-  background: var.$popup-color;
-  border: 0.1rem solid var.$secondary-color;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  margin: 1.5rem;
-  display: block;
-  text-align: center;
-}
-
-/* header .navbar {
-  display: none;
-} */
-
-.header__navbar.active {
-  left: 0;
-  display: inline;
-  top: 8rem;
-  z-index: 100;
-}
-
-.icons__search,
-.icons__shoppingbag {
-  font-size: 2.5rem;
-  color: var.$secondary-color;
-  margin-left: 1.5rem;
-}
-
-.icons__search:hover,
-.icons__shoppingbag:hover {
-  color: var.$icon-hover;
-}
-
-/////footer
-.container {
-  max-width: 1170px;
-  margin: auto;
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-ul {
-  list-style: none;
-}
-li {
-  text-align: justify;
-}
-
-.footer {
-  background-color: var.$popup-color;
-  padding: 8px 0;
-}
-.footer-col {
-  width: 50%;
-  margin-bottom: 8px;
-
-  padding: 0 15px;
-}
-.footer-col h4 {
-  font-size: 18px;
-  color: var.$secondary-color;
-  //text-transform: capitalize;
-  margin-bottom: 35px;
-  font-weight: 500;
-  position: relative;
-}
-.footer-col ul li:not(:last-child) {
-  margin-bottom: 10px;
-}
-.footer-col ul li a {
-  font-size: 16px;
-  // text-transform: capitalize;
-  text-decoration: none;
-  font-weight: 300;
-  color: var.$secondary-color;
-  display: block;
-  transition: all 0.3s ease;
-}
-.footer-col ul li a:hover,
-.arrow:hover {
-  color: var.$icon-hover;
-  padding-left: 2px;
-}
-.footer-col .social-links a {
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  background-color: var.$popup-color;
-  margin: 0 10px 10px 0;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
-  color: var.$secondary-color;
-  transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover {
-  color: var.$secondary-color;
-  background-color: var.$icon-hover;
-  border-radius: 50%;
-}
-
-ol,
-ul {
-  padding-left: 0;
-}
-
-.arrow {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 20px;
-  color: var.$secondary-color;
-}
-
-.copyright {
-  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: 16px;
-  margin-top: 2rem;
-  color: var.$secondary-color;
-  margin-bottom: 3rem;
+  align-items: center;
+  margin-left: 2rem;
+
+  @include mixins.for-size(tablet) {
+    margin-left: 9rem;
+  }
+
+  @include mixins.for-size(laptop) {
+    margin-left: 25%;
+  }
+
+  &__title {
+    font-size: 2rem;
+
+    &_text {
+      @include mixins.for-size(tablet) {
+        font-size: 1.7rem;
+      }
+
+      @include mixins.for-size(laptop) {
+        font-size: 1.7rem;
+      }
+    }
+  }
 }
 
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  border: solid 0.1px var.$secondary-color;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  @include mixins.for-size(tablet) {
+    font-size: 2rem;
+    width: 75%;
+    margin-left: 9rem;
+  }
+
+  @include mixins.for-size(laptop) {
+    width: 50vw;
+    margin-left: 25%;
+  }
+}
+
+.formContact__container {
+  width: 95%;
+  font-size: 1.5rem;
+}
+.form-control {
+  height: 40px;
+  width: 90%;
+  font-size: 1.3rem;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+}
+
+.formTextMessage {
+  height: 70px;
+}
+
+.contactBtn {
+  width: 90px;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+////FAQ
 .faq-description {
-  font-size: 14px;
   line-height: 1.5;
   margin: 1.5rem;
+
+  @include mixins.for-size(tablet) {
+    font-size: 1.7rem;
+  }
+
+  @include mixins.for-size(laptop) {
+    font-size: 1.7rem;
+  }
 }
 
 .faq-mtitle {
   font-family: var.$title-font;
   display: flex;
-  // background-color: #f9f5f0;
   padding: 3px;
   border-radius: 7px;
+  font-size: 2rem;
 
   justify-content: center;
   align-items: center;
+  @include mixins.for-size(tablet) {
+    font-size: 2.5rem;
+    margin: 20px;
+  }
 }
 
 .faq {
@@ -243,8 +137,9 @@ ul {
   padding: 10px 15px;
   position: relative;
   cursor: pointer;
-  font-size: 16px;
+  font-family: var.$font;
   transition: background-color 0.2s ease-out;
+  font-size: 2rem;
 }
 
 .faq-title:after {
@@ -266,7 +161,6 @@ ul {
 .faq-input {
   width: 0;
   height: 0;
-  //-webkit-appearance: none;
   appearance: none;
   position: absolute;
 }
@@ -289,110 +183,14 @@ ul {
   display: none;
   padding: 10px 15px;
   color: var.$secondary-color;
-  font-size: 16px;
   white-space: pre-line;
-}
+  line-height: 1.5;
 
-@media screen and (min-width: 768px) {
-  #header__menu-bar {
-    display: none;
-  }
-
-  .header__navbar {
-    display: flex;
-    position: relative;
-    left: 0%;
-    background: none;
-    border-top: none;
-    margin-left: auto;
-    width: auto;
-    min-height: 0;
-  }
-
-  .header__navbar.active {
-    display: none;
-    top: 2rem;
-    z-index: 0;
-  }
-
-  .links {
+  @include mixins.for-size(tablet) {
     font-size: 1.7rem;
-    color: var.$secondary-color;
-    margin: 0 1rem;
-    background: none;
-
-    border: none;
   }
 
-  .links:hover {
-    color: var.$icon-hover;
-  }
-
-  .contactContainer {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  .contact {
-    display: flex;
-    flex-direction: row;
-    //width: 50%;
-    margin-left: 8rem;
-    width: 75%;
-
-    &__section {
-      display: flex;
-      flex-direction: column;
-
-      /* margin: 40px;
-      margin-left: 200px;
-      margin-bottom: -60px; */
-    }
-
-    /*  &__title {
-     // font-size: 27px;
-    } */
-    &__text {
-      font-size: 15px;
-    }
-  }
-
-  .thankYouMessage {
-    margin: 2rem;
-    width: 50%;
-  }
-  .formContact {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-
-    .form-label {
-      font-size: 12px;
-    }
-
-    .form-control {
-      font-size: 12px;
-    }
-  }
-
-  .footer-col {
-    width: 25%;
-    margin-bottom: 8px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .contact {
-    margin-left: 250px;
-  }
-
-  .contactForm {
-    width: 75%;
-  }
-
-  .faq {
-    max-width: 750px;
+  @include mixins.for-size(laptop) {
+    font-size: 1.7rem;
   }
 }

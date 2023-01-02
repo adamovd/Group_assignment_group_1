@@ -21,9 +21,6 @@ export function createThankYouMessage() {
     ".contactForm"
   ) as HTMLFormElement;
 
-  /* let formSubmitBtn: HTMLButtonElement = document.querySelector(
-    ".thankYouBtn"
-  ) as HTMLButtonElement; */
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
