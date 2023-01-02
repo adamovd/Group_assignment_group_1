@@ -82,6 +82,7 @@ export function presentCheckout(cartProducts: CartItem[]) {
     checkoutProductAmountContainer.appendChild(checkoutProductAmount);
     checkoutProductAmountContainer.appendChild(checkoutProductAdd);
   }
+
   let sum = 0;
   const checkoutTotalAmount: HTMLParagraphElement = document.createElement("p");
   checkoutTotalAmount.classList.add("checkoutTotalAmount");

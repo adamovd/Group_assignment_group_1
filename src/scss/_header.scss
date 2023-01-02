@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use "mixins";
 
 :root {
   --black: black;
@@ -36,13 +37,11 @@ li {
 ///
 
 .header {
-  top: 0;
-  left: 0;
-  right: 0;
   background: #f9f5f0;
   //padding: 1rem;
   padding: 2rem;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -61,8 +60,7 @@ li {
 
   &__menu-bar {
     font-size: 2.5rem;
-    padding: 0.5rem 1.5rem;
-    border: 0.1rem solid var(--black);
+
     color: var(--black);
     border-radius: 0.3rem;
     cursor: pointer;
@@ -73,12 +71,14 @@ li {
   }
 
   &__logo {
-    font-size: 2.5rem;
-    color: var(--black);
-  }
-
-  &__logo:hover {
-    color: var(--orange);
+    height: 35px;
+    margin-left: 20px;
+    @include mixins.for-size(tablet) {
+      height: 50px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -93,10 +93,6 @@ li {
   text-align: center;
 }
 
-/* header .navbar {
-  display: none;
-} */
-
 .header__navbar.active {
   left: 0;
   display: inline;
@@ -108,7 +104,6 @@ li {
 .icons__shoppingbag {
   font-size: 2.5rem;
   color: var(--black);
-  margin-left: 1.5rem;
 }
 
 .icons__search:hover,
