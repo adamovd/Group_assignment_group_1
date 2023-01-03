@@ -165,21 +165,23 @@ export function displayProduct(listOfProducts: Product[]) {
         productSizeFirstLabel.innerHTML = "One size";
       }
 
-      productCartBtn.addEventListener("click", () => {
-        addToCart(listOfProducts[i]);
-      });
-
       productSizeFirstInput.addEventListener("input", () => {
         listOfProducts[i].size = productSizeFirstLabel.innerHTML;
-        console.log(listOfProducts[i].size);
+        console.log(listOfProducts[i]);
       });
       productSizeSecondInput.addEventListener("input", () => {
         listOfProducts[i].size = productSizeSecondLabel.innerHTML;
-        console.log(listOfProducts[i].size);
+        console.log(listOfProducts[i]);
       });
       productSizeThirdInput.addEventListener("input", () => {
         listOfProducts[i].size = productSizeThirdLabel.innerHTML;
-        console.log(listOfProducts[i].size);
+        console.log(listOfProducts[i]);
+      });
+
+      productCartBtn.addEventListener("click", () => {
+        console.log(listOfProducts[i]);
+
+        addToCart(listOfProducts[i]);
       });
 
       productImgContainer.appendChild(productImgCarousel);

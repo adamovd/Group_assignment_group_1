@@ -2,7 +2,7 @@ import { CartItem } from "../models/CartItem";
 import { Customer } from "../models/Customer";
 import { presentCheckout } from "./presentCheckout";
 
-export function generatePurschase() {
+export function generatePurchase() {
   const checkout: HTMLElement = document.querySelector(
     ".checkout"
   ) as HTMLElement;
@@ -63,6 +63,8 @@ export function generatePurschase() {
     const checkoutProductLi: HTMLLIElement = document.createElement("li");
     const checkoutProductName: HTMLParagraphElement =
       document.createElement("p");
+    const checkoutProductSize: HTMLParagraphElement =
+      document.createElement("p");
     const checkoutProductPrice: HTMLParagraphElement =
       document.createElement("p");
     const checkoutProductImg: HTMLImageElement = document.createElement("img");
@@ -81,6 +83,7 @@ export function generatePurschase() {
     checkoutProductLi.classList.add("justify-content-between");
     checkoutProductLi.classList.add("lh-sm");
     checkoutProductName.classList.add("checkoutproduct__name");
+    checkoutProductSize.classList.add("checkoutproduct__size");
     checkoutProductPrice.classList.add("checkoutproduct__price");
     checkoutProductImg.classList.add("checkoutproduct__img");
     checkoutProductAmountContainer.classList.add(
@@ -97,6 +100,7 @@ export function generatePurschase() {
     orderContainer.appendChild(checkoutProductLi);
     checkoutProductLi.appendChild(checkoutProductImg);
     checkoutProductLi.appendChild(checkoutProductName);
+    checkoutProductLi.appendChild(checkoutProductSize);
     checkoutProductLi.appendChild(checkoutProductPrice);
     checkoutProductLi.appendChild(checkoutProductAmountContainer);
     checkoutProductAmountContainer.appendChild(checkoutProductRemove);

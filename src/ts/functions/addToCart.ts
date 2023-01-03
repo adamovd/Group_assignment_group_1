@@ -16,6 +16,7 @@ export function addToCart(product: Product) {
     found = false;
   } else {
     for (let i = 0; i < cartProducts.length; i++) {
+      cartProducts[i].product.id;
       if (cartProducts[i].product.id === cartProduct.product.id) {
         cartProducts[i].amount++;
         localStorage.setItem("cart", JSON.stringify(cartProducts) || "[]");
