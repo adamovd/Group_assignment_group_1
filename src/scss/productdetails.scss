@@ -4,11 +4,19 @@
 @use "variables" as var;
 @use "mixins";
 
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+}
+
 .product {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  @include mixins.for-size(tablet) {
+  @include mixins.for-size(laptop) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -16,18 +24,24 @@
 }
 
 .imgcontainer {
-  max-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 80vw;
   width: 100%;
   margin: 20px;
   overflow: hidden;
   @include mixins.for-size(tablet) {
+    width: 60%;
+  }
+  @include mixins.for-size(laptop) {
     width: 50%;
   }
 }
 
 .carousel-item {
   width: 100%;
-  @include mixins.for-size(tablet) {
+  @include mixins.for-size(laptop) {
     border: 100px solid var.$primary-color;
   }
 }
@@ -60,40 +74,64 @@
 
   &__name {
     font-family: var.$title_font;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     @include mixins.for-size(tablet) {
-      font-size: 3rem;
+      font-size: 2rem;
+    }
+    @include mixins.for-size(laptop) {
+      font-size: 4rem;
     }
   }
 
   &__price {
     font-family: var.$font;
-    font-size: 2rem;
+    font-size: 1rem;
     @include mixins.for-size(tablet) {
-      font-size: 2.5rem;
+      font-size: 2rem;
+    }
+    @include mixins.for-size(laptop) {
+      font-size: 3rem;
     }
   }
 
-  &__btn,
-  .btn-group {
+  &__btn {
     width: 200px;
     margin-top: 10px;
     font-family: var.$font;
-    font-size: 2rem;
+    font-size: 1rem;
+    @include mixins.for-size(tablet) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .btn-group {
+    width: 200px;
+    margin-top: 10px;
+  }
+
+  .btn-outline-dark {
+    font-family: var.$font;
+    font-size: 1rem;
+    @include mixins.for-size(tablet) {
+      font-size: 1.5rem;
+    }
   }
 
   &__describe {
     font-family: var.$font;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     margin-top: 10px;
 
     @include mixins.for-size(tablet) {
       font-size: 1.5rem;
+      width: 70vw;
+      padding: 20px;
     }
 
-    @include mixins.for-size(tablet) {
-      padding: 20px;
+    @include mixins.for-size(laptop) {
+      font-size: 2rem;
+      width: 40vw;
     }
   }
 }
