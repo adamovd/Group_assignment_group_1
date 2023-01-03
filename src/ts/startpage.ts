@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
   // displayStartpage();
   createPromotion();
   createFooter();
-  showProductStartpage();
+  showProductsStartpage();
 });
 
 function displayStartpage() {
@@ -105,7 +105,7 @@ const divContainer: HTMLDivElement = document.querySelector(
   ".productStartpage"
 ) as HTMLDivElement;
 
-function showProductStartpage() {
+function showProductsStartpage() {
   let productFilter = products.splice(15, 15);
 
   for (let i = 0; i < productFilter.length; i++) {
