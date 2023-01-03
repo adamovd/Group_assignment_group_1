@@ -129,6 +129,10 @@ function showProductStartpage() {
     productImg.src = productFilter[i].image;
     productImg.alt = productFilter[i].name;
 
+    productImg.addEventListener("click", () => {
+      location.href = "../pages/productdetails.html?id=" + productFilter[i].id;
+    });
+
     divContainer.appendChild(productContainer);
     productContainer.appendChild(productImgContainer);
     productImgContainer.appendChild(productImg);
