@@ -3,7 +3,7 @@ import { createFooter } from "./footer";
 import { generatePurchase } from "./functions/generatePurchase";
 import { presentCheckout } from "./functions/presentCheckout";
 import { saveCustomer } from "./functions/saveCustomer";
-import { createMenu, toggleHamburgerMenu } from "./header";
+import { createBadge, createMenu, toggleHamburgerMenu } from "./header";
 import { CartItem } from "./models/CartItem";
 
 window.addEventListener("load", () => {
@@ -12,6 +12,7 @@ window.addEventListener("load", () => {
   presentCheckout(cartProducts);
   cartButton();
   createFooter();
+  createBadge();
 });
 
 let cartProductsFromLS: CartItem[] = [];
