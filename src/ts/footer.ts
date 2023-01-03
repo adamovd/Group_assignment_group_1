@@ -187,7 +187,7 @@ export function createFooter() {
     "a"
   ) as HTMLAnchorElement;
   storeAdress.classList.add("footer__links");
-  storeAdress.innerHTML = `<i class="fa fa-map-marker"></i>Address:Gågatan 2,Stockholm`;
+  storeAdress.innerHTML = `<i class="fa fa-map-marker"></i>Gågatan 2,Stockholm`;
 
   const storeLiEmail: HTMLLIElement = document.createElement(
     "li"
@@ -198,7 +198,7 @@ export function createFooter() {
     "a"
   ) as HTMLAnchorElement;
   storeEmail.classList.add("footer__links");
-  storeEmail.innerHTML = `<i class="fa fa-envelope"></i>Email:aurora@webbshop.se`;
+  storeEmail.innerHTML = `<i class="fa fa-envelope"></i>aurora@webbshop.se`;
   storeEmail.href = "#";
 
   const storeLiTel: HTMLLIElement = document.createElement(
@@ -210,7 +210,7 @@ export function createFooter() {
     "a"
   ) as HTMLAnchorElement;
   storeTel.classList.add("footer__links");
-  storeTel.innerHTML = `<i class="fa fa-phone"></i>Phone:073-5647654</a>`;
+  storeTel.innerHTML = `<i class="fa fa-phone"></i>073-5647654`;
   storeTel.href = "#";
 
   const footerCol4: HTMLDivElement = document.createElement(
@@ -237,7 +237,7 @@ export function createFooter() {
   fb.href = "https://sv-se.facebook.com/";
   fb.setAttribute("aria-label", "facebook-logo");
   fb.classList.add("footer__links");
-  fb.innerHTML = '<i class="fab fa-facebook-f"></i>';
+  fb.innerHTML = '<i class="fab fa-facebook-f"></i>@aurorashopse';
 
   const insta: HTMLAnchorElement = document.createElement(
     "a"
@@ -246,7 +246,7 @@ export function createFooter() {
   insta.href = "https://www.instagram.com/";
   insta.setAttribute("aria-label", "instagram-logo");
   insta.classList.add("footer__links");
-  insta.innerHTML = `<i class="fab fa-instagram"></i>`;
+  insta.innerHTML = `<i class="fab fa-instagram"></i>@aurorashopse`;
 
   const twitter: HTMLAnchorElement = document.createElement(
     "a"
@@ -255,7 +255,7 @@ export function createFooter() {
   twitter.href = "https://twitter.com/";
   twitter.setAttribute("aria-label", "twitter");
   twitter.classList.add("footer__links");
-  twitter.innerHTML = '<i class="fab fa-twitter"></i>';
+  twitter.innerHTML = '<i class="fab fa-twitter"></i>@aurorashopse';
 
   const copyRightWrapper: HTMLDivElement = document.createElement(
     "div"
