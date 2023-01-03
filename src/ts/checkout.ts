@@ -14,8 +14,6 @@ window.addEventListener("load", () => {
   createFooter();
 });
 
-let cartOrderProducts: CartItem[] = [];
-
 let cartProductsFromLS: CartItem[] = [];
 cartProductsFromLS = JSON.parse(localStorage.getItem("cart") || "[]");
 let cartProducts = cartProductsFromLS.map((cartProducts) => {
