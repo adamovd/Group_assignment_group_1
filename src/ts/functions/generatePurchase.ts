@@ -9,7 +9,7 @@ export function generatePurchase() {
   checkout.innerHTML = "";
 
   let checkoutProductsFromLS: CartItem[] = [];
-  checkoutProductsFromLS = JSON.parse(localStorage.getItem("cart") || "[]");
+  checkoutProductsFromLS = JSON.parse(localStorage.getItem("order") || "[]");
   let orderProducts = checkoutProductsFromLS.map((orderProducts) => {
     return new CartItem(orderProducts.product, orderProducts.amount);
   });

@@ -244,6 +244,8 @@ function cardPayment() {
   cardForm.addEventListener("submit", (event: SubmitEvent) => {
     event.preventDefault();
     window.scrollTo(0, 0);
+    localStorage.setItem("order", JSON.stringify(cartProducts));
+    localStorage.removeItem("cart");
     generatePurchase();
   });
 }
@@ -300,6 +302,8 @@ function invoicePayment() {
   invoiceForm.addEventListener("submit", (event: SubmitEvent) => {
     event.preventDefault();
     window.scrollTo(0, 0);
+    localStorage.setItem("order", JSON.stringify(cartProducts));
+    localStorage.removeItem("cart");
     generatePurchase();
   });
 }

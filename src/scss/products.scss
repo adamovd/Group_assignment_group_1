@@ -40,6 +40,19 @@ html {
 .filter__btn {
   margin: 10px;
   width: 20vw;
+  font-size: 15px;
+}
+
+.sort__az,
+.sort__za,
+.sort__pricehtol,
+.sort__priceltoh,
+.filter__all,
+.filter__rings,
+.filter__necklaces,
+.filter__bracelets,
+.filter__earrings {
+  font-size: 15px;
 }
 
 .row {
@@ -140,210 +153,4 @@ a {
 }
 li {
   list-style: none;
-}
-
-//////
-///
-
-.header {
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #f9f5f0;
-  //padding: 1rem;
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-
-  // position: fixed;
-
-  &__navbar {
-    position: absolute;
-    top: 100%;
-    left: -120%;
-    width: 100%;
-    background: #f9f5f0;
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-    min-height: 100vh;
-
-    @include mixins.for-size(tablet) {
-      display: flex;
-      position: relative;
-      left: 0%;
-      background: none;
-      border-top: none;
-      margin-left: auto;
-      width: auto;
-      min-height: 0;
-    }
-  }
-
-  &__menu-bar {
-    font-size: 2.5rem;
-    padding: 0.5rem 1.5rem;
-    border: 0.1rem solid var(--black);
-    color: var(--black);
-    border-radius: 0.3rem;
-    cursor: pointer;
-  }
-
-  .header__menuBar {
-    font-size: 2.5rem;
-  }
-
-  &__logo {
-    font-size: 2.5rem;
-    color: var(--black);
-  }
-
-  &__logo:hover {
-    color: var(--orange);
-  }
-}
-
-.links {
-  font-size: 2rem;
-  background: #f9f5f0;
-  border: 0.1rem solid var(--black);
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  margin: 1.5rem;
-  display: block;
-  text-align: center;
-
-  @include mixins.for-size(tablet) {
-    font-size: 1.7rem;
-    color: var(--black);
-    margin: 0 1rem;
-    background: none;
-    border: none;
-
-    .links:hover {
-      color: var(--orange);
-    }
-  }
-}
-
-/* header .navbar {
-  display: none;
-} */
-
-.header__navbar.active {
-  left: 0;
-  display: inline;
-  top: 8rem;
-  z-index: 100;
-
-  @include mixins.for-size(tablet) {
-    display: none;
-    top: 2rem;
-    z-index: 0;
-  }
-}
-
-.icons__search,
-.icons__shoppingbag {
-  font-size: 2.5rem;
-  color: var(--black);
-  margin-left: 1.5rem;
-}
-
-.icons__search:hover,
-.icons__shoppingbag:hover {
-  color: var(--orange);
-}
-
-/////footer
-.container {
-  margin: auto;
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-ul {
-  list-style: none;
-}
-li {
-  text-align: justify;
-}
-
-.footer {
-  background-color: #f9f5f0;
-  padding: 8px 0;
-}
-.footer-col {
-  width: 50%;
-  margin-bottom: 8px;
-  padding: 0 15px;
-
-  @include mixins.for-size(tablet) {
-    width: 25%;
-    margin-bottom: 8px;
-  }
-}
-.footer-col h4 {
-  font-size: 18px;
-  color: black;
-  //text-transform: capitalize;
-  margin-bottom: 35px;
-  font-weight: 500;
-  position: relative;
-}
-.footer-col ul li:not(:last-child) {
-  margin-bottom: 10px;
-}
-.footer-col ul li a {
-  font-size: 16px;
-  // text-transform: capitalize;
-  text-decoration: none;
-  font-weight: 300;
-  color: black;
-  display: block;
-  transition: all 0.3s ease;
-}
-.footer-col ul li a:hover,
-.arrow:hover {
-  color: var(--orange);
-  padding-left: 2px;
-}
-.footer-col .social-links a {
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  background-color: #f9f5f0;
-  margin: 0 10px 10px 0;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
-  color: black;
-  transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover {
-  color: #24262b;
-  background-color: var(--orange);
-  border-radius: 50%;
-}
-
-ol,
-ul {
-  padding-left: 0;
-}
-
-.arrow {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 20px;
-  color: black;
-}
-
-.copyright {
-  display: flex;
-  justify-content: center;
-  font-size: 16px;
-  margin-top: 2rem;
-  color: black;
-  margin-bottom: 3rem;
 }
