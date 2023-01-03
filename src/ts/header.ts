@@ -1,4 +1,24 @@
+import { presentCart } from "./cart";
 import { CartItem } from "./models/CartItem";
+
+const cartBadge: HTMLSpanElement = document.createElement(
+  "span"
+) as HTMLSpanElement;
+cartBadge.classList.add("cart-badge", "badge", "rounded-pill");
+cartBadge.id = "badgeOnCart";
+
+export function createBadge() {
+  let getLSList: string = localStorage.getItem("cart") || "[]";
+
+  let LSList: CartItem[] = JSON.parse(getLSList);
+
+  let sum = 0;
+  for (let i = 0; i < LSList.length; i++) {
+    sum += LSList[i].amount;
+
+    cartBadge.innerHTML = sum.toString();
+  }
+}
 
 export function createMenu() {
   const header: HTMLDivElement = document.querySelector(
@@ -99,11 +119,7 @@ export function createMenu() {
   searchIcon.classList.add("fas", "fa-search");
 
   /////////////7
-  const cartBadge: HTMLSpanElement = document.createElement(
-    "span"
-  ) as HTMLSpanElement;
-  cartBadge.classList.add("cart-badge", "badge", "rounded-pill");
-  cartBadge.id = "badgeOnCart";
+
   //cartBadge.innerHTML = "0";
 
   /////////////////////////////7
@@ -125,17 +141,6 @@ export function createMenu() {
   header.appendChild(logo);
   header.appendChild(navbar);
   header.appendChild(icons);
-
-  let getLSList: string = localStorage.getItem("cart") || "[]";
-
-  let LSList: CartItem[] = JSON.parse(getLSList);
-
-  let sum = 0;
-  for (let i = 0; i < LSList.length; i++) {
-    sum += LSList[i].amount;
-
-    cartBadge.innerHTML = sum.toString();
-  }
 }
 
 export function toggleHamburgerMenu() {
@@ -161,3 +166,5 @@ export function toggleHamburgerMenu() {
     navbar.classList.remove("active");
   });
 }
+
+createBadge();

@@ -1,3 +1,4 @@
+import { createBadge } from "./header";
 import { CartItem } from "./models/CartItem";
 
 let cartProductsFromLS: CartItem[] = [];
@@ -74,6 +75,8 @@ export function presentCart(cartProducts: CartItem[]) {
       localStorage.setItem("cart", JSON.stringify(cartProducts) || "");
       presentCart(cartProducts);
       console.log(cartProducts[i].amount);
+
+      createBadge();
     });
 
     cartProductRemove.addEventListener("click", () => {
@@ -85,6 +88,7 @@ export function presentCart(cartProducts: CartItem[]) {
       localStorage.setItem("cart", JSON.stringify(cartProducts) || "[]");
       presentCart(cartProducts);
       console.log(cartProducts[i].amount);
+      createBadge();
     });
 
     cartModalBody.appendChild(cartProductLi);

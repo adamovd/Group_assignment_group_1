@@ -1,3 +1,4 @@
+import { createBadge } from "../header";
 import { CartItem } from "../models/CartItem";
 import { Product } from "../models/Product";
 
@@ -19,6 +20,8 @@ export function addToCart(product: Product) {
         cartProducts[i].amount++;
         localStorage.setItem("cart", JSON.stringify(cartProducts) || "[]");
         found = true;
+        createBadge();
+
         return;
       }
     }
@@ -26,5 +29,6 @@ export function addToCart(product: Product) {
   if (found === false) {
     cartProducts.push(cartProduct);
     localStorage.setItem("cart", JSON.stringify(cartProducts) || "[]");
+    createBadge();
   }
 }
