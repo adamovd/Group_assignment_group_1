@@ -14,6 +14,8 @@ window.addEventListener("load", () => {
   createFooter();
 });
 
+let cartOrderProducts: CartItem[] = [];
+
 let cartProductsFromLS: CartItem[] = [];
 cartProductsFromLS = JSON.parse(localStorage.getItem("cart") || "[]");
 let cartProducts = cartProductsFromLS.map((cartProducts) => {
@@ -191,6 +193,8 @@ function cardPayment() {
   cardForm.addEventListener("submit", (event: SubmitEvent) => {
     event.preventDefault();
     window.scrollTo(0, 0);
+    localStorage.setItem("order", JSON.stringify(cartProducts));
+    localStorage.removeItem("cart");
     generatePurschase();
   });
 }
@@ -246,6 +250,8 @@ function invoicePayment() {
   invoiceForm.addEventListener("submit", (event: SubmitEvent) => {
     event.preventDefault();
     window.scrollTo(0, 0);
+    localStorage.setItem("order", JSON.stringify(cartProducts));
+    localStorage.removeItem("cart");
     generatePurschase();
   });
 }
