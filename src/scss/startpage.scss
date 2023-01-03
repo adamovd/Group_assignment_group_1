@@ -22,30 +22,6 @@
     height: 100vh;
     width: 100%;
   }
-  // .productStartpage {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-  //   flex-wrap: wrap;
-
-  //   .productsStartpage {
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: center;
-  //     align-items: center;
-  //     flex-wrap: wrap;
-  //   }
-  //   .productsStartpageImgContainer {
-  //     position: relative;
-  //     width: 50%;
-  //     justify-content: center;
-  //     align-items: center;
-
-  //     &__image {
-  //     }
-  //   }
-  // }
 
   .productStartpage {
     display: flex;
@@ -56,6 +32,9 @@
     @include mixins.for-size(tablet) {
       display: flex;
       flex-direction: row;
+      margin-left: 10px;
+      margin-right: 10px;
+      gap: 10px;
     }
   }
 
@@ -69,13 +48,12 @@
 
     @include mixins.for-size(tablet) {
       display: flex;
-      gap: 5px;
     }
 
     &__name {
       font-family: var.$title-font;
       font-size: 20px;
-      margin-top: -5px;
+      margin: -3px;
     }
 
     &__type {
