@@ -1,6 +1,6 @@
 import { cartButton } from "./cart";
 import { createFooter } from "./footer";
-import { createMenu, toggleHamburgerMenu } from "./header";
+import { createBadge, createMenu, toggleHamburgerMenu } from "./header";
 import { StartpageItem } from "./models/StartpageItem";
 import { startpageList } from "./models/startpageList";
 import { createPromotion } from "./promo";
@@ -12,6 +12,7 @@ window.addEventListener("load", () => {
   // displayStartpage();
   createPromotion();
   createFooter();
+  createBadge();
 });
 
 function displayStartpage() {

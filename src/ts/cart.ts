@@ -86,6 +86,7 @@ export function presentCart(cartProducts: CartItem[]) {
       cartProducts[i].removeItem(1);
       if (cartProducts[i].amount < 1) {
         cartProducts.splice(i, 1);
+        createBadge();
       }
       localStorage.setItem("cart", JSON.stringify(cartProducts) || "[]");
       presentCart(cartProducts);
@@ -125,6 +126,7 @@ export function presentCart(cartProducts: CartItem[]) {
   checkoutBtn.addEventListener("click", () => {
     window.location.href = "../pages/checkout.html";
   });
+  createBadge();
 }
 
 // export function checkOutClick() {
