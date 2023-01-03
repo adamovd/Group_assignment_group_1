@@ -122,8 +122,16 @@ export function presentCart(cartProducts: CartItem[]) {
     "btn-checkout"
   ) as HTMLButtonElement;
 
+  const shoppingBtn: HTMLButtonElement = document.querySelector(
+    ".shopping"
+  ) as HTMLButtonElement;
+
   checkoutBtn.addEventListener("click", () => {
     window.location.href = "../pages/checkout.html";
+  });
+
+  shoppingBtn.addEventListener("click", () => {
+    window.location.href = "../pages/products.html";
   });
 }
 
