@@ -198,7 +198,7 @@ export function createFooter() {
     "a"
   ) as HTMLAnchorElement;
   storeEmail.classList.add("footer__links");
-  storeEmail.innerHTML = `<i class="fa fa-envelope"></i>Email:shop@webbshop.se`;
+  storeEmail.innerHTML = `<i class="fa fa-envelope"></i>Email:aurora@webbshop.se`;
   storeEmail.href = "#";
 
   const storeLiTel: HTMLLIElement = document.createElement(
