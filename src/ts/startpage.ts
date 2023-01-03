@@ -1,6 +1,7 @@
 import { cartButton } from "./cart";
 import { createFooter } from "./footer";
 import { createBadge, createMenu, toggleHamburgerMenu } from "./header";
+import { products } from "./models/productList";
 import { StartpageItem } from "./models/StartpageItem";
 import { startpageList } from "./models/startpageList";
 import { createPromotion } from "./promo";
@@ -13,6 +14,7 @@ window.addEventListener("load", () => {
   createPromotion();
   createFooter();
   createBadge();
+  showProductsStartpage();
 });
 
 function displayStartpage() {
@@ -98,4 +100,45 @@ function displayStartpage() {
 
   carouselBtnPrev.appendChild(carouselPrevIcon);
   carouselBtnNext.appendChild(carouselNextIcon);
+}
+
+const divContainer: HTMLDivElement = document.querySelector(
+  ".productStartpage"
+) as HTMLDivElement;
+
+function showProductsStartpage() {
+  let productFilter = products.splice(15, 15);
+
+  for (let i = 0; i < productFilter.length; i++) {
+    const productContainer: HTMLDivElement = document.createElement("div");
+    const productImgContainer: HTMLDivElement = document.createElement("div");
+    const productName: HTMLParagraphElement = document.createElement("p");
+    const productPrice: HTMLParagraphElement = document.createElement("p");
+    const productType: HTMLParagraphElement = document.createElement("p");
+    const productImg: HTMLImageElement = document.createElement("img");
+
+    productContainer.classList.add("productsStartpage");
+    productImgContainer.classList.add("productsStartpageImgContainer");
+    productName.classList.add("productsStartpage__name");
+    productPrice.classList.add("productsStartpage__price");
+    productType.classList.add("productsStartpage__type");
+    productImg.classList.add("productsStartpage__img");
+
+    productName.innerHTML = productFilter[i].name;
+    productPrice.innerHTML = productFilter[i].price.toString() + "kr";
+    productType.innerHTML = productFilter[i].type;
+    productImg.src = productFilter[i].image;
+    productImg.alt = productFilter[i].name;
+
+    productImg.addEventListener("click", () => {
+      location.href = "../pages/productdetails.html?id=" + productFilter[i].id;
+    });
+
+    divContainer.appendChild(productContainer);
+    productContainer.appendChild(productImgContainer);
+    productImgContainer.appendChild(productImg);
+    productContainer.appendChild(productType);
+    productContainer.appendChild(productName);
+    productContainer.appendChild(productPrice);
+  }
 }

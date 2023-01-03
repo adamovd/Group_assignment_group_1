@@ -4,43 +4,27 @@
 @use "variables" as var;
 @use "mixins";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  //text-transform: capitalize;
-  transition: all 0.1s linear;
-}
-
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-  scroll-padding-top: 6rem;
-  scroll-behavior: smooth;
-}
-
-#header__menu-bar {
-  @include mixins.for-size(tablet) {
-    display: none;
-  }
-}
-
-.selections {
-  justify-content: space-between;
-}
 .dropdown {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 20vw;
+  width: 30vw;
+  @include mixins.for-size(tablet) {
+    width: 30vw;
+    height: 5vh;
+  }
+  @include mixins.for-size(laptop) {
+    width: 20vw;
+    height: 7vh;
+  }
 }
 .sort__btn,
 .filter__btn {
   margin: 10px;
-  width: 20vw;
-  font-size: 15px;
+  font-size: 1.5rem;
+  @include mixins.for-size(tablet) {
+    font-size: 2rem;
+  }
 }
 
 .sort__az,
@@ -52,13 +36,18 @@ html {
 .filter__necklaces,
 .filter__bracelets,
 .filter__earrings {
-  font-size: 15px;
+  font-size: 1.5rem;
+  @include mixins.for-size(tablet) {
+    font-size: 2rem;
+  }
 }
 
 .row {
   display: flex;
   justify-content: center;
-  align-items: center;
+  @include mixins.for-size(laptop) {
+    justify-content: space-between;
+  }
 }
 
 .allProductsContainer {
@@ -101,16 +90,28 @@ html {
   @include mixins.for-size(tablet) {
     width: 30%;
   }
+  @include mixins.for-size(laptop) {
+    width: 25%;
+  }
 
   &__name {
     font-family: var.$title-font;
-    font-size: 20px;
-    margin: -5px;
+    font-size: 1.5rem;
+    text-align: center;
+    @include mixins.for-size(tablet) {
+      font-size: 2rem;
+    }
+    @include mixins.for-size(laptop) {
+      font-size: 3rem;
+    }
   }
 
   &__type {
     font-family: var.$font;
-    font-size: 10px;
+    font-size: 1rem;
+    @include mixins.for-size(laptop) {
+      font-size: 2rem;
+    }
   }
 
   &__img,
@@ -124,6 +125,10 @@ html {
 
   &__price {
     font-family: var.$font;
+    font-size: 1.5rem;
+    @include mixins.for-size(laptop) {
+      font-size: 2rem;
+    }
   }
 
   &__btn {
@@ -134,12 +139,22 @@ html {
     left: 90%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+    @include mixins.for-size(tablet) {
+      font-size: 1rem;
+    }
+    @include mixins.for-size(laptop) {
+      font-size: 2rem;
+      padding: 5px;
+    }
   }
 }
 
 .productimgcontainer {
   position: relative;
   width: 50%;
+  @include mixins.for-size(tablet) {
+    width: 70%;
+  }
 }
 
 :root {

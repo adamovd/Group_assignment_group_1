@@ -8,7 +8,6 @@
   box-sizing: border-box;
   outline: none;
   border: none;
-  transition: all 0.1s linear;
   font-family: var.$font;
 }
 
@@ -59,16 +58,25 @@ li {
 
   .header__menuBar {
     font-size: 2.5rem;
+
+    #header__menu-bar {
+      @include mixins.for-size(tablet) {
+        display: none;
+      }
+    }
   }
 
   &__logo {
     height: 35px;
     margin-left: 20px;
+    &:hover {
+      cursor: pointer;
+    }
     @include mixins.for-size(tablet) {
       height: 50px;
     }
-    &:hover {
-      cursor: pointer;
+    @include mixins.for-size(laptop) {
+      height: 80px;
     }
   }
 }
@@ -76,12 +84,29 @@ li {
 .links {
   font-size: 2rem;
   background: var.$popup-color;
-  border: 0.1rem solid var.$secondary-color;
-  border-radius: 0.5rem;
   padding: 1.5rem;
   margin: 1.5rem;
   display: block;
   text-align: center;
+  @include mixins.for-size(tablet) {
+    font-size: 1.9rem;
+  }
+  @include mixins.for-size(laptop) {
+    font-size: 2.3rem;
+  }
+}
+
+.header__navbar {
+  @include mixins.for-size(tablet) {
+    display: flex;
+    position: relative;
+    left: 0%;
+    background: none;
+    border-top: none;
+    margin-left: auto;
+    width: auto;
+    min-height: 0;
+  }
 }
 
 .header__navbar.active {
@@ -95,6 +120,13 @@ li {
 .icons__shoppingbag {
   font-size: 2.5rem;
   color: var.$secondary-color;
+  @include mixins.for-size(tablet) {
+    font-size: 2.8rem;
+  }
+  @include mixins.for-size(laptop) {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
 }
 
 .icons__search:hover,
@@ -104,44 +136,16 @@ li {
 
 .btn .badge {
   background-color: var.$icon-hover;
-  left: -6;
+  left: -6px;
   top: -2px;
-  font-size: 14px;
+  font-size: 1rem;
   color: var.$secondary-color;
-}
-
-@media screen and (min-width: 768px) {
-  #header__menu-bar {
-    display: none;
+  @include mixins.for-size(tablet) {
+    font-size: 1.3rem;
   }
-
-  .header__navbar {
-    display: flex;
-    position: relative;
-    left: 0%;
-    background: none;
-    border-top: none;
-    margin-left: auto;
-    width: auto;
-    min-height: 0;
-  }
-
-  .header__navbar.active {
-    display: none;
-    top: 2rem;
-    z-index: 0;
-  }
-
-  .links {
-    font-size: 1.7rem;
-    color: var.$secondary-color;
-    margin: 0 1rem;
-    background: none;
-
-    border: none;
-  }
-
-  .links:hover {
-    color: var.$icon-hover;
+  @include mixins.for-size(laptop) {
+    font-size: 1.5rem;
+    left: -8px;
+    top: -7px;
   }
 }
