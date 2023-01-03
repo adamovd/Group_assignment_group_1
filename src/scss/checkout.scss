@@ -76,6 +76,16 @@ body {
     }
   }
 
+  &__size {
+    width: 10%;
+    font-family: var.$font;
+    font-size: 1rem;
+    margin-right: 15px;
+    @include mixins.for-size(tablet) {
+      font-size: 2.5rem;
+    }
+  }
+
   &__price {
     width: 10%;
     font-family: var.$font;
@@ -236,11 +246,12 @@ body {
       }
     }
     button {
-      margin-bottom: 20px;
+      font-family: var.$title-font;
+      margin-top: 20px;
+      width: 80vw;
+      height: 40px;
       font-size: 1.5rem;
-      width: 90%;
       @include mixins.for-size(tablet) {
-        margin-top: 30px;
         font-size: 2rem;
       }
     }
@@ -296,27 +307,60 @@ body {
 
   &__choice {
     width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
 
-    .form-floating {
+    &__row {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
-      align-items: center;
-      height: 70px;
-
-      input {
-        height: 65px;
-        font-size: 1.5rem;
-      }
     }
-    .pay {
-      margin-top: 20px;
-      width: 100%;
-      height: 40px;
+
+    &__nameinput,
+    &__numberinput,
+    &__expirationinput,
+    &__cvvinput {
+      height: 45px;
       font-size: 1.5rem;
-      @include mixins.for-size(tablet) {
-        font-size: 2rem;
-      }
+    }
+    &__nameinput,
+    &__numberinput {
+      width: 80vw;
+    }
+    &__expirationinput,
+    &__cvvinput {
+      width: 40vw;
+    }
+  }
+  .pay {
+    margin-top: 20px;
+    width: 80vw;
+    height: 40px;
+    font-size: 1.5rem;
+    @include mixins.for-size(tablet) {
+      font-size: 2rem;
+    }
+  }
+
+  .invoice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #name {
+      width: 80vw;
+      height: 45px;
+      font-size: 1.5rem;
     }
   }
 }

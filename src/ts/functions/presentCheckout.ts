@@ -14,6 +14,8 @@ export function presentCheckout(cartProducts: CartItem[]) {
     const checkoutProductLi: HTMLLIElement = document.createElement("li");
     const checkoutProductName: HTMLParagraphElement =
       document.createElement("p");
+    const checkoutProductSize: HTMLParagraphElement =
+      document.createElement("p");
     const checkoutProductPrice: HTMLParagraphElement =
       document.createElement("p");
     const checkoutProductImg: HTMLImageElement = document.createElement("img");
@@ -32,6 +34,7 @@ export function presentCheckout(cartProducts: CartItem[]) {
     checkoutProductLi.classList.add("justify-content-between");
     checkoutProductLi.classList.add("lh-sm");
     checkoutProductName.classList.add("checkoutproduct__name");
+    checkoutProductSize.classList.add("checkoutproduct__size");
     checkoutProductPrice.classList.add("checkoutproduct__price");
     checkoutProductImg.classList.add("checkoutproduct__img");
     checkoutProductAmountContainer.classList.add(
@@ -46,6 +49,7 @@ export function presentCheckout(cartProducts: CartItem[]) {
     checkoutProductRemove.classList.add("btn-dark");
 
     checkoutProductName.innerHTML = cartProducts[i].product.name;
+    checkoutProductSize.innerHTML = cartProducts[i].product.size;
     checkoutProductPrice.innerHTML =
       cartProducts[i].product.price.toString() + " kr";
     checkoutProductImg.src = cartProducts[i].product.image;
@@ -76,6 +80,7 @@ export function presentCheckout(cartProducts: CartItem[]) {
     checkoutSummary.appendChild(checkoutProductLi);
     checkoutProductLi.appendChild(checkoutProductImg);
     checkoutProductLi.appendChild(checkoutProductName);
+    checkoutProductLi.appendChild(checkoutProductSize);
     checkoutProductLi.appendChild(checkoutProductPrice);
     checkoutProductLi.appendChild(checkoutProductAmountContainer);
     checkoutProductAmountContainer.appendChild(checkoutProductRemove);

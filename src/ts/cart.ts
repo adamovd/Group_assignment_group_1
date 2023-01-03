@@ -32,6 +32,8 @@ export function presentCart(cartProducts: CartItem[]) {
   cartModalBody.innerHTML = "";
 
   for (let i = 0; i < cartProducts.length; i++) {
+    console.log(cartProducts[i]);
+
     const cartProductLi: HTMLLIElement = document.createElement("li");
     const cartProductName: HTMLParagraphElement = document.createElement("p");
     const cartProductPrice: HTMLParagraphElement = document.createElement("p");
