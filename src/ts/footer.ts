@@ -34,7 +34,7 @@ export function createFooter() {
     "h4"
   ) as HTMLHeadingElement;
 
-  shopTitle.innerText = "Shop";
+  shopTitle.innerText = "Aurora";
   shopTitle.classList.add("footer__title");
 
   const shopUl: HTMLUListElement = document.createElement(
@@ -265,6 +265,7 @@ export function createFooter() {
     "p"
   ) as HTMLParagraphElement;
   copyRight.classList.add("copyright");
+  copyRight.innerHTML = "Copyright © 2023 Aurora";
 
   footerRow.appendChild(arrowWrapper);
   arrowWrapper.appendChild(arrowIcon);

@@ -52,7 +52,7 @@ export function createAboutUs() {
   aboutText.classList.add("aboutText");
 
   aboutText.innerHTML = `
-    Welcome to our exclusive jewelry shop, where you will find the most exquisite and unique pieces that are sure to make a statement. We are a brand that specializes in creating one-of-a-kind, high-end jewelry that exudes glamour and sophistication.
+    Welcome to our exclusive jewelry shop, where you will find the most exquisite and unique pieces that are sure to make a statement. We are a brand that specializes in creating one of a kind, high-end jewelry that exudes glamour and sophistication.
 
     Our journey in the jewelry industry began many years ago, when our founder discovered their passion for fine gemstones and precious metals. They spent years honing their craft and learning the art of jewelry making, eventually turning their talent into a successful business.
 

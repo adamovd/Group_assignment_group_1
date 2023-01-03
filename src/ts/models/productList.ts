@@ -64,7 +64,7 @@ export const products: Product[] = [
     1890,
     "https://images.pexels.com/photos/14111392/pexels-photo-14111392.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Necklace",
-    "Reflecting heritage and style, this wide golden chain necklace will add effortless glamour to any outfit. The epitome of sophistication, statement-making and alluring, this golden chain necklace will lend your outfits a touch of exuberant glamour and style.",
+    "Reflecting exclusivity and style, this wide golden chain necklace will add effortless glamour to any outfit. The epitome of sophistication, statement-making and alluring, this golden chain necklace will lend your outfits a touch of exuberant glamour and style.",
     "",
     "https://images.pexels.com/photos/14111394/pexels-photo-14111394.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "https://images.pexels.com/photos/14111393/pexels-photo-14111393.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
@@ -76,7 +76,7 @@ export const products: Product[] = [
     3200,
     "https://images.pexels.com/photos/10983782/pexels-photo-10983782.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Necklace",
-    "A necklace for any occasion, this rose gold chain features a heart-shaped diamond pedant in a center setting and is accented with shimmering stones.With its romantic aura, this solid rose-gold chain necklace is a beautiful gift for your loved one.",
+    "A necklace for any occasion, this rose gold chain features a heart-shaped diamond pedant in a center setting and is accented with shimmering stones.  With its romantic aura, this solid rose-gold chain necklace is a beautiful gift for your loved one.",
     ""
   ),
 
@@ -134,7 +134,7 @@ export const products: Product[] = [
     3600,
     "https://images.pexels.com/photos/10976653/pexels-photo-10976653.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Ring",
-    "Wear bold, classic style with these two gold rings. With shimmering diamonds, these rings will add a touch of sophistication to any outfit.These rings are the perfect addtion to your jewelry collection. They feature gold, which is known for its durability and is a great complement to the prominent diamond set in these rings.",
+    "Wear bold, classic style with these two gold rings. With shimmering diamonds, these rings will add a touch of sophistication to any outfit. These rings are the perfect addtion to your jewelry collection. They feature gold, which is known for its durability and is a great complement to the prominent diamond set in these rings.",
     ""
   ),
 
@@ -144,7 +144,7 @@ export const products: Product[] = [
     4590,
     "https://images.pexels.com/photos/10976654/pexels-photo-10976654.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Earring",
-    "Enchanting, the diamond studs are versatile and chic. Set in 18k gold, pave-set diamonds punctuate a floral design at the center of each earring.These delicate diamond earrings are part of the Dripping in Diamonds collection.",
+    "Enchanting, the diamond studs are versatile and chic. Set in 18k gold, pave-set diamonds punctuate a floral design at the center of each earring. These delicate diamond earrings are part of the Dripping in Diamonds collection.",
     ""
   ),
 
@@ -154,7 +154,7 @@ export const products: Product[] = [
     3800,
     "https://images.pexels.com/photos/10976655/pexels-photo-10976655.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Ring",
-    "Dazzle with the classic, vintage-inspired Two Diamond Rose Gold Rings.These two rings in rose gold are a fresh take on the classic, timeless look of diamond. The chic and modern designs of these rings are sure to be a hit at any occasion. Each ring features two sparkling diamonds, which reflect the light back through their prisms.",
+    "Dazzle with the classic, vintage-inspired two diamond rose gold rings. These two rings in rose gold are a fresh take on the classic, timeless look of diamond. The chic and modern designs of these rings are sure to be a hit at any occasion. Each ring features two sparkling diamonds, which reflect the light back through their prisms.",
     ""
   ),
 
@@ -164,7 +164,7 @@ export const products: Product[] = [
     4299,
     "https://images.pexels.com/photos/8891954/pexels-photo-8891954.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "Bracelet",
-    "A beautiful, must-have braclet duo. The golden bead bracelet goes with everything and the silver bracelet is an updated classic. Wear to the beach or for a night out on the town.Combining two of the most classic pieces of jewellery for a sophisticated look, this braclet is the perfect pairing for your gold and silver collections.",
+    "A beautiful, must-have braclet duo. The golden bead bracelet goes with everything and the silver bracelet is an updated classic. Wear to the beach or for a night out on the town. Combining two of the most classic pieces of jewellery for a sophisticated look, this braclet is the perfect pairing for your gold and silver collections.",
     ""
   ),
 

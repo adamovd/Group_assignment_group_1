@@ -1,11 +1,6 @@
 @use "variables" as var;
 @use "mixins";
 
-:root {
-  --black: black;
-  --orange: #e7cab3;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +8,6 @@
   box-sizing: border-box;
   outline: none;
   border: none;
-  // text-transform: capitalize;
   transition: all 0.1s linear;
   font-family: var.$title-font;
 }
@@ -27,17 +21,16 @@ html {
 
 a {
   text-decoration: none;
-  color: black;
+  color: var.$secondary-color;
 }
 li {
   list-style: none;
 }
 
 //////
-///
 
 .header {
-  background: #f9f5f0;
+  background: var.$popup-color;
   //padding: 1rem;
   padding: 2rem;
   display: flex;
@@ -46,14 +39,12 @@ li {
   align-items: center;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 
-  // position: fixed;
-
   &__navbar {
     position: absolute;
     top: 100%;
     left: -120%;
     width: 100%;
-    background: #f9f5f0;
+    background: var.$popup-color;
     border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
     min-height: 100vh;
   }
@@ -61,7 +52,7 @@ li {
   &__menu-bar {
     font-size: 2.5rem;
 
-    color: var(--black);
+    color: var.$secondary-color;
     border-radius: 0.3rem;
     cursor: pointer;
   }
@@ -84,8 +75,8 @@ li {
 
 .links {
   font-size: 2rem;
-  background: #f9f5f0;
-  border: 0.1rem solid var(--black);
+  background: var.$popup-color;
+  border: 0.1rem solid var.$secondary-color;
   border-radius: 0.5rem;
   padding: 1.5rem;
   margin: 1.5rem;
@@ -103,20 +94,20 @@ li {
 .icons__search,
 .icons__shoppingbag {
   font-size: 2.5rem;
-  color: var(--black);
+  color: var.$secondary-color;
 }
 
 .icons__search:hover,
 .icons__shoppingbag:hover {
-  color: var(--orange);
+  color: var.$icon-hover;
 }
 
 .btn .badge {
-  background-color: #f8d4b7;
+  background-color: var.$icon-hover;
   left: -6;
   top: -2px;
   font-size: 14px;
-  color: black;
+  color: var.$secondary-color;
 }
 
 @media screen and (min-width: 768px) {
@@ -143,7 +134,7 @@ li {
 
   .links {
     font-size: 1.7rem;
-    color: var(--black);
+    color: var.$secondary-color;
     margin: 0 1rem;
     background: none;
 
@@ -151,6 +142,6 @@ li {
   }
 
   .links:hover {
-    color: var(--orange);
+    color: var.$icon-hover;
   }
 }

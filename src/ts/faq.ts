@@ -47,7 +47,7 @@ export function createFQA() {
         <input class="faq-input" type="checkbox" id="faq_3">
         <label class="faq-title" for="faq_3">Shipping</label>
         <div class="faq-text">
-        Our Express and Standard Courier service is a fast and reliable way to get your package delivered to its destination. With this services, your package will be picked up from our warehouse and delivered directly to the recipient's address, typically within 1-3 business days. You'll receive tracking updates along the way so you can keep track of your package's progress. This service is available for domestic and international shipping. Please note that delivery times may vary depending on the destination, and additional charges may apply for certain locations. Contact us for more information on our Express Courier service.</p>
+        Our Express and Standard Courier services are fast and reliable way to get your package delivered to its destination. With this services, your package will be picked up from our warehouse and delivered directly to the recipient's address, typically within 1-5 business days. You'll receive tracking updates along the way so you can keep track of your package's progress. Delivery services are available for domestic and international shipping. Please note that delivery times may vary depending on the destination, and additional charges may apply for certain locations. Contact us for more information on our delivery services.</p>
         </div>
       </div>
 
@@ -56,7 +56,7 @@ export function createFQA() {
       <input class="faq-input" type="checkbox" id="faq_4">
       <label class="faq-title" for="faq_4">Returns</label>
       <div class="faq-text">
-          <p>We want you to be completely satisfied with your purchase. If for any reason you are not happy with your order, you may return it within 14 days of receiving it for a full refund or exchange. Please note that all returns must be in their original condition, including tags and packaging. Customized or personalized items are non-refundable
+          <p>We want you to be completely satisfied with your purchase. If for any reason you are not happy with your order, you may return it within 14 days of receiving it for a full refund or exchange. Please note that all returns must be in their original condition, including tags and packaging. Customized or personalized items are non-refundable.
           
           To initiate a return, please contact our customer service to request a return authorization. Once your return has been approved, you will receive instructions on how to send your item(s) back to us. We recommend using a tracked and insured shipping method, as we are not responsible for lost or damaged packages.
 
@@ -92,20 +92,8 @@ export function createFQA() {
     If everything is correct, click the "Pay" button to complete the payment.
     You may be prompted to enter a one-time code that is sent to your phone or email to confirm the payment.
     
-    
-    
-    PayPal: To pay with PayPal, you will need to have a PayPal account and a payment method linked to your account.
-      When you are ready to check out, choose PayPal as your payment option.
-      If you are not already logged in to your PayPal account, you will be prompted to do so.
-      Review the details of your order, including the total amount due and the shipping address.
-      If everything is correct, click the "Pay Now" button to complete the payment.
-      You will be redirected to the PayPal website to confirm the payment.
-    
-    
     Invoice: The invoice will outline the payment terms and methods that are accepted.
-    
     Keep a copy of the invoice and any receipts or confirmation emails related to the payment for your records.
-
     It is important to pay invoices promptly to avoid any delays or late fees.
     
     </p>
