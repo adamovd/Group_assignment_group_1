@@ -2,6 +2,7 @@
 @use "footer";
 @use "cartmodal";
 @use "variables" as var;
+@use "mixins";
 
 * {
   overflow-x: hidden;
@@ -10,6 +11,10 @@
 }
 
 .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   &__image {
     background-image: url("https://images.unsplash.com/photo-1591892150204-2f872745bc4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
     background-size: cover;
@@ -17,6 +22,28 @@
     height: 100vh;
     width: 100%;
   }
+}
+
+.startpage {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 5%;
+
+  // &__img {
+  //   background-size: cover;
+  //   background-position: center;
+  //   height: 100vh;
+  //   width: 100%;
+  // }
+  // &__img--first {
+  //   background-image: url("https://images.unsplash.com/photo-1591892150204-2f872745bc4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
+  // }
+
+  // &__img--second {
+  //   background-image: url("https://images.pexels.com/photos/6408285/pexels-photo-6408285.jpeg");
+  // }
 }
 
 .promo-text {
