@@ -15,6 +15,7 @@ window.onload = () => {
   sortItem();
   createFooter();
 };
+
 let productList: Product[] = products;
 const cartProducts: CartItem[] = [];
 
@@ -93,6 +94,17 @@ function filterItem() {
 }
 
 function sortItem() {
+  let resetButton: HTMLAnchorElement = document.querySelector(
+    ".sort__reset"
+  ) as HTMLAnchorElement;
+
+  let sortAll = productList.filter(function (products) {
+    return products.id;
+  });
+  resetButton.addEventListener("click", () => {
+    createHTML(sortAll);
+  });
+
   let sortAzButton: HTMLAnchorElement = document.querySelector(
     ".sort__az"
   ) as HTMLAnchorElement;

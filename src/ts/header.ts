@@ -18,6 +18,10 @@ export function createBadge() {
 
     cartBadge.innerHTML = sum.toString();
   }
+
+  if (LSList.length < 1) {
+    cartBadge.innerHTML = "";
+  }
 }
 
 export function createMenu() {

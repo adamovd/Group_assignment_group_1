@@ -1,5 +1,5 @@
 import { cartButton } from "./cart";
-import { createMenu, toggleHamburgerMenu } from "./header";
+import { createBadge, createMenu, toggleHamburgerMenu } from "./header";
 import { createFooter } from "./footer";
 
 window.addEventListener("load", () => {
@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
   cartButton();
   createAboutUs();
   createFooter();
+  createBadge();
 });
 
 export function createAboutUs() {
