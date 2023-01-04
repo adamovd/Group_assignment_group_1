@@ -142,6 +142,8 @@ li {
   color: var.$secondary-color;
   @include mixins.for-size(tablet) {
     font-size: 1.3rem;
+    left: 10px;
+    top: -30px;
   }
   @include mixins.for-size(laptop) {
     font-size: 1.5rem;

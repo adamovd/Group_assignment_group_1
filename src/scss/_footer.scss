@@ -21,7 +21,8 @@
   &__ul {
     gap: 10px;
     padding-left: 0;
-    @include mixins.for-size(tablet) {
+
+    @include mixins.for-size(laptop) {
       margin-left: 100px;
     }
   }
@@ -72,7 +73,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    @include mixins.for-size(tablet) {
+    @include mixins.for-size(laptop) {
       margin-left: 100px;
     }
 
@@ -82,7 +83,7 @@
       text-align: center;
       line-height: 40px;
       color: var.$secondary-color;
-      @include mixins.for-size(tablet) {
+      @include mixins.for-size(laptop) {
         font-size: 2rem;
       }
 

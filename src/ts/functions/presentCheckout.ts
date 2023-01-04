@@ -3,13 +3,9 @@ import { CartItem } from "../models/CartItem";
 const checkoutSummary: HTMLUListElement = document.getElementById(
   "checkoutsummary"
 ) as HTMLUListElement;
-const totalItems: HTMLSpanElement = document.querySelector(
-  ".summary__items--amount"
-) as HTMLSpanElement;
 
 export function presentCheckout(cartProducts: CartItem[]) {
   checkoutSummary.innerHTML = "";
-  totalItems.innerHTML = "";
   for (let i = 0; i < cartProducts.length; i++) {
     const checkoutProductLi: HTMLLIElement = document.createElement("li");
     const checkoutProductName: HTMLParagraphElement =
@@ -56,7 +52,6 @@ export function presentCheckout(cartProducts: CartItem[]) {
     checkoutProductAmount.innerHTML = cartProducts[i].amount.toString();
     checkoutProductAdd.innerHTML = `<i class="bi bi-plus"></i>`;
     checkoutProductRemove.innerHTML = `<i class="bi bi-dash"></i>`;
-    totalItems.innerHTML = cartProducts.length.toString();
 
     checkoutProductAdd.addEventListener("click", () => {
       console.log(cartProducts[i]);
