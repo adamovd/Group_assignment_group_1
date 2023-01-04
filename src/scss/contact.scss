@@ -73,167 +73,169 @@ html {
   @include mixins.for-size(tablet) {
     font-size: 2rem;
     width: 75%;
-
-    @include mixins.for-size(laptop) {
-      width: 35vw;
-    }
-  }
-  .formContact {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .formContact__container {
-    width: 95%;
-    font-size: 1.5rem;
-  }
-  .form-control {
-    height: 40px;
-    width: 90%;
-    font-size: 1.3rem;
+    // margin-left: 9rem;
   }
 
-  .form-label {
-    margin-bottom: 0.5rem;
+  @include mixins.for-size(laptop) {
+    width: 35vw;
+    // margin-left: 30%;
   }
+}
+.formContact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.formContact__container {
+  width: 95%;
+  font-size: 1.5rem;
+}
+.form-control {
+  height: 40px;
+  width: 90%;
+  font-size: 1.3rem;
+}
 
-  .formTextMessage {
-    height: 70px;
-  }
+.form-label {
+  margin-bottom: 0.5rem;
+}
 
-  .contactBtn {
-    width: 90px;
-    font-size: 1.5rem;
-    margin-top: 20px;
-  }
+.formTextMessage {
+  height: 70px;
+}
 
-  .thankYouMessage {
-    margin: 2.5rem;
-    width: 80%;
-    font-size: 1.5rem;
-    text-align: center;
-    font-weight: 400;
-    h4 {
-      font-family: var.$title-font;
+.contactBtn {
+  width: 90px;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
 
-      @include mixins.for-size(desktop) {
-        font-size: 3rem;
-      }
-    }
-
-    @include mixins.for-size(tablet) {
-      width: 50%;
-    }
-
-    @include mixins.for-size(laptop) {
-      width: 50%;
-    }
-    @include mixins.for-size(desktop) {
-      font-size: 2rem;
-      width: 30%;
-    }
-  }
-
-  ////FAQ
-  .faq-description {
-    line-height: 1.5;
-    margin: 1.5rem;
-
-    @include mixins.for-size(tablet) {
-      font-size: 1.7rem;
-    }
-
-    @include mixins.for-size(laptop) {
-      font-size: 2rem;
-    }
-  }
-
-  .faq-mtitle {
+.thankYouMessage {
+  margin: 2.5rem;
+  width: 80%;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 400;
+  h4 {
     font-family: var.$title-font;
-    display: flex;
-    padding: 3px;
-    border-radius: 7px;
-    font-size: 2rem;
 
-    justify-content: center;
-    align-items: center;
-    @include mixins.for-size(tablet) {
-      font-size: 2.5rem;
-      margin: 20px;
+    @include mixins.for-size(desktop) {
+      font-size: 3rem;
     }
   }
 
-  .faq {
-    max-width: 500px;
-    margin: 20px auto;
-    padding-top: 4px;
-    padding-bottom: 4px;
+  @include mixins.for-size(tablet) {
+    width: 50%;
   }
 
-  .faq-item {
-    margin-bottom: 5px;
+  @include mixins.for-size(laptop) {
+    width: 50%;
+  }
+  @include mixins.for-size(desktop) {
+    font-size: 2rem;
+    width: 30%;
+  }
+}
+
+////FAQ
+.faq-description {
+  line-height: 1.5;
+  margin: 1.5rem;
+
+  @include mixins.for-size(tablet) {
+    font-size: 1.7rem;
   }
 
-  .faq-title {
-    display: block;
-    padding: 10px 15px;
-    position: relative;
-    cursor: pointer;
-    font-family: var.$font;
-    transition: background-color 0.2s ease-out;
+  @include mixins.for-size(laptop) {
     font-size: 2rem;
   }
+}
 
-  .faq-title:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    border-style: solid;
-    border-width: 6px 6px 0 6px;
-    border-color: black transparent transparent transparent;
+.faq-mtitle {
+  font-family: var.$title-font;
+  display: flex;
+  padding: 3px;
+  border-radius: 7px;
+  font-size: 2rem;
+
+  justify-content: center;
+  align-items: center;
+  @include mixins.for-size(tablet) {
+    font-size: 2.5rem;
+    margin: 20px;
+  }
+}
+
+.faq {
+  max-width: 500px;
+  margin: 20px auto;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.faq-item {
+  margin-bottom: 5px;
+}
+
+.faq-title {
+  display: block;
+  padding: 10px 15px;
+  position: relative;
+  cursor: pointer;
+  font-family: var.$font;
+  transition: background-color 0.2s ease-out;
+  font-size: 2rem;
+}
+
+.faq-title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: black transparent transparent transparent;
+}
+
+.faq-title:hover {
+  background-color: var.$icon-hover;
+}
+
+.faq-input {
+  width: 0;
+  height: 0;
+  appearance: none;
+  position: absolute;
+}
+
+.faq-input:checked ~ .faq-title {
+  background-color: var.$icon-hover;
+}
+
+.faq-input:checked ~ .faq-title:after {
+  border-style: solid;
+  border-width: 0 5px 8px 5px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.faq-input:checked ~ .faq-text {
+  display: block;
+}
+
+.faq-text {
+  display: none;
+  padding: 10px 15px;
+  color: var.$secondary-color;
+  white-space: pre-line;
+  line-height: 1.5;
+
+  @include mixins.for-size(tablet) {
+    font-size: 1.7rem;
   }
 
-  .faq-title:hover {
-    background-color: var.$icon-hover;
-  }
-
-  .faq-input {
-    width: 0;
-    height: 0;
-    appearance: none;
-    position: absolute;
-  }
-
-  .faq-input:checked ~ .faq-title {
-    background-color: var.$icon-hover;
-  }
-
-  .faq-input:checked ~ .faq-title:after {
-    border-style: solid;
-    border-width: 0 5px 8px 5px;
-    border-color: transparent transparent #fff transparent;
-  }
-
-  .faq-input:checked ~ .faq-text {
-    display: block;
-  }
-
-  .faq-text {
-    display: none;
-    padding: 10px 15px;
-    color: var.$secondary-color;
-    white-space: pre-line;
-    line-height: 1.5;
-
-    @include mixins.for-size(tablet) {
-      font-size: 1.7rem;
-    }
-
-    @include mixins.for-size(laptop) {
-      font-size: 2rem;
-    }
+  @include mixins.for-size(laptop) {
+    font-size: 2rem;
   }
 }
