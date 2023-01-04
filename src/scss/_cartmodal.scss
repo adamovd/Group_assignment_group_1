@@ -36,10 +36,10 @@
   }
 
   &__price {
-    width: 10%;
+    width: 20%;
     font-family: var.$font;
     margin-right: 30px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     @include mixins.for-size(tablet) {
       font-size: 2rem;
     }
@@ -57,7 +57,7 @@
     font-family: var.$font;
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     @include mixins.for-size(tablet) {
       font-size: 2rem;
     }
