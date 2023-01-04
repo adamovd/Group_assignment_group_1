@@ -31,11 +31,13 @@
     list-style: none;
     margin-top: 15px;
     @include mixins.for-size(laptop) {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
 
-    &:hover {
-      color: var.$icon-hover;
+    a {
+      &:hover {
+        color: var.$icon-hover;
+      }
     }
   }
 }
@@ -91,7 +93,7 @@
         font-size: 2rem;
         padding-right: 5px;
         @include mixins.for-size(tablet) {
-          font-size: 3rem;
+          font-size: 2.5rem;
           padding-right: 10px;
         }
       }

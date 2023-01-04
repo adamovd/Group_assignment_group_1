@@ -16,6 +16,7 @@
   @include mixins.for-size(laptop) {
     width: 20vw;
     height: 7vh;
+    margin: 20px;
   }
 }
 .sort__btn,
@@ -78,6 +79,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 100px;
   }
 }
 
@@ -103,7 +105,7 @@
       font-size: 2rem;
     }
     @include mixins.for-size(laptop) {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
 
@@ -111,7 +113,8 @@
     font-family: var.$font;
     font-size: 1rem;
     @include mixins.for-size(laptop) {
-      font-size: 2rem;
+      font-size: 1.5rem;
+      margin-top: 5px;
     }
   }
 
