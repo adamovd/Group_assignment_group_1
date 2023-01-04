@@ -54,7 +54,7 @@ export function generatePurchase() {
   customerZip.innerHTML = customer.zip;
   customerPhone.innerHTML = customer.phone;
   customerMail.innerHTML = customer.mail;
-  orderQuestions.innerHTML = `If you have any questions about your order, get in contact on: </br> <i>order@webshop.com</i>`;
+  orderQuestions.innerHTML = `If you have any questions about your order, get in contact on: </br> <i>order@aurora.com</i>`;
 
   orderContainer.innerHTML = "";
   for (let i = 0; i < orderProducts.length; i++) {

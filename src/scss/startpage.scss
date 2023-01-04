@@ -133,10 +133,12 @@
   }
 
   .carousel-caption {
-    margin-bottom: 130px;
+    background-color: rgba($color: white, $alpha: 0.6);
+    padding: 30px;
+    margin-bottom: 100px;
 
-    @include mixins.for-size(laptop) {
-      height: 60vh;
+    @include mixins.for-size(tablet) {
+      margin-bottom: 200px;
     }
   }
 
@@ -145,6 +147,10 @@
     color: var.$secondary-color;
     font-size: 2rem;
     overflow-y: hidden;
+
+    @include mixins.for-size(tablet) {
+      font-size: 3rem;
+    }
 
     @include mixins.for-size(laptop) {
       font-size: 4rem;
@@ -158,6 +164,11 @@
   &__text {
     font-size: 1.2rem;
     color: var.$secondary-color;
+    font-weight: 500;
+
+    @include mixins.for-size(tablet) {
+      font-size: 2rem;
+    }
     @include mixins.for-size(laptop) {
       font-size: 2.5rem;
     }

@@ -83,11 +83,10 @@ function displayStartpage() {
   startpageFirstImg.src = "https://i.ibb.co/vmgH7gs/aurora.jpg";
   startpageSecondImg.src = "https://i.ibb.co/bW14cc6/valentines.jpg";
   startpageThirdImg.src = "https://i.ibb.co/gWtQRQG/gifts.jpg";
-  startpageFirstTitle.innerHTML =
-    "Welcome to Aurora Jewelry, the premier destination for exquisite fine jewelry.";
+  startpageFirstTitle.innerHTML = "Welcome to Aurora Jewelry.";
   startpageSecondTitle.innerHTML = `Join us in celebrating love and commitment with our Valentine's Day collection &hearts;`;
-  startpageFirstText.innerHTML = `From timeless classics to unique contemporary designs, our collection is sure to dazzle and delight.  Aurora Jewelry has something for everyone. Come visit us today and let us help you find a piece that expresses your personal style and elegance.`;
-  startpageSecondText.innerHTML = `One of the most popular gifts to give on Valentine's Day is jewelry, </br>as it is a timeless and elegant way to show your love. From statement necklaces to sparkling gemstone rings, we have something for every occasion and taste.`;
+  startpageFirstText.innerHTML = `Aurora Jewelry has something for everyone. Come visit us today and let us help you find a piece that expresses your personal style and elegance.`;
+  startpageSecondText.innerHTML = `One of the most popular gifts to give on Valentine's Day is jewelry, we have something for every occasion and taste.`;
   startpageThirdTitle.innerHTML = `Sparkle and shine!`;
   startpageThirdText.innerHTML = `With our dazzling selection of rings!</br> Visit our jewelry shop now for a unique selection of fashionable and timeless rings.`;
 
