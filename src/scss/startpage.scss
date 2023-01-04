@@ -73,11 +73,17 @@
       font-family: var.$title-font;
       font-size: 20px;
       margin: -3px;
+      @include mixins.for-size(laptop) {
+        font-size: 25px;
+      }
     }
 
     &__type {
       font-family: var.$font;
       font-size: 10px;
+      @include mixins.for-size(laptop) {
+        font-size: 15px;
+      }
     }
 
     &__img {
@@ -90,6 +96,9 @@
 
     &__price {
       font-family: var.$font;
+      @include mixins.for-size(laptop) {
+        font-size: 15px;
+      }
     }
   }
 }
