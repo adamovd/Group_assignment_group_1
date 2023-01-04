@@ -134,7 +134,6 @@ function showProductsStartpage() {
   spotlightText.innerHTML = "Check out our latest collection.";
   spotlightContainer.appendChild(spotlightTitle);
   spotlightContainer.appendChild(spotlightText);
-  document.body.appendChild(spotlightContainer);
   let productFilter = products.splice(15, 15);
 
   for (let i = 0; i < productFilter.length; i++) {

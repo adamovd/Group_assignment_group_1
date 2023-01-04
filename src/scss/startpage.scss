@@ -47,11 +47,21 @@
       font-family: var.$title-font;
       font-size: 2rem;
       margin-top: 20px;
+      @include mixins.for-size(tablet) {
+        font-size: 3rem;
+      }
+      @include mixins.for-size(laptop) {
+        font-size: 4rem;
+      }
     }
 
     &__text {
       font-family: var.$font;
       font-size: 1.5rem;
+      @include mixins.for-size(tablet) {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
     }
   }
 
