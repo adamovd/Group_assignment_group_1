@@ -93,7 +93,6 @@ export function createFooter() {
   shopLinkContact.innerText = "Contact";
   shopLinkContact.href = "../pages/contact.html";
 
-  /////////////////////////////////////
   const footerCol2: HTMLDivElement = document.createElement(
     "div"
   ) as HTMLDivElement;

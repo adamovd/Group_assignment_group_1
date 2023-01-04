@@ -26,11 +26,8 @@ li {
   list-style: none;
 }
 
-//////
-
 .header {
   background: var.$popup-color;
-  //padding: 1rem;
   padding: 2rem;
   display: flex;
   flex-direction: row;
@@ -88,6 +85,9 @@ li {
   margin: 1.5rem;
   display: block;
   text-align: center;
+  &:hover {
+    color: var.$icon-hover;
+  }
   @include mixins.for-size(tablet) {
     font-size: 1.9rem;
   }

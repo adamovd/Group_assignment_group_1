@@ -197,9 +197,3 @@ export const products: Product[] = [
     "17"
   ),
 ];
-
-/*  new Product("Ring", 899, "", "Ring", "Golden ring", "M"),
-  new Product("Ring", 899, "", "Ring", "Golden ring", "M"),
-  new Product("Ring", 899, "", "Ring", "Golden ring", "M"),
-
-  new Product("Ring", 899, "", "Ring", "Golden ring", "M"), */

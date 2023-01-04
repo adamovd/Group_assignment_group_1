@@ -2,16 +2,12 @@ import { cartButton } from "./cart";
 import { createFooter } from "./footer";
 import { createBadge, createMenu, toggleHamburgerMenu } from "./header";
 import { products } from "./models/productList";
-import { StartpageItem } from "./models/StartpageItem";
-import { startpageList } from "./models/startpageList";
-import { createPromotion } from "./promo";
 
 window.addEventListener("load", () => {
   createMenu();
   toggleHamburgerMenu();
   cartButton();
   displayStartpage();
-  // createPromotion();
   createFooter();
   createBadge();
   showProductsStartpage();

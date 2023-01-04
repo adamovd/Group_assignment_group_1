@@ -1,6 +1,4 @@
 import { CartItem } from "../models/CartItem";
-import { Customer } from "../models/Customer";
-import { presentCheckout } from "./presentCheckout";
 
 export function generatePurchase() {
   const checkout: HTMLElement = document.querySelector(

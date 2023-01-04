@@ -29,6 +29,7 @@ html {
     display: flex;
     flex-direction: row;
     padding: 5rem;
+    min-height: 70vh;
   }
 }
 
@@ -54,11 +55,17 @@ html {
   height: auto;
   width: 400px;
   padding: 3rem;
+  @include mixins.for-size(laptop) {
+    width: 500px;
+  }
 }
 
 .aboutText {
   font-size: 14px;
   white-space: pre-line;
+  @include mixins.for-size(laptop) {
+    font-size: 1.8rem;
+  }
 }
 
 .aboutTitle {

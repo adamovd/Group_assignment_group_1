@@ -1,4 +1,3 @@
-import { presentCart } from "./cart";
 import { CartItem } from "./models/CartItem";
 
 const cartBadge: HTMLSpanElement = document.createElement(

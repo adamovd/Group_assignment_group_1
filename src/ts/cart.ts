@@ -136,7 +136,3 @@ export function presentCart(cartProducts: CartItem[]) {
     window.location.href = "../pages/products.html";
   });
 }
-
-// export function checkOutClick() {
-//   window.location.href = "../pages/checkout.html";
-// }
